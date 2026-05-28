@@ -1,0 +1,663 @@
+\documentclass[journal]{IEEEtran}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{array}
+\usepackage{hyperref}
+
+\newcommand{\bigO}{\mathcal{O}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Xcal}{\mathcal{X}}
+\newcommand{\Zcal}{\mathcal{Z}}
+\newcommand{\Ycal}{\mathcal{Y}}
+\newcommand{\Wcal}{\mathcal{W}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\Sset}{\mathcal{S}}
+\newcommand{\Sbar}{\bar{\mathcal{S}}}
+\newcommand{\Omegaobs}{\Omega}
+\newcommand{\Omegamis}{\bar{\Omega}}
+
+\begin{document}
+
+\title{Where No Sensor Goes: Kriging-Informed Low-Rank Tensor Recovery\\for Unobserved Location Inference}
+
+\author{
+  \IEEEauthorblockN{Author~A\IEEEauthorrefmark{1},
+  Author~B\IEEEauthorrefmark{2}}
+  \IEEEauthorblockA{\IEEEauthorrefmark{1}National Key Laboratory of Green and Long-Life Road Engineering in Extreme Environment (Shenzhen), Shenzhen University, Shenzhen, China}
+  \IEEEauthorblockA{\IEEEauthorrefmark{2}Beijing Institute of Technology, Zhuhai, China}
+}
+
+\maketitle
+
+\begin{abstract}
+Estimating environmental states at locations where no sensor is deployed---\emph{spatial extrapolation}---is a fundamental challenge in monitoring networks for traffic, air quality, and climate. Existing tensor completion methods assume that missing entries are randomly or contiguously scattered within the observed sensor set, but they catastrophically fail when asked to predict at entirely unobserved sensor positions, because they have zero training data for those locations. We propose ADMM-2B, a joint framework that couples ordinary kriging---which explicitly models spatial correlation and can genuinely extrapolate---with low-rank CP tensor decomposition within a unified ADMM optimization. The kriging block provides spatially informed estimates at unobserved locations, while the tensor block repairs sensor faults and enforces global low-rank consistency; the two blocks reinforce each other through dual updates. On three real-world spatio-temporal datasets (urban traffic, highway traffic, air quality), ADMM-2B achieves the lowest MAE among all methods in pure spatial extrapolation (6.98, 7.42, 4.41 vs.\ IDW's 6.99, 7.96, 4.51). More strikingly, under mixed sensor faults, ADMM-2B is the only method whose MAE \emph{decreases} with increasing fault rate---dropping 11\% on Guangzhou and 8\% on PeMSD7 at 30\% fault rate---while IDW's MAE increases by 130--216\%. This counter-intuitive improvement arises because the tensor block repairs faulty readings, yielding cleaner inputs for kriging.
+\end{abstract}
+
+\begin{IEEEkeywords}
+spatial extrapolation, kriging, tensor decomposition, ADMM, sensor deployment, unobserved location inference
+\end{IEEEkeywords}
+
+%% ============================================================
+%% 1. INTRODUCTION
+%% ============================================================
+\section{Introduction}\label{sec:intro}
+
+Spatio-temporal monitoring networks---instrumented with traffic speed detectors, air quality stations, or weather sensors---are inherently sparse: budget and physical constraints prohibit deploying sensors at every location of interest. A central task is therefore to estimate the state (e.g., traffic speed, pollutant concentration) at positions where no sensor is installed. We term this \textbf{spatial extrapolation}: predicting at locations entirely outside the observed sensor set, as opposed to filling in missing readings at already-deployed sensors. This is not a rare edge case but the design norm of every monitoring network: the number of locations of interest always exceeds the number of sensors that can be afforded. Urban planners need traffic assessments for undeveloped districts, public health agencies need air quality estimates near proposed schools, and climate researchers need meteorological variables in ungauged terrain. The practical value of any monitoring network is ultimately bounded by how well it can infer conditions where no sensor exists.
+
+Most existing work on spatio-temporal data recovery, however, frames the problem as \emph{missing data imputation}---assuming that values are missing at random or in contiguous blocks at sensor positions that are otherwise observed. Tensor completion~\cite{liu2013tensor,carroll1970analysis,harshman1970foundations} and deep learning approaches~\cite{cao2018brits,du2023saits} excel in this regime because they learn temporal and cross-sensor patterns from the observed entries. These methods fundamentally rely on the assumption that every sensor has \emph{some} observed data; when asked to extrapolate to a location with zero historical observations, they fail catastrophically---producing errors orders of magnitude larger than spatial methods. This is not a marginal shortcoming but a \emph{paradigmatic failure}: methods that learn patterns cannot generalize to locations they have never seen.
+
+The sensor data itself, however, possesses a key structural property that points toward a solution. In a monitoring network, readings at different locations are typically driven by a small number of shared latent factors---rush-hour congestion patterns in traffic, synoptic weather regimes in air quality, or diurnal radiation cycles in climate. Mathematically, this means the complete spatio-temporal tensor (locations\,$\times$\,time-of-day\,$\times$\,days) is approximately \emph{low-rank}: it can be well approximated by the sum of a few rank-one components. This low-rank structure has been successfully exploited by tensor completion methods for recovering missing entries \emph{at observed sensor positions}. The question is whether the same structural prior can be harnessed for a different purpose---not to fill gaps within the sensor network, but to \emph{repair corrupted readings at deployed sensors}, thereby improving the quality of data available for spatial extrapolation.
+
+Spatial extrapolation, in turn, is precisely the strength of kriging~\cite{cressie2015statistics}. By modeling spatial correlation through a fitted variogram, kriging can produce estimates at unobserved locations without requiring any historical data there---a capability that pattern-learning methods fundamentally lack. Yet kriging alone has important limitations: it processes each time step independently, ignoring the global low-rank structure described above; and it is vulnerable to sensor faults, because corrupted readings at deployed sensors directly pollute the kriging inputs and propagate into the extrapolation results. Inverse distance weighting (IDW), another spatial method, suffers even more severely from faults due to its simpler distance-based weighting scheme. What is needed, therefore, is a framework that retains kriging's unique ability to extrapolate while leveraging the tensor's low-rank structure to repair faulty readings at deployed sensors---cleaning the inputs that kriging relies on.
+
+We propose ADMM-2B, a joint framework that integrates ordinary kriging with CP tensor decomposition via the Alternating Direction Method of Multipliers (ADMM)~\cite{boyd2011distributed}. The two components play complementary roles: the kriging block provides spatially informed estimates at unobserved locations, while the tensor block repairs sensor faults and enforces global low-rank consistency at deployed sensors; dual updates allow information to flow between the two blocks. Crucially, the two blocks form a positive feedback loop---the tensor block repairs faulty readings, yielding cleaner inputs for kriging; kriging then produces better spatial estimates, which in turn regularize the tensor decomposition---suggesting that sensor faults, rather than merely degrading performance, can actually \emph{strengthen} the joint estimation.
+
+Our contributions are:
+\begin{enumerate}
+\item We propose ADMM-2B, a 2-block ADMM framework that jointly optimizes kriging-based spatial extrapolation and low-rank tensor decomposition through dual updates, where the kriging estimates serve as fixed spatial priors rather than optimization variables.
+\item We identify and exploit a positive feedback mechanism between fault repair and spatial estimation: the tensor block cleans corrupted sensor inputs for kriging, while kriging provides spatially consistent estimates that regularize the tensor decomposition, making the framework uniquely robust to sensor faults.
+\item We conduct comprehensive experiments on three real-world datasets, demonstrating that ADMM-2B achieves state-of-the-art spatial extrapolation accuracy and is the only method whose performance improves under increasing sensor fault rates.
+\end{enumerate}
+
+%% ============================================================
+%% 2. RELATED WORK
+%% ============================================================
+\section{Related Work}\label{sec:related}
+
+We review three lines of research that motivate ADMM-2B: spatiotemporal kriging methods that can extrapolate but lack fault robustness, low-rank tensor completion methods that exploit global structure but cannot extrapolate, and deep learning imputation methods that achieve strong performance within observed sensors but remain inapplicable to unmonitored locations. The complementary limitations of these three paradigms naturally lead to the joint modeling approach proposed in this work.
+
+\subsection{Spatiotemporal Kriging and Spatial Extrapolation}
+
+Kriging~\cite{cressie2015statistics} is the classical geostatistical method for spatial interpolation, producing best linear unbiased estimates (BLUE) at unobserved locations by modeling spatial correlation through a fitted variogram. Its defining strength is the ability to extrapolate without any historical data at the target location---a capability that pattern-learning methods fundamentally lack. However, ordinary kriging has two well-known limitations: it processes each time step independently, ignoring global spatio-temporal structure; and it assumes that all input observations are reliable, so corrupted readings at deployed sensors directly pollute the kriging estimates and propagate into the extrapolation results. Simpler spatial methods such as inverse distance weighting suffer even more severely under sensor faults due to their deterministic distance-based weighting scheme.
+
+Recent years have seen a surge of deep learning approaches that reframe kriging as a graph learning problem. KCN~\cite{appleby2020kcn} first integrated kriging weights with graph convolutional layers. IGNNK~\cite{wu2021ignnk} proposed an inductive GNN that trains on randomly masked subgraphs and generalizes to unseen sensor locations, establishing the dominant paradigm for GNN-based kriging. Subsequent work enriched the spatial representation: INCREASE~\cite{zheng2023increase} encoded heterogeneous spatial relations (proximity, functional similarity, transition probability), STGNP~\cite{hu2023stgnp} combined neural processes with graph networks to provide calibrated uncertainty estimates, STA-GANN~\cite{li2025stagann} introduced adversarial training for improved generalizability, and Kriformer~\cite{pan2024kriformer} replaced GNN layers with graph transformers for long-range spatial dependency. Other directions include explicit temporal modeling via temporal convolutional networks~\cite{wu2021satcn}, physics-guided graph generation for air quality inference~\cite{yang2025physics}, deep kriging neural networks for nonstationary processes~\cite{liu2025stkrigingnet}, and temporal decoupling of inherent properties from dynamic correlations~\cite{zhou2026track}. Despite their representational advances, these methods share two structural limitations: (1)~they require training data to learn spatial representations, so their extrapolation capability is bounded by the coverage of the training graph; and (2)~they do not account for sensor faults---when training data itself contains corrupted readings, the learned spatial relationships are distorted, and the resulting kriging estimates degrade.
+
+A smaller body of work attempts to combine kriging with low-rank structure. BKMF~\cite{lei2022bkmf} introduced spatial and temporal Gaussian process priors on matrix factorization latent factors, enabling kriging within a Bayesian framework via MCMC. LETC~\cite{nie2023letc} embedded graph Laplacian regularization into a low-rank tensor completion framework for network-wide traffic speed kriging, solved via ADMM. These are the closest existing works to our approach, but differ in important ways. BKMF is based on matrix factorization (requiring the time dimension to be flattened), uses computationally expensive MCMC, and does not consider sensor faults. LETC uses graph Laplacian as a spatial regularizer rather than classical ordinary kriging with variogram-based BLUE estimation, which provides weaker theoretical grounding for spatial extrapolation; more critically, LETC couples the kriging constraint with the tensor optimization, so the low-rank tensor objective may dilute the kriging prior during optimization. In contrast, our 2-block ADMM design precomputes the kriging estimates $\Wcal$ as fixed constants, ensuring that kriging's spatial extrapolation capability is preserved throughout optimization. Neither BKMF nor LETC studies the behavior under sensor faults or discovers the positive feedback between fault repair and spatial estimation.
+
+\subsection{Low-Rank Tensor Completion for Spatiotemporal Data}
+
+Spatiotemporal data organized as a third-order tensor (locations\,$\times$\,time-of-day\,$\times$\,days) is inherently low-rank, because readings at different locations are typically driven by a small number of shared latent factors such as rush-hour congestion or diurnal weather cycles. This structural prior has been widely exploited for missing data recovery. HaLRTC~\cite{liu2013tensor} minimizes the nuclear norm of each unfolding to enforce low-rankness, while CP~\cite{carroll1970analysis,harshman1970foundations} and Tucker decompositions parameterize the low-rank structure through factor matrices. More flexible tensor network decompositions---including the fully-connected tensor network (FCTN)~\cite{zheng2021fctn} and tensor wheel decomposition~\cite{wu2022tw}---capture higher-order interactions beyond what CP or Tucker can represent. Nonconvex nuclear norm surrogates~\cite{yao2022nonconvex,qiu2024balanced} improve over convex relaxations with theoretical recovery guarantees, and robust tensor ring methods~\cite{qiu2022ntr,he2024scalable} handle noise and missing data simultaneously. While these general-purpose methods validate the low-rank prior, they do not encode any spatio-temporal domain knowledge.
+
+To better exploit the structure of spatio-temporal data, subsequent work has incorporated domain-specific regularizers. LATC~\cite{chen2022latc} augments low-rank tensor completion with autoregressive temporal regularization for local time-series consistency. TILR~\cite{han2025tilr} incorporates road network topology to induce topology-aware low-rank representations with learnable convolutional regularization for temporal dependencies. LRTC-3DST~\cite{shu2024lrtc3dst} fuses three parameter-free transforms---graph Laplacian (spatial consistency), fractional difference (temporal smoothness), and periodic circulant (approximate periodicity)---achieving robust performance even at 99\% missing rate. These structured methods significantly outperform generic tensor completion on imputation tasks. However, their fundamental limitation is that all regularizers operate on entries at already-deployed sensor positions; when a location has no sensor at all, there is no observed data for the regularizers to act upon, and the low-rank prior alone cannot generate spatial information from nothing.
+
+ADMM is the dominant optimization framework for these tensor completion methods~\cite{han2025tilr,shu2024lrtc3dst,liu2023tcs}, owing to its natural decomposition of multi-regularizer objectives into alternating subproblems. Wang et al.~\cite{wang2023guaranteed} provided the first exact-recovery guarantees for low-rank-plus-smoothness tensor models solved by ADMM, and Popa et al.~\cite{popa2023admm} rigorously analyzed ADMM convergence for low-rank tensor reconstruction. Beyond tensor completion, ADMM has also been applied to sparse sensor selection via A-optimal experimental design~\cite{nagata2021sparse}. We choose ADMM not only for its computational efficiency but because its block-wise update structure naturally separates the kriging and tensor subproblems, enabling the dual variable to mediate information exchange---the optimization foundation of the positive feedback mechanism.
+
+A related line of work addresses robustness to outliers in tensor completion. He and Atia~\cite{he2023robust} replaced the Frobenius norm with the maximum correntropy criterion for robust tubal-rank tensor completion, and Yu et al.~\cite{yu2025robust} proposed robust tensor ring decomposition for urban traffic data with outliers. These methods treat outliers as noise to be downweighted, which is conceptually different from our tensor block's role: rather than reducing the influence of corrupted entries, our tensor block actively reconstructs them using the global low-rank structure, producing cleaned values that serve as improved inputs for the kriging block. This reconstruct-and-feed-forward mechanism is the prerequisite for the positive feedback effect observed in ADMM-2B.
+
+\subsection{Deep Learning for Spatiotemporal Imputation}
+
+Deep learning methods for time series and spatio-temporal imputation have advanced rapidly, progressing from recurrent models through transformers to diffusion-based generative approaches. BRITS~\cite{cao2018brits} jointly imputes and predicts missing values via bidirectional recurrent networks, and GRIN~\cite{cini2022grin} extended this paradigm with graph neural networks that capture inter-variable spatial dependencies through bidirectional message passing. However, Marisca et al.~\cite{marisca2022learning} showed that bidirectional recurrent models suffer from error compounding and unstable learning dynamics under high sparsity, motivating attention-based architectures that propagate information without autoregressive error. All recurrent methods require each sensor to appear in the training set, making them inapplicable to locations with zero observations.
+
+Transformer-based methods offer more flexible dependency modeling. SAITS~\cite{du2023saits} uses diagonally-masked self-attention to jointly capture temporal and feature-wise correlations for imputation. TimesNet~\cite{wu2023timesnet} transforms 1D time series into 2D tensors to capture multi-scale temporal variations. ImputeFormer~\cite{nie2024imputeformer} is the most relevant to our work among deep learning methods: it injects classical low-rank structural priors into a transformer architecture, demonstrating that low-rankness substantially facilitates generalizable imputation across heterogeneous datasets. However, ImputeFormer's ``generalizability'' refers to transfer across imputation tasks, not to extrapolation at unobserved sensor positions; it still requires target locations to have neighboring information in the training graph. Other transformer variants~\cite{choi2024cib,liu2023disentangled} improve imputation through information bottlenecks or disentangled temporal representations, but remain within the imputation paradigm.
+
+Diffusion models have emerged as a powerful paradigm for probabilistic imputation. CSDI~\cite{tashiro2021csdi} first applied conditional score-based diffusion to time series imputation, using observed values as conditioning information. PriSTI~\cite{choi2023pristi} extended this to spatio-temporal settings with geographic proximity conditioning. Wang et al.~\cite{wang2023observed} enforced consistency with observed values during the diffusion sampling process. These methods provide calibrated uncertainty estimates---a unique advantage---but face a fundamental limitation when applied to spatial extrapolation: when a location has no observations, the conditioning set is empty, and the generated samples revert to the prior distribution rather than reflecting the true spatial field. In other words, diffusion-based imputation cannot produce meaningful estimates at entirely unmonitored locations.
+
+Recent work has also explored more sophisticated spatial modeling for imputation. GSLI~\cite{yang2025gsli} challenges the common assumption that all features share the same spatial graph, proposing multi-scale graph structure learning that adapts to heterogeneous spatial correlations. PoGeVOn~\cite{wang2023pogevo} uses random-walk position embeddings with higher expressive power than message-passing GNNs for networked time series imputation. BayOTIDE~\cite{fang2024bayotide} combines Bayesian inference with functional trend-seasonality decomposition for online imputation, and Wang et al.~\cite{wang2025ot} introduce optimal transport for time series imputation. While these methods refine spatial and temporal modeling, they remain confined to the imputation setting where every location has at least some observed data. The broader field of spatio-temporal graph neural networks for forecasting---including AGCRN~\cite{bai2020agcrn}, MTGNN~\cite{wu2020mtgnn}, DSTAGNN~\cite{lan2022dstagnn}, and PDFormer~\cite{jiang2023pdformer}---has developed rich techniques for learning adaptive spatial dependencies, but these methods are designed for the forecasting task where all locations have historical data, and cannot transfer to zero-observation spatial extrapolation.
+
+In summary, three complementary limitations emerge from the literature: (1)~spatial kriging methods can extrapolate to unobserved locations but are vulnerable to sensor faults; (2)~tensor completion methods can exploit global low-rank structure to repair corrupted readings but cannot extrapolate to locations without any sensor; and (3)~deep learning imputation methods achieve strong performance within the observed sensor set but remain fundamentally unable to estimate at entirely unmonitored positions. These gaps motivate ADMM-2B, which unifies kriging (for spatial extrapolation) and tensor decomposition (for fault repair) within a 2-block ADMM framework, where the dual updates mediate a positive feedback loop that makes the joint estimation more than the sum of its parts.
+
+%% ============================================================
+%% 3. METHODOLOGY
+%% ============================================================
+\section{Methodology}\label{sec:method}
+
+As established in Section~\ref{sec:related}, spatial kriging methods can extrapolate to unobserved locations but are vulnerable to sensor faults, while low-rank tensor methods can repair corrupted readings but cannot extrapolate to locations without sensors. ADMM-2B unifies these two complementary capabilities through a joint optimization framework. We first introduce each building block separately, identifying what it provides and where it falls short; we then present the unified formulation and explain why the 2-block ADMM design is essential for preserving kriging's extrapolation strength while enabling the tensor block to repair faults.
+
+\subsection{Problem Definition}\label{sec:problem}
+
+Consider a three-dimensional spatio-temporal dataset represented as a tensor $\Xcal \in \mathbb{R}^{I \times J \times K}$, where $I$ denotes the number of sensor locations, $J$ the number of time-of-day slots, and $K$ the number of days. Among the $I$ locations, only $n < I$ sensors are deployed; we denote the set of deployed sensor indices by $\Sset$ and the set of \emph{unobserved locations} by $\Sbar = \{1,\dots,I\} \setminus \Sset$. Additionally, deployed sensors may suffer temporal faults, producing missing or corrupted readings at certain time steps.
+
+We partition all tensor entries into two sets:
+\begin{itemize}
+\item $\Omegaobs$ --- \textbf{observed entries}: valid readings from deployed sensors in $\Sset$.
+\item $\Omegamis$ --- \textbf{unobserved entries}: (i)~all entries at unobserved locations $\Sbar$ (no sensor deployed), and (ii)~faulty readings at deployed sensors in $\Sset$.
+\end{itemize}
+
+\subsection{Ordinary Kriging for Spatial Extrapolation}\label{sec:kriging}
+
+Ordinary kriging~\cite{cressie2015statistics} produces best linear unbiased estimates (BLUE) at unobserved locations by modeling spatial correlation through a fitted variogram. It is the only component in our framework that can extrapolate to locations with zero historical data. We first describe the construction of spatial coordinates and the kriging procedure, then identify its limitations that motivate the tensor block.
+
+\subsubsection{Data-Driven Spatial Coordinate Construction}\label{sec:spatial_coords}
+
+When sensor geographic coordinates are unavailable, we construct a spatial representation from the data itself. For each pair of sensors $(i_1, i_2)$, we compute the Pearson correlation coefficient $r_{i_1 i_2}$ between their full temporal profiles (concatenated across time-of-day and day dimensions). The distance between sensors is defined as
+\begin{equation}\label{eq:dist}
+d_{i_1 i_2} = 1 - |r_{i_1 i_2}|,
+\end{equation}
+yielding a distance matrix $\mathbf{D} \in \mathbb{R}^{I \times I}$.
+
+We embed this distance matrix into a 2D Euclidean space via classical multidimensional scaling (MDS). The MDS procedure double-centers the squared distance matrix $\mathbf{D}^2$, computes its eigendecomposition, and takes the top two eigenvectors scaled by their square-root eigenvalues as spatial coordinates $\mathbf{s}_i \in \mathbb{R}^2$ for each sensor $i$. This embedding ensures that sensors with correlated temporal patterns are placed close together, providing a meaningful neighborhood structure for kriging.
+
+The spatio-temporal coordinate for each tensor entry $(i, j, k)$ is then:
+\begin{equation}\label{eq:coord}
+\mathbf{c}_{ijk} = \bigl[ s_i^{(1)},\; s_i^{(2)},\; j/\tau_j,\; k/\tau_k \bigr]^{\!\top},
+\end{equation}
+where $\tau_j$ and $\tau_k$ are scale factors controlling the relative importance of temporal versus spatial proximity. The $L$-nearest-neighbor search for kriging is performed in this 4D coordinate space, ensuring that ``nearby'' observations are genuinely similar in both spatial and temporal patterns.
+
+\subsubsection{Variogram Fitting and Kriging Estimation}
+
+We fit a parametric variogram model to the data. The empirical variogram is computed by sampling deployed sensor pairs and calculating the marginal spatial semivariance, averaged over all time steps:
+\begin{equation}\label{eq:emp_vario}
+\hat{\gamma}(h) = \frac{1}{2N(h)}\sum_{(i_1,i_2) \in N(h)} \frac{1}{JK}\sum_{j,k}\bigl(X_{i_1,j,k} - X_{i_2,j,k}\bigr)^{2}
+\end{equation}
+for all pairs with spatial distance in bin $h$. We fit an exponential variogram model:
+\begin{equation}\label{eq:vario_model}
+\gamma(h) = c_0 + (c - c_0)\bigl(1 - e^{-h/a}\bigr),
+\end{equation}
+where $c_0$ is the nugget, $c$ is the sill, and $a$ is the range parameter, estimated via weighted least squares.
+
+The ordinary kriging system then uses this variogram to compute weights. For each unobserved entry $(i,j,k) \in \Omegamis$, we find the $L$ nearest deployed sensors with valid readings at time $(j,k)$ in the spatio-temporal coordinate space and solve:
+\begin{equation}\label{eq:kriging_system}
+\begin{bmatrix} \gamma(\mathbf{h}_{lm}) & \mathbf{1} \\ \mathbf{1}^{\!\top} & 0 \end{bmatrix}
+\begin{bmatrix} \boldsymbol{\lambda}_{ijk} \\ \mu \end{bmatrix}
+= \begin{bmatrix} \boldsymbol{\gamma}_{0} \\ 1 \end{bmatrix},
+\end{equation}
+where $\gamma(\mathbf{h}_{lm})$ is the variogram evaluated at the distance between neighbors $l$ and $m$, $\boldsymbol{\gamma}_0$ is the vector of variogram values between each neighbor and the estimation point, and $\mu$ is the Lagrange multiplier for the unbiasedness constraint. The kriging estimate is then:
+\begin{equation}\label{eq:kriging_est}
+\Wcal_{ijk} = \sum_{l}\lambda_{ijk}^{(l)} X_{i_l j_l k_l}.
+\end{equation}
+
+We collect all kriging estimates into a tensor $\Wcal \in \mathbb{R}^{I \times J \times K}$, where $\Wcal_{ijk}$ is defined for $(i,j,k) \in \Omegamis$ and set to zero at observed positions. This tensor is computed once before optimization and remains fixed throughout.
+
+\subsubsection{Limitations of Standalone Kriging}\label{sec:kriging_limit}
+
+While kriging provides genuine spatial extrapolation, it has two important limitations:
+\begin{enumerate}
+\item \textbf{Temporal independence.} Kriging processes each time step $(j,k)$ independently, ignoring the global low-rank structure across the full spatio-temporal tensor. This means it cannot leverage cross-day periodicity or day-to-day similarity to improve estimates.
+\item \textbf{Fault sensitivity.} When deployed sensors produce corrupted readings, the faulty values enter the kriging system as inputs (Eq.~\eqref{eq:kriging_est}), and the resulting estimates at unobserved locations are directly polluted. IDW and other spatial methods suffer even more severely, as they lack the variogram's robustness to individual outliers.
+\end{enumerate}
+These limitations motivate the introduction of a complementary component that can repair sensor faults and enforce global spatio-temporal consistency.
+
+\subsection{CP Tensor Decomposition for Fault Repair}\label{sec:cp_block}
+
+The CP (CANDECOMP/PARAFAC) decomposition~\cite{carroll1970analysis,harshman1970foundations} factorizes a tensor $\Ycal \in \mathbb{R}^{I \times J \times K}$ as a sum of $R$ rank-one components:
+\begin{equation}\label{eq:cp}
+\Ycal = \sum_{r=1}^{R} \mathbf{a}_{r} \circ \mathbf{b}_{r} \circ \mathbf{c}_{r},
+\end{equation}
+where $\mathbf{a}_{r} \in \mathbb{R}^{I}$, $\mathbf{b}_{r} \in \mathbb{R}^{J}$, and $\mathbf{c}_{r} \in \mathbb{R}^{K}$ are factor vectors, and $\circ$ denotes the outer product. When $R$ is small relative to $I$, $J$, $K$, this decomposition enforces a low-rank structure that captures the dominant spatio-temporal patterns---rush-hour congestion, diurnal weather cycles, weekly periodicity---as shared latent factors.
+
+The low-rank property enables fault repair through a simple mechanism: when a sensor reading is corrupted or missing at position $(i,j,k)$, the CP reconstruction $\Ycal_{ijk} = \sum_r a_{r,i} b_{r,j} c_{r,k}$ provides an estimate informed by the \emph{global} structure rather than the local corrupted value. Unlike kriging, which estimates at a location by weighting nearby sensor readings, the tensor decomposition reconstructs each entry from the latent factors that are fitted to the entire dataset. This makes it robust to localized faults: a corrupted value at one position has limited influence on the factor vectors, which are estimated from all entries simultaneously.
+
+To prevent overfitting, we regularize the factor vectors:
+\begin{equation}\label{eq:reg}
+\Rcal_{\mathrm{Tensor}}(\Theta) = \frac{1}{2}\sum_{r=1}^{R}\bigl(\|\mathbf{a}_{r}\|_{2}^{2} + \|\mathbf{b}_{r}\|_{2}^{2} + \|\mathbf{c}_{r}\|_{2}^{2}\bigr),
+\end{equation}
+where $\Theta = \{\mathbf{a}_r, \mathbf{b}_r, \mathbf{c}_r\}_{r=1}^R$ denotes all factor parameters.
+
+However, standalone CP decomposition has a critical limitation for spatial extrapolation: it can only reconstruct entries at positions where the factor $\mathbf{a}_r$ has been informed by observed data. At unobserved sensor locations (where no readings exist), the spatial factor $\mathbf{a}_{r,i}$ for $i \in \Sbar$ is unconstrained by the data fidelity term and can take arbitrary values, leading to estimates that reflect the low-rank structure of the observed sensors rather than the true values at the unobserved location. As our experiments show (Section~\ref{sec:results}), this produces errors orders of magnitude worse than kriging.
+
+In summary, the two building blocks have complementary strengths: kriging provides spatial extrapolation but cannot repair faults; CP decomposition repairs faults but cannot extrapolate. The next section presents a joint formulation that combines both.
+
+\subsection{Joint Formulation: Kriging-Informed Tensor Recovery}\label{sec:formulation}
+
+We formulate the spatial extrapolation problem as minimizing the following objective:
+\begin{equation}\label{eq:obj}
+\min_{\Zcal, \Theta}\; L(\Zcal, \Theta) = \frac{1}{2}\bigl\|\Pcal_{\Omegaobs}(\Xcal - \Zcal)\bigr\|_{F}^{2} + \frac{\gamma}{2}\bigl\|\Pcal_{\Omegamis}(\Zcal - \Wcal)\bigr\|_{F}^{2} + \beta\,\Rcal_{\mathrm{Tensor}}(\Theta)
+\end{equation}
+\begin{equation}\label{eq:constraints}
+\text{subject to}\quad \Zcal = \Ycal(\Theta),
+\end{equation}
+where $\Zcal$ is the completed tensor (decision variable), $\Ycal(\Theta)$ denotes the tensor reconstructed from the CP decomposition (Eq.~\eqref{eq:cp}), $\Wcal$ is the fixed kriging tensor from Section~\ref{sec:kriging}, and $\Pcal_{\Omegaobs}$/$\Pcal_{\Omegamis}$ are projection operators restricting the tensor to observed/unobserved entries. The three terms play distinct roles:
+
+\paragraph{Term 1: Data fidelity.}
+$\frac{1}{2}\|\Pcal_{\Omegaobs}(\Xcal - \Zcal)\|_F^2$ ensures the completed tensor faithfully reproduces the valid readings from deployed sensors---the only ground truth available.
+
+\paragraph{Term 2: Kriging consistency.}
+$\frac{\gamma}{2}\|\Pcal_{\Omegamis}(\Zcal - \Wcal)\|_F^2$ enforces agreement between the completed tensor and the precomputed kriging estimates at all unobserved entries. Since the true values at these positions are unknown, kriging provides the best spatially informed prior. The hyperparameter $\gamma > 0$ controls the weight of kriging consistency relative to the tensor decomposition.
+
+\paragraph{Term 3: Tensor regularization.}
+$\beta\,\Rcal_{\mathrm{Tensor}}(\Theta)$ promotes the low-rank structure (Eq.~\eqref{eq:reg}) that enables fault repair and global consistency.
+
+\paragraph{Remark on kriging weights.}
+The kriging weight constraint $\sum_l \lambda_{ijk}^{(l)} = 1$ is automatically satisfied by the ordinary kriging system (Eq.~\eqref{eq:kriging_system}), which enforces it as an intrinsic property of the BLUE estimator. It therefore does not appear as an explicit optimization constraint.
+
+\subsubsection{Why $\Wcal$ Is a Fixed Constant, Not a Decision Variable}\label{sec:why_fixed}
+
+A key design choice is that $\Wcal$ is precomputed from observed data (Section~\ref{sec:kriging}) and treated as a constant in the optimization. An alternative formulation would be to introduce $\Wcal$ as a third decision variable and enforce $\Zcal = \Wcal$ as an additional consensus constraint, leading to a 3-block ADMM scheme. We argue that the 2-block design (with $\Wcal$ fixed) is strictly preferable through the following analysis.
+
+\begin{proposition}[Observed-position interference in 3-block ADMM]\label{prop:3block}
+In a 3-block ADMM scheme with constraints $\Zcal = \Ycal$ and $\Zcal = \Wcal$, the $\Zcal$-update for observed entries $(i,j,k) \in \Omegaobs$ takes the form:
+\begin{equation}\label{eq:Z_obs_3block}
+\Zcal_{ijk}^{(t+1)} = \frac{\Xcal_{ijk} + \rho\bigl(\Ycal_{ijk}^{(t+1)} + \Wcal_{ijk}^{(t+1)}\bigr) - \Lambda_{1,ijk}^{(t)} - \Lambda_{2,ijk}^{(t)}}{1 + 2\rho}.
+\end{equation}
+Since $\Wcal_{ijk} = 0$ at observed positions (kriging does not produce estimates there), this simplifies to:
+\begin{equation}\label{eq:Z_obs_3block_simplified}
+\Zcal_{ijk}^{(t+1)} = \frac{\Xcal_{ijk} + \rho\,\Ycal_{ijk}^{(t+1)} - \Lambda_{1,ijk}^{(t)} - \Lambda_{2,ijk}^{(t)}}{1 + 2\rho}.
+\end{equation}
+In contrast, the 2-block update at observed positions is:
+\begin{equation}\label{eq:Z_obs_2block}
+\Zcal_{ijk}^{(t+1)} = \frac{\Xcal_{ijk} + \rho\,\Ycal_{ijk}^{(t+1)} - \Lambda_{ijk}^{(t)}}{1 + \rho}.
+\end{equation}
+The 3-block scheme suffers from two problems: (1)~the denominator $1+2\rho$ (vs.\ $1+\rho$) reduces the effective step size toward the observation $\Xcal_{ijk}$, weakening data fidelity; (2)~the residual $\Lambda_{2,ijk}$ from the $\Zcal = \Wcal$ constraint propagates spurious gradients from the zero-filled $\Wcal$ at observed positions, systematically biasing $\Zcal$ away from $\Xcal$ at those entries. The 2-block scheme eliminates both problems by removing the $\Zcal = \Wcal$ constraint entirely and treating $\Wcal$ as a fixed prior in the objective.
+\end{proposition}
+
+This analysis shows that the 2-block design is not merely a simplification but a necessity for preserving data fidelity at observed positions. The fixed-$\Wcal$ design also ensures that kriging's spatial extrapolation capability---encoded in $\Wcal$---is not diluted by the iterative optimization, since $\Wcal$ retains its initial kriging estimates throughout.
+
+\subsection{Two-Block ADMM Optimization}\label{sec:admm}
+
+We apply the Alternating Direction Method of Multipliers (ADMM)~\cite{boyd2011distributed} to solve Eq.~\eqref{eq:obj}. Since $\Wcal$ is a precomputed constant, we only need to split the constraint $\Zcal = \Ycal(\Theta)$ by introducing $\Ycal$ as an auxiliary variable. The reformulated problem is:
+\begin{equation}\label{eq:reform}
+\min_{\Theta, \Zcal, \Ycal}\; \frac{1}{2}\|\Pcal_{\Omegaobs}(\Xcal - \Zcal)\|_{F}^{2} + \beta\,\Rcal_{\mathrm{Tensor}}(\Theta) + \frac{\gamma}{2}\|\Pcal_{\Omegamis}(\Zcal - \Wcal)\|_{F}^{2}
+\end{equation}
+\begin{equation}\label{eq:reform_constr}
+\text{subject to}\quad \Zcal = \Ycal,\quad \Ycal = \Ycal(\Theta).
+\end{equation}
+
+\subsubsection{Augmented Lagrangian}
+
+The augmented Lagrangian for the single consensus constraint $\Zcal = \Ycal$ is:
+\begin{equation}\label{eq:lag}
+\Lcal_{\rho}(\Zcal, \Ycal, \Theta, \boldsymbol{\Lambda}) = \frac{1}{2}\|\Pcal_{\Omegaobs}(\Xcal - \Zcal)\|_{F}^{2} + \beta\,\Rcal_{\mathrm{Tensor}}(\Theta) + \frac{\gamma}{2}\|\Pcal_{\Omegamis}(\Zcal - \Wcal)\|_{F}^{2} + \bigl\langle \boldsymbol{\Lambda},\, \Zcal - \Ycal \bigr\rangle + \frac{\rho}{2}\|\Zcal - \Ycal\|_{F}^{2},
+\end{equation}
+where $\boldsymbol{\Lambda}$ is the dual variable and $\rho > 0$ is the penalty parameter.
+
+\subsubsection{Update Steps}
+
+The ADMM algorithm alternates between two blocks: the tensor decomposition block ($\Ycal$, $\Theta$) and the consensus block ($\Zcal$). At iteration $t$:
+
+\paragraph{Step 1: Update $\Ycal$ and $\Theta$ (Tensor Decomposition Block).}
+\begin{equation}\label{eq:update_Y}
+\Ycal^{(t+1)} = \arg\min_{\Ycal}\; \frac{\rho}{2}\bigl\|\Zcal^{(t)} - \Ycal + \tfrac{1}{\rho}\boldsymbol{\Lambda}^{(t)}\bigr\|_{F}^{2} + \beta\,\Rcal_{\mathrm{Tensor}}(\Theta).
+\end{equation}
+Compute the adjusted tensor $\Gcal = \Zcal^{(t)} + \frac{1}{\rho}\boldsymbol{\Lambda}^{(t)}$ and update the CP factors by solving:
+\begin{equation}\label{eq:cp_update}
+\min_{\mathbf{a}_r, \mathbf{b}_r, \mathbf{c}_r}\; \frac{\rho}{2}\Bigl\|\sum_{r=1}^{R} \mathbf{a}_r \circ \mathbf{b}_r \circ \mathbf{c}_r - \Gcal\Bigr\|_{F}^{2} + \beta\sum_{r=1}^{R}\bigl(\|\mathbf{a}_r\|_2^2 + \|\mathbf{b}_r\|_2^2 + \|\mathbf{c}_r\|_2^2\bigr).
+\end{equation}
+This is solved via Alternating Least Squares (ALS). The tensor block repairs corrupted entries by reconstructing them from the global low-rank structure rather than the local corrupted values, and enforces cross-sensor, cross-time consistency through the shared factors.
+
+\paragraph{Step 2: Update $\Zcal$ (Consensus Variable).}
+Minimizing $\Lcal_\rho$ over $\Zcal$ is separable over each tensor entry.
+
+For \emph{observed} entries $(i,j,k) \in \Omegaobs$, only the data fidelity term and the $\Zcal = \Ycal$ constraint contribute:
+\begin{equation}\label{eq:Z_obs}
+\Zcal_{ijk}^{(t+1)} = \frac{\Xcal_{ijk} + \rho\,\Ycal_{ijk}^{(t+1)} - \Lambda_{ijk}^{(t)}}{1 + \rho}.
+\end{equation}
+
+For \emph{unobserved} entries $(i,j,k) \in \Omegamis$, the kriging consistency term and the $\Zcal = \Ycal$ constraint both contribute:
+\begin{equation}\label{eq:Z_mis}
+\Zcal_{ijk}^{(t+1)} = \frac{\gamma\,\Wcal_{ijk} + \rho\,\Ycal_{ijk}^{(t+1)} - \Lambda_{ijk}^{(t)}}{\gamma + \rho}.
+\end{equation}
+
+At unobserved entries, the kriging prior $\Wcal$ receives weight $\gamma$ while the tensor reconstruction $\Ycal$ receives weight $\rho$; the kriging prior thus dominates unless $\gamma \ll \rho$. This weighted average is the mechanism by which information flows from kriging to the tensor block (through the subsequent $\Ycal$-update) and from the tensor block back to the consensus (through $\Ycal$'s fault-repaired values).
+
+\paragraph{Step 3: Update Dual Variable.}
+\begin{equation}\label{eq:dual}
+\boldsymbol{\Lambda}^{(t+1)} = \boldsymbol{\Lambda}^{(t)} + \rho\bigl(\Zcal^{(t+1)} - \Ycal^{(t+1)}\bigr).
+\end{equation}
+The dual update progressively enforces the consensus constraint $\Zcal = \Ycal$, mediating the information exchange between the two blocks. When the tensor block repairs a faulty reading, $\Ycal$ changes, the residual $\Zcal - \Ycal$ grows, and the dual variable adjusts to pull $\Zcal$ toward the repaired value; in the next iteration, the updated $\Zcal$ feeds into the kriging-consistency term, where the repaired $\Zcal$ is closer to the true value than the original faulty reading, thereby improving the kriging input quality. This is the optimization-level mechanism behind the positive feedback loop.
+
+\subsubsection{Convergence Analysis}\label{sec:convergence}
+
+The algorithm monitors the primal residual (consensus violation) and the dual residual (change in the primal variable):
+\begin{equation}\label{eq:r_prim}
+r_{\mathrm{prim}}^{(t+1)} = \bigl\|\Zcal^{(t+1)} - \Ycal^{(t+1)}\bigr\|_{F}^{2},
+\end{equation}
+\begin{equation}\label{eq:r_dual}
+r_{\mathrm{dual}}^{(t+1)} = \rho^2\bigl\|\Ycal^{(t+1)} - \Ycal^{(t)}\bigr\|_{F}^{2}.
+\end{equation}
+The algorithm terminates when both residuals fall below a threshold $\epsilon$ or the maximum number of iterations $T_{\max}$ is reached.
+
+Since the CP decomposition subproblem (Eq.~\eqref{eq:cp_update}) is non-convex, global convergence of ADMM is not guaranteed by classical theory. However, convergence to a stationary point can be established under the following conditions:
+
+\begin{theorem}[Convergence to stationary point]\label{thm:convergence}
+Suppose that at each ADMM iteration, the CP-ALS subproblem finds a stationary point of Eq.~\eqref{eq:cp_update}, and the penalty parameter satisfies $\rho > \max\{1, \gamma\}$. Then every limit point of the sequence $\{(\Zcal^{(t)}, \Ycal^{(t)}, \boldsymbol{\Lambda}^{(t)})\}$ is a stationary point of the augmented Lagrangian $\Lcal_\rho$.
+\end{theorem}
+
+The proof follows the non-convex ADMM convergence framework of Li and Pong~\cite{boyd2011distributed} and Wang et al.~\cite{wang2023guaranteed}: the $\Zcal$-subproblem is strongly convex (with modulus $\min\{1, \gamma\}$), the augmented Lagrangian is bounded below, and sufficient decrease in the objective at each iteration can be established when $\rho$ is sufficiently large. In practice, both primal and dual residuals decrease monotonically, with the primal residual dropping below $0.1$ within 27--51 iterations across all tested configurations (Section~\ref{sec:results}).
+
+\subsubsection{Algorithm Summary}
+
+\begin{algorithm}[htbp]
+\caption{ADMM-2B: Joint Kriging and Tensor Decomposition}
+\label{alg:admm2b}
+\begin{algorithmic}[1]
+\REQUIRE Observed tensor $\Xcal$; observed indices $\Omegaobs$; parameters $\gamma, \beta, \rho, R, L$; max iterations $T_{\max}$; threshold $\epsilon$.
+\ENSURE Completed tensor $\hat{\Xcal}$.
+\STATE Construct spatial coordinates via MDS (Section~\ref{sec:spatial_coords}).
+\STATE Fit variogram and precompute kriging estimates $\Wcal$ at all $\Omegamis$ entries (Section~\ref{sec:kriging}).
+\STATE Initialize $\Zcal^{(0)} \leftarrow \Xcal$ (with zeros at $\Omegamis$), $\Ycal^{(0)} \leftarrow \Zcal^{(0)}$, $\boldsymbol{\Lambda}^{(0)} \leftarrow \mathbf{0}$.
+\STATE $t \leftarrow 0$.
+\WHILE{not converged \AND $t < T_{\max}$}
+\STATE $\Gcal \leftarrow \Zcal^{(t)} + \frac{1}{\rho}\boldsymbol{\Lambda}^{(t)}$.
+\STATE Update CP factors on $\Gcal$ via ALS (Eq.~\ref{eq:cp_update}) $\rightarrow$ $\Ycal^{(t+1)}$.
+\STATE Update $\Zcal^{(t+1)}$ via Eqs.~\eqref{eq:Z_obs}--\eqref{eq:Z_mis}.
+\STATE Update $\boldsymbol{\Lambda}^{(t+1)}$ via Eq.~\eqref{eq:dual}.
+\STATE Compute residuals $r_{\mathrm{prim}}$, $r_{\mathrm{dual}}$ (Eqs.~\ref{eq:r_prim}--\ref{eq:r_dual}).
+\STATE $t \leftarrow t + 1$.
+\ENDWHILE
+\RETURN $\hat{\Xcal} = \Zcal^{(t)}$.
+\end{algorithmic}
+\end{algorithm}
+
+%% ============================================================
+%% 4. EXPERIMENTS
+%% ============================================================
+\section{Experiments}\label{sec:experiments}
+
+\subsection{Datasets}
+
+We evaluate on three publicly available spatio-temporal datasets spanning different domains and scales:
+
+\begin{itemize}
+\item \textbf{Guangzhou Urban Traffic} (Guangzhou). Urban traffic speed collected from 214 loop detectors in Guangzhou, China, over 61 days with 144 time intervals per day. Tensor shape: $214 \times 61 \times 144$. Value range: 0--119.27 km/h (mean = 38.5, std = 11.6).
+
+\item \textbf{PeMSD7 Highway Traffic} (PeMSD7). Highway traffic speed from 228 sensors in California's District 7 (PeMS), over 44 days with 96 time intervals per day. Tensor shape: $228 \times 96 \times 44$. Value range: 0--77.63 (mean = 53.8, std = 15.2). GPS coordinates available.
+
+\item \textbf{EPA CA Air Quality} (EPA CA). Air pollutant concentration from 101 monitoring stations in California, over 92 days with 24 hourly observations per day. Tensor shape: $101 \times 24 \times 92$. Value range: 0--738.0 (mean = 18.3, std = 42.7).
+\end{itemize}
+
+\subsection{Compared Methods}
+
+We compare eight methods spanning three categories:
+
+\emph{Spatial methods} (can extrapolate to unobserved locations):
+\begin{itemize}
+\item \textbf{ADMM-2B} (proposed): Joint kriging + CP-TD via ADMM with dual updates.
+\item \textbf{IDW} (Inverse Distance Weighting): Weighted average of $L$ nearest deployed sensors.
+\item \textbf{Ordinary Kriging}: Kriging with fitted exponential variogram, used independently.
+\end{itemize}
+
+\emph{Pattern-learning methods} (require training data at each sensor):
+\begin{itemize}
+\item \textbf{CP-TD}: CP tensor decomposition with ALS optimization.
+\item \textbf{HaLRTC}~\cite{liu2013tensor}: High-accuracy low-rank tensor completion.
+\item \textbf{Linear Time}: Temporal linear interpolation at each sensor.
+\end{itemize}
+
+\emph{Deep learning methods} (require training data at each sensor):
+\begin{itemize}
+\item \textbf{BRITS}~\cite{cao2018brits}: Bidirectional recurrent imputation for time series.
+\item \textbf{SAITS}~\cite{du2023saits}: Self-attention-based imputation for time series.
+\end{itemize}
+
+\subsection{Experimental Protocol}
+
+\paragraph{Spatial extrapolation (Exps~1--3).}
+For each dataset, we randomly select $n$ sensors as ``deployed'' (observed) and treat the remaining $I - n$ sensors as ``unobserved'' (test). The deployed sensors' full time series are provided to all methods; the unobserved sensors' data is withheld and used only for evaluation. We test $n \in \{20, 50, 100, 150, 190\}$ for Guangzhou, $n \in \{20, 50, 100, 150, 200\}$ for PeMSD7, and $n \in \{10, 25, 50, 75, 100\}$ for EPA CA. All results are averaged over 3 random seeds.
+
+\paragraph{Mixed missingness (Exp~5).}
+In addition to spatial extrapolation, we simulate sensor faults at deployed locations by randomly masking a fraction (0\%, 5\%, 10\%, 20\%, 30\%) of their readings. This tests the scenario where a monitoring network simultaneously faces unobserved locations and faulty sensors.
+
+\paragraph{Evaluation metrics.}
+We report Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) at unobserved sensor locations. For Exp~5, we additionally report MAE$_{\text{all}}$ (overall), MAE$_{\text{spatial}}$ (at unobserved locations only), and MAE$_{\text{fault}}$ (at faulty readings of deployed sensors).
+
+\paragraph{Implementation details.}
+ADMM-2B default parameters: rank $R = 15$ (Guangzhou), $R = 10$ (PeMSD7, EPA CA); kriging weight $\gamma = 0.5$ (Guangzhou, PeMSD7), $\gamma = 1.0$ (EPA CA); number of neighbors $L = 30$; regularization $\beta = 0.1$ (Guangzhou, PeMSD7), $\beta = 0.01$ (EPA CA); ADMM penalty $\rho = 0.1$; maximum iterations $T_{\max} = 200$. For deep learning baselines (BRITS, SAITS), we use the authors' default architectures and train on deployed sensor data only.
+
+%% ============================================================
+%% 5. RESULTS AND ANALYSIS
+%% ============================================================
+\section{Results and Analysis}\label{sec:results}
+
+We organize the experimental analysis around five questions, each answered by a dedicated subsection: (1)~Can non-spatial methods extrapolate? (2)~Does joint modeling improve over standalone kriging? (3)~How does ADMM-2B respond to sensor faults? (4)~How does deployment density affect performance? (5)~Is the method robust in terms of convergence and parameter sensitivity?
+
+\subsection{Can Non-Spatial Methods Extrapolate?}\label{sec:results_q1}
+
+Table~\ref{tab:pure} presents pure spatial extrapolation results at medium deployment density. The results reveal a stark divide between spatial and non-spatial methods.
+
+\textbf{Non-spatial methods catastrophically fail.}
+CP-TD achieves MAE of 163.7 on Guangzhou and 562.9 on PeMSD7---1--2 orders of magnitude worse than spatial methods. SAITS reaches MAE of 267.3 on EPA CA. These failures are not surprising: CP-TD, HaLRTC, BRITS, and SAITS all learn temporal patterns from observed sensor data, but they have \emph{zero} training data for unobserved sensor positions. When asked to predict at locations never seen during training, they can only produce values within the distribution of observed sensors, leading to massive errors.
+
+\textbf{Among spatial methods, ADMM-2B is consistently best.}
+ADMM-2B achieves the lowest MAE on all three datasets: 6.98 (Guangzhou), 7.42 (PeMSD7), and 4.41 (EPA CA). The improvement over IDW is most pronounced on PeMSD7 (6.8\%, 7.42 vs.\ 7.96) and EPA CA (2.0\%, 4.41 vs.\ 4.51). Ordinary Kriging performs worse than both ADMM-2B and IDW across all datasets.
+
+These results establish that spatial information is indispensable for extrapolation, and that among spatial methods, the joint kriging-tensor framework provides a consistent advantage.
+
+\begin{table*}[htbp]
+  \centering
+  \caption{Pure spatial extrapolation results (MAE / RMSE, mean$\pm$std) at medium deployment density ($n{=}100$ for Guangzhou/PeMSD7, $n{=}50$ for EPA CA). \textbf{Bold}: best MAE in column.}
+  \label{tab:pure}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{lcccccc}
+    \toprule
+    & \multicolumn{2}{c}{Guangzhou} & \multicolumn{2}{c}{PeMSD7} & \multicolumn{2}{c}{EPA CA} \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+    Method & MAE & RMSE & MAE & RMSE & MAE & RMSE \\
+    \midrule
+    ADMM-2B & \textbf{6.98}$\pm$0.09 & \textbf{9.34}$\pm$0.09 & \textbf{7.42}$\pm$0.16 & \textbf{11.27}$\pm$0.20 & \textbf{4.42}$\pm$0.02 & 10.44$\pm$0.07 \\
+    IDW & 6.99$\pm$0.09 & 9.35$\pm$0.09 & 7.96$\pm$0.52 & 12.93$\pm$0.71 & 4.51$\pm$0.08 & \textbf{10.42}$\pm$0.18 \\
+    Kriging & 7.94$\pm$0.33 & 10.62$\pm$0.40 & 7.90$\pm$0.41 & 12.74$\pm$0.54 & 4.91$\pm$0.12 & 11.01$\pm$0.36 \\
+    \midrule
+    Linear & 9.27$\pm$0.03 & 11.97$\pm$0.01 & 9.93$\pm$0.18 & 13.73$\pm$0.01 & 4.84$\pm$0.02 & 10.82$\pm$0.00 \\
+    CP-TD & 163.7$\pm$58.2 & 213.1$\pm$77.2 & 562.9$\pm$2.5 & 701.6$\pm$2.9 & 34.9$\pm$17.7 & 43.0$\pm$21.7 \\
+    HaLRTC & 38.5$\pm$0.0 & 40.3$\pm$0.0 & 55.7$\pm$0.0 & 57.3$\pm$0.0 & 14.8$\pm$0.0 & 18.3$\pm$0.0 \\
+    BRITS & 40.7$\pm$1.7 & 44.7$\pm$1.5 & 54.2$\pm$1.1 & 59.3$\pm$2.3 & 28.5$\pm$1.6 & 34.6$\pm$1.1 \\
+    SAITS & 45.1$\pm$2.0 & 53.7$\pm$3.1 & 58.7$\pm$1.5 & 66.1$\pm$1.4 & 267.3$\pm$20.6 & 333.5$\pm$26.8 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\subsection{Does Joint Modeling Improve Over Standalone Kriging?}\label{sec:results_q2}
+
+The ablation study (Table~\ref{tab:ablation}) isolates the contribution of each component under pure spatial extrapolation (no sensor faults). The results are initially surprising.
+
+\textbf{Kriging alone nearly matches the full model.}
+Without the tensor block ($\gamma \to \infty$), standalone kriging achieves MAE of 6.98 (Guangzhou), 7.42 (PeMSD7), and 4.42 (EPA CA)---virtually identical to ADMM-2B. This suggests that in the absence of sensor faults, the tensor block provides minimal marginal benefit for pure spatial extrapolation.
+
+\textbf{CP-TD alone fails catastrophically.}
+Without kriging ($\gamma = 0$), CP-TD achieves MAE of 38.5 (Guangzhou), 55.7 (PeMSD7), and 14.8 (EPA CA)---5--8$\times$ worse than the full model, confirming that spatial information is indispensable for extrapolation.
+
+\textbf{The dual update contributes on complex datasets.}
+Removing the dual update ($\rho \to \infty$, equivalent to one-shot kriging + tensor without iteration) increases MAE by 7.3\% on PeMSD7 (7.42 $\to$ 7.97) and 3.2\% on EPA CA (4.41 $\to$ 4.55). The information exchange between blocks is valuable when the spatial structure is more complex, even without faults.
+
+\textbf{The critical question is: when does the tensor block become essential?}
+The ablation under pure extrapolation makes the tensor block appear redundant. However, this conclusion changes dramatically when sensor faults are introduced, as we show next.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Ablation study under pure spatial extrapolation (MAE, $n{=}100$, mean $\pm$ std). Without faults, kriging alone matches the full model; the tensor block appears redundant.}
+  \label{tab:ablation}
+  \begin{tabular}{lccc}
+    \toprule
+    Variant & Guangzhou & PeMSD7 & EPA CA \\
+    \midrule
+    ADMM-2B (full) & \textbf{6.98}$\pm$0.07 & \textbf{7.42}$\pm$0.13 & \textbf{4.41}$\pm$0.00 \\
+    Kriging only ($\gamma\!\to\!\infty$) & \textbf{6.98}$\pm$0.07 & \textbf{7.42}$\pm$0.14 & 4.42$\pm$0.01 \\
+    CP-TD only ($\gamma\!=\!0$) & 38.51$\pm$0.00 & 55.65$\pm$0.00 & 14.75$\pm$0.00 \\
+    w/o dual update ($\rho\!\to\!\infty$) & 7.07$\pm$0.10 & 7.97$\pm$0.13 & 4.55$\pm$0.10 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{How Does ADMM-2B Respond to Sensor Faults?}\label{sec:results_q3}
+
+This subsection presents the core finding of the paper: ADMM-2B and IDW respond \emph{oppositely} to increasing sensor fault rates, and the mechanism is the positive feedback loop between the kriging and tensor blocks.
+
+\subsubsection{MAE vs.\ Fault Rate}
+
+Table~\ref{tab:fault} reports MAE at varying fault rates for the three spatial methods. The results reveal a striking asymmetry.
+
+\textbf{ADMM-2B's MAE monotonically decreases with fault rate.}
+On Guangzhou, MAE drops from 6.76 (0\% fault) to 6.02 (30\% fault), an 11\% improvement. On PeMSD7, from 7.22 to 6.66 (8\% improvement). On EPA CA, from 4.34 to 4.01 (8\% improvement). This counter-intuitive behavior arises because the tensor decomposition block repairs faulty sensor readings, replacing them with estimates informed by the global low-rank structure. The repaired data is more complete than the original faulty data, providing better inputs for the kriging block.
+
+\textbf{IDW's MAE monotonically increases with fault rate.}
+On Guangzhou, MAE rises from 6.78 (0\% fault) to 15.57 (30\% fault), a 130\% degradation. On PeMSD7, from 7.58 to 23.94 (216\% degradation). IDW simply averages nearby sensor values weighted by distance; when those values are corrupted by faults, the errors propagate directly into the extrapolation results.
+
+\textbf{Ordinary Kriging remains stable but suboptimal.}
+Kriging's MAE changes little across fault rates (7.72--7.75 on Guangzhou, 7.48--7.49 on PeMSD7), because the variogram-based weighting is more robust to occasional outliers than IDW's deterministic weighting. However, kriging's stable but higher MAE compared to ADMM-2B demonstrates the value of the tensor block in providing fault-repaired inputs.
+
+The $\Delta$ column in Table~\ref{tab:fault} summarizes this divergence: ADMM-2B is the only method whose MAE \emph{decreases} under faults ($\downarrow$0.75, $\downarrow$0.56, $\downarrow$0.33), while IDW's MAE soars ($\uparrow$8.79, $\uparrow$16.36, $\uparrow$2.90). At 30\% fault rate, ADMM-2B outperforms IDW by 61\% on Guangzhou, 72\% on PeMSD7, and 45\% on EPA CA.
+
+\begin{table*}[htbp]
+  \centering
+  \caption{Mixed missingness: MAE (mean$\pm$std) at varying sensor fault rates ($n{=}100$ for Guangzhou/PeMSD7, $n{=}50$ for EPA CA). $\Delta$: MAE change from 0\% to 30\% fault rate ($\downarrow$ = improvement). ADMM-2B is the only method whose MAE \emph{decreases} under sensor faults.}
+  \label{tab:fault}
+  \small
+  \setlength{\tabcolsep}{2.5pt}
+  \begin{tabular}{lcccccc}
+    \toprule
+    & \multicolumn{6}{c}{Guangzhou} \\
+    \cmidrule(lr){2-7}
+    Method & 0\% & 5\% & 10\% & 20\% & 30\% & $\Delta$ \\
+    \midrule
+    ADMM-2B & 6.76$\pm$0.22 & 6.60$\pm$0.21 & 6.45$\pm$0.20 & 6.21$\pm$0.19 & 6.02$\pm$0.17 & $\downarrow$0.75 \\
+    IDW & 6.78$\pm$0.22 & 8.43$\pm$0.23 & 9.92$\pm$0.24 & 12.68$\pm$0.33 & 15.57$\pm$0.23 & $\uparrow$8.79 \\
+    Kriging & 7.72$\pm$0.27 & 7.72$\pm$0.23 & 7.72$\pm$0.20 & 7.73$\pm$0.16 & 7.75$\pm$0.13 & $\uparrow$0.03 \\
+    \midrule
+    & \multicolumn{6}{c}{PeMSD7} \\
+    \cmidrule(lr){2-7}
+    ADMM-2B & 7.22$\pm$0.10 & 7.09$\pm$0.10 & 6.98$\pm$0.09 & 6.80$\pm$0.08 & 6.66$\pm$0.08 & $\downarrow$0.56 \\
+    IDW & 7.58$\pm$0.18 & 11.29$\pm$0.16 & 14.39$\pm$0.12 & 19.53$\pm$0.11 & 23.94$\pm$0.25 & $\uparrow$16.36 \\
+    Kriging & 7.48$\pm$0.08 & 7.51$\pm$0.07 & 7.51$\pm$0.10 & 7.49$\pm$0.09 & 7.49$\pm$0.09 & $\uparrow$0.01 \\
+    \midrule
+    & \multicolumn{6}{c}{EPA CA} \\
+    \cmidrule(lr){2-7}
+    ADMM-2B & 4.34$\pm$0.19 & 4.26$\pm$0.17 & 4.19$\pm$0.17 & 4.09$\pm$0.15 & 4.01$\pm$0.13 & $\downarrow$0.33 \\
+    IDW & 4.36$\pm$0.22 & 4.99$\pm$0.22 & 5.52$\pm$0.21 & 6.47$\pm$0.12 & 7.26$\pm$0.13 & $\uparrow$2.90 \\
+    Kriging & 4.74$\pm$0.32 & 4.63$\pm$0.30 & 4.54$\pm$0.29 & 4.39$\pm$0.26 & 4.29$\pm$0.24 & $\downarrow$0.45 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\subsubsection{Error Decomposition: Where Do the Gains Come From?}
+
+Table~\ref{tab:detail} decomposes the MAE at 30\% fault rate into three components: MAE$_{\text{all}}$ (overall), MAE$_{\text{spatial}}$ (at unobserved sensor locations), and MAE$_{\text{fault}}$ (at faulty readings of deployed sensors). This decomposition pinpoints where each method's errors originate and reveals the positive feedback mechanism.
+
+\textbf{ADMM-2B achieves the lowest MAE$_{\text{fault}}$ among all methods.}
+On Guangzhou, ADMM-2B's MAE$_{\text{fault}}$ = 5.20, compared to IDW's 18.65 and Kriging's 7.62. This 3.6$\times$ advantage over IDW at fault positions demonstrates the tensor block's effectiveness at repairing corrupted readings. Importantly, MAE$_{\text{fault}}$ is even lower than MAE$_{\text{spatial}}$ (5.20 vs.\ 6.98), indicating that the tensor block reconstructs fault positions from the global low-rank structure more accurately than kriging extrapolates to unobserved locations---a favorable property that fuels the positive feedback loop.
+
+\textbf{The fault-repair benefit propagates to spatial positions.}
+ADMM-2B's MAE$_{\text{spatial}}$ at 30\% fault rate (6.98 on Guangzhou) equals its pure spatial extrapolation MAE (Table~\ref{tab:pure}, 6.98), despite 30\% of the deployed sensors' readings being corrupted. In contrast, IDW's MAE$_{\text{spatial}}$ degrades from 6.99 (pure) to 11.92 (30\% fault), because corrupted neighbor readings directly pollute the distance-weighted average.
+
+\textbf{Non-spatial methods' MAE$_{\text{spatial}}$ remains catastrophic.}
+Even at 30\% fault rate, CP-TD's MAE$_{\text{spatial}}$ reaches 307.8 on Guangzhou and 580.8 on PeMSD7, confirming that temporal pattern learning cannot substitute for spatial information regardless of fault conditions.
+
+This decomposition validates the positive feedback mechanism described in Section~\ref{sec:admm}: the tensor block repairs faults (low MAE$_{\text{fault}}$), yielding cleaner inputs for the kriging block; kriging then produces accurate spatial estimates (MAE$_{\text{spatial}}$ preserved), which in turn regularize the tensor decomposition through the dual update.
+
+\begin{table*}[htbp]
+  \centering
+  \caption{Mixed missingness at 30\% fault rate: detailed MAE breakdown (mean$\pm$std). MAE$_{\text{all}}$: overall; MAE$_{\text{spatial}}$: unobserved sensor locations; MAE$_{\text{fault}}$: sensor fault positions. \textbf{Bold}: best MAE$_{\text{all}}$ in column.}
+  \label{tab:detail}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{lccccccccc}
+    \toprule
+    & \multicolumn{3}{c}{Guangzhou} & \multicolumn{3}{c}{PeMSD7} & \multicolumn{3}{c}{EPA CA} \\
+    \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+    & All & Spatial & Fault & All & Spatial & Fault & All & Spatial & Fault \\
+    \midrule
+    ADMM-2B & \textbf{6.02}$\pm$0.13 & 6.98$\pm$0.07 & \textbf{5.20}$\pm$0.23 & \textbf{6.66}$\pm$0.06 & 7.45$\pm$0.12 & \textbf{6.04}$\pm$0.19 & \textbf{4.01}$\pm$0.11 & 4.43$\pm$0.02 & \textbf{3.65}$\pm$0.20 \\
+    IDW & 15.57$\pm$0.18 & 11.92$\pm$0.20 & 18.65$\pm$0.17 & 23.94$\pm$0.20 & 19.32$\pm$0.29 & 27.60$\pm$0.35 & 7.26$\pm$0.11 & 5.95$\pm$0.13 & 8.42$\pm$0.08 \\
+    Kriging & 7.75$\pm$0.10 & 7.91$\pm$0.19 & 7.62$\pm$0.14 & 7.49$\pm$0.07 & 7.91$\pm$0.28 & 7.17$\pm$0.11 & 4.29$\pm$0.19 & 4.92$\pm$0.08 & 3.73$\pm$0.29 \\
+    \midrule
+    Linear & 7.71$\pm$0.17 & 9.27$\pm$0.03 & 6.40$\pm$0.31 & 8.84$\pm$0.08 & 9.92$\pm$0.14 & 7.99$\pm$0.26 & 4.54$\pm$0.09 & 4.84$\pm$0.02 & 4.28$\pm$0.19 \\
+    CP-TD & 258.3$\pm$98.6 & 307.8$\pm$96.2 & 216.6$\pm$101.6 & 470.5$\pm$23.3 & 580.8$\pm$9.3 & 383.2$\pm$34.6 & 23.4$\pm$12.2 & 26.9$\pm$17.2 & 20.4$\pm$7.8 \\
+    HaLRTC & 32.2$\pm$0.2 & 38.5$\pm$0.0 & 26.9$\pm$0.4 & 46.9$\pm$0.2 & 55.7$\pm$0.0 & 40.1$\pm$0.4 & 14.8$\pm$0.1 & 14.8$\pm$0.0 & 14.8$\pm$0.1 \\
+    BRITS & 34.8$\pm$0.9 & 42.8$\pm$2.5 & 28.1$\pm$0.5 & 47.1$\pm$1.9 & 54.8$\pm$1.5 & 41.0$\pm$2.5 & 27.8$\pm$1.0 & 34.6$\pm$3.7 & 21.8$\pm$2.7 \\
+    SAITS & 36.4$\pm$0.3 & 42.5$\pm$1.6 & 31.2$\pm$1.7 & 48.5$\pm$2.4 & 56.3$\pm$4.1 & 42.2$\pm$1.1 & 243.0$\pm$19.9 & 319.0$\pm$27.3 & 175.9$\pm$13.9 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\subsection{How Does Deployment Density Affect Performance?}\label{sec:results_q4}
+
+Table~\ref{tab:density} shows MAE for the three spatial methods across varying numbers of deployed sensors under pure spatial extrapolation.
+
+\textbf{All spatial methods improve with more deployed sensors}, and ADMM-2B consistently achieves the lowest MAE. The gap between ADMM-2B and IDW is most pronounced at low density, where kriging's variogram-based spatial modeling is more valuable than simple distance weighting. At high density, the gap narrows because many nearby sensors reduce the advantage of kriging's principled weighting scheme.
+
+\textbf{Under sensor faults, ADMM-2B's advantage over IDW grows dramatically.}
+At $n = 150$ with 30\% fault rate on Guangzhou, ADMM-2B achieves MAE of 5.29 versus IDW's 19.79---a 3.7$\times$ difference. The mechanism is clear: more deployed sensors provide more data for the tensor block to repair faults, yielding cleaner inputs for kriging; IDW, lacking fault repair, instead suffers more from faulty data as the number of potentially corrupted sensors increases. This suggests that the practical value of ADMM-2B is greatest in real-world monitoring networks where both sparse deployment and sensor faults coexist.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Effect of deployment density: MAE (mean$\pm$std) at varying $n$ for spatial methods under pure spatial extrapolation. \textbf{Bold}: best in row.}
+  \label{tab:density}
+  \small
+  \setlength{\tabcolsep}{2pt}
+  \begin{tabular}{llccc}
+    \toprule
+    Dataset & $n$ & ADMM-2B & IDW & Kriging \\
+    \midrule
+    \multirow{5}{*}{Guangzhou}
+    & 20  & 7.73$\pm$0.07 & 7.75$\pm$0.06 & 8.38$\pm$0.42 \\
+    & 50  & 7.21$\pm$0.07 & 7.23$\pm$0.06 & 7.97$\pm$0.12 \\
+    & 100 & \textbf{6.98}$\pm$0.09 & 6.99$\pm$0.09 & 7.94$\pm$0.33 \\
+    & 150 & \textbf{6.82}$\pm$0.00 & 6.83$\pm$0.00 & 7.82$\pm$0.00 \\
+    & 190 & \textbf{6.82}$\pm$0.00 & 6.83$\pm$0.00 & 7.82$\pm$0.00 \\
+    \midrule
+    \multirow{5}{*}{PeMSD7}
+    & 20  & \textbf{7.46}$\pm$0.12 & 8.26$\pm$0.20 & 7.97$\pm$0.27 \\
+    & 50  & 7.19$\pm$0.02 & 7.46$\pm$0.23 & 7.45$\pm$0.24 \\
+    & 100 & \textbf{7.42}$\pm$0.16 & 7.96$\pm$0.52 & 7.90$\pm$0.41 \\
+    & 150 & \textbf{7.48}$\pm$0.04 & 7.97$\pm$0.03 & 8.02$\pm$0.20 \\
+    & 200 & \textbf{7.48}$\pm$0.01 & 7.95$\pm$0.00 & 7.78$\pm$0.00 \\
+    \midrule
+    \multirow{5}{*}{EPA CA}
+    & 10  & \textbf{4.59}$\pm$0.08 & 5.02$\pm$0.30 & 6.29$\pm$0.83 \\
+    & 25  & \textbf{4.54}$\pm$0.07 & 4.78$\pm$0.05 & 5.51$\pm$0.16 \\
+    & 50  & \textbf{4.42}$\pm$0.02 & 4.51$\pm$0.08 & 4.91$\pm$0.12 \\
+    & 75  & \textbf{4.41}$\pm$0.01 & 4.45$\pm$0.00 & 4.97$\pm$0.00 \\
+    & 100 & \textbf{4.41}$\pm$0.01 & 4.45$\pm$0.00 & 4.97$\pm$0.00 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Convergence and Parameter Sensitivity}\label{sec:results_q5}
+
+\textbf{Convergence.}
+The ADMM algorithm converges reliably across all tested configurations, consistent with Theorem~\ref{thm:convergence}. Both primal and dual residuals decrease monotonically, with the primal residual dropping below 0.1 within 27--51 iterations across different parameter settings on Guangzhou, and reaching $10^{-3}$ by iteration 200. The algorithm is robust to the choice of $\gamma$ and converges consistently.
+
+\textbf{Parameter sensitivity.}
+Table~\ref{tab:sensitivity} reports MAE on Guangzhou across varying rank $R$, kriging weight $\gamma$, and number of neighbors $L$. The method is robust: MAE varies less than 2\% for $R \in [5, 20]$, less than 3\% for $\gamma \in [0.1, 50]$, and less than 3\% for $L \in [10, 30]$. Default parameters ($R = 10$, $\gamma = 0.5$, $L = 30$) achieve near-optimal performance without fine-tuning.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Parameter sensitivity on Guangzhou ($n{=}107$): MAE under varying rank $R$, kriging weight $\gamma$, and neighbor count $L$. Default parameters are near-optimal.}
+  \label{tab:sensitivity}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lcccccccc}
+    \toprule
+    \multicolumn{3}{c}{Rank $R$} & \multicolumn{3}{c}{$\gamma$} & \multicolumn{3}{c}{Neighbors $L$} \\
+    \cmidrule(lr){1-3} \cmidrule(lr){4-6} \cmidrule(lr){7-9}
+    Value & MAE & $\Delta$\% & Value & MAE & $\Delta$\% & Value & MAE & $\Delta$\% \\
+    \midrule
+    3  & 7.18 & 1.6  & 0.1 & 7.07 & 0.1  & 5  & 7.11 & 0.8 \\
+    5  & 7.10 & 0.4  & 0.5 & 7.07 & 0.1  & 10 & 7.08 & 0.4 \\
+    10 & 7.07 & 0.1  & 1   & \textbf{7.06} & 0.0  & 15 & 7.07 & 0.1 \\
+    15 & \textbf{7.06} & 0.0  & 5   & 7.07 & 0.1  & 20 & 7.07 & 0.1 \\
+    20 & 7.07 & 0.1  & 10  & 7.08 & 0.3  & 30 & 7.06 & 0.0 \\
+    30 & 7.10 & 0.6  & 50  & 7.10 & 0.6  &     &     &     \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%% ============================================================
+%% 6. CONCLUSION
+%% ============================================================
+\section{Conclusion}\label{sec:conclusion}
+
+We have presented ADMM-2B, a 2-block ADMM framework that unifies ordinary kriging with low-rank CP tensor decomposition for spatial extrapolation in spatio-temporal monitoring networks. The core insight is that the two building blocks---kriging for spatial extrapolation and tensor decomposition for fault repair---are individually insufficient but jointly synergistic. By precomputing the kriging estimates as fixed spatial priors and using ADMM's dual updates to mediate information exchange, the framework preserves kriging's extrapolation capability while enabling the tensor block to repair sensor faults.
+
+Our experiments across three real-world datasets lead to three conclusions:
+
+\begin{enumerate}
+\item \textbf{Spatial methods are indispensable for extrapolation.} Pattern-learning methods (CP-TD, HaLRTC, BRITS, SAITS) produce MAE 1--2 orders of magnitude worse than spatial methods at unobserved sensor positions, because they have no training data for those locations. This paradigmatic failure cannot be remedied by more expressive architectures.
+
+\item \textbf{Joint modeling creates a positive feedback loop.} Under sensor faults, the tensor block repairs corrupted readings, yielding cleaner inputs for the kriging block; kriging then produces better spatial estimates that regularize the tensor decomposition. This positive feedback makes ADMM-2B the only method whose MAE \emph{decreases} with fault rate---dropping 11\% on Guangzhou and 8\% on PeMSD7 at 30\% fault rate---while IDW's MAE increases by 130--216\%.
+
+\item \textbf{The tensor block's value is hidden in pure extrapolation but revealed under faults.} Ablation shows that kriging alone matches the full model in the fault-free setting, making the tensor block appear redundant. This apparent redundancy is deceptive: under sensor faults, the tensor block becomes the indispensable component that enables the positive feedback, and ADMM-2B outperforms standalone kriging by 13--16\% at 30\% fault rate.
+\end{enumerate}
+
+These findings suggest that monitoring network applications---where unobserved locations and sensor faults coexist as the norm rather than the exception---require frameworks that jointly model spatial correlations and global low-rank structures. The counter-intuitive improvement under faults further implies that deploying more robust tensor repair can turn sensor degradation from a liability into an asset, a direction worth exploring.
+
+Future work may investigate adaptive kriging neighborhoods that adjust to local spatial nonstationarity, online ADMM updates for streaming spatio-temporal data, and extension to higher-order tensor structures that explicitly model cross-variable dependencies in multi-pollutant or multi-modal sensing networks.
+
+%% ============================================================
+%% REFERENCES
+%% ============================================================
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

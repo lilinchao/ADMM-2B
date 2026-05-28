@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Ablation study (MAE, $n{=}100$, mean $\pm$ std). Each component of ADMM-2B is essential.}
+  \label{tab:ablation}
+  \begin{tabular}{lccc}
+    \toprule
+    Variant & Guangzhou & PeMSD7 & EPA CA \\
+    \midrule
+    ADMM-2B (full) & \textbf{6.98}$\pm$0.07 & \textbf{7.42}$\pm$0.13 & \textbf{4.41}$\pm$0.00 \\
+    Kriging only & \textbf{6.98}$\pm$0.07 & \textbf{7.42}$\pm$0.14 & \textbf{4.42}$\pm$0.01 \\
+    CP-TD only & 38.51$\pm$0.00 & 55.65$\pm$0.00 & 14.75$\pm$0.00 \\
+    ADMM w/o dual update & 7.07$\pm$0.10 & 7.97$\pm$0.13 & 4.55$\pm$0.10 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

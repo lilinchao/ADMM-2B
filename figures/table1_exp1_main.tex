@@ -1,0 +1,24 @@
+\begin{table*}[htbp]
+  \centering
+  \caption{Comprehensive comparison: pure spatial extrapolation (Exp1) and mixed missingness with sensor faults (Exp5). MAE (mean$\pm$std) at medium deployment density ($n{=}100$ for Guangzhou/PeMSD7, $n{=}50$ for EPA CA). \textbf{Bold}: best in column. $\Delta$: MAE change from 0\% to 30\% fault rate ($\downarrow$ = improvement). ADMM-2B is the only method whose MAE \emph{decreases} under sensor faults.}
+  \label{tab:main_results}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{lcccccccccccc}
+    \toprule
+    & \multicolumn{4}{c}{Guangzhou} & \multicolumn{4}{c}{PeMSD7} & \multicolumn{4}{c}{EPA CA} \\
+    \cmidrule(lr){2-5} \cmidrule(lr){6-9} \cmidrule(lr){10-13}
+    Method & Pure & Fault 0\% & Fault 30\% & $\Delta$ & Pure & Fault 0\% & Fault 30\% & $\Delta$ & Pure & Fault 0\% & Fault 30\% & $\Delta$ \\
+    \midrule
+    ADMM-2B & \textbf{6.98}$\pm$0.07 & 6.76$\pm$0.18 & 6.02$\pm$0.13 & $\downarrow$0.75 & \textbf{7.42}$\pm$0.13 & 7.22$\pm$0.08 & 6.66$\pm$0.06 & $\downarrow$0.56 & \textbf{4.42}$\pm$0.02 & 4.34$\pm$0.16 & 4.01$\pm$0.11 & $\downarrow$0.33 \\
+    IDW & 6.99$\pm$0.07 & 6.78$\pm$0.18 & 15.57$\pm$0.18 & $\uparrow$8.79 & 7.96$\pm$0.43 & 7.58$\pm$0.14 & 23.94$\pm$0.20 & $\uparrow$16.36 & 4.51$\pm$0.07 & 4.36$\pm$0.18 & 7.26$\pm$0.11 & $\uparrow$2.90 \\
+    Kriging & 7.94$\pm$0.27 & 7.72$\pm$0.22 & 7.75$\pm$0.10 & $\uparrow$0.03 & 7.90$\pm$0.34 & 7.48$\pm$0.06 & 7.49$\pm$0.07 & $\uparrow$0.01 & 4.91$\pm$0.10 & 4.74$\pm$0.26 & 4.29$\pm$0.19 & $\downarrow$0.45 \\
+    \midrule
+    Linear & 9.3$\pm$0.0 & 9.1$\pm$0.2 & 7.7$\pm$0.2 & $\downarrow$1.4 & 9.9$\pm$0.1 & 9.8$\pm$0.1 & 8.8$\pm$0.1 & $\downarrow$0.9 & 4.8$\pm$0.0 & 4.9$\pm$0.1 & 4.5$\pm$0.1 & $\downarrow$0.4 \\
+    CP-TD & 163.7$\pm$47.5 & 160.8$\pm$51.9 & 258.3$\pm$98.6 & $\uparrow$97.6 & 562.9$\pm$2.0 & 546.1$\pm$18.3 & 470.5$\pm$23.3 & $\downarrow$75.6 & 34.9$\pm$14.5 & 35.2$\pm$14.5 & 23.4$\pm$12.2 & $\downarrow$11.8 \\
+    HaLRTC & 38.5$\pm$0.0 & 38.6$\pm$0.3 & 32.2$\pm$0.2 & $\downarrow$6.4 & 55.7$\pm$0.0 & 55.9$\pm$0.3 & 46.9$\pm$0.2 & $\downarrow$8.9 & 14.8$\pm$0.0 & 14.8$\pm$0.1 & 14.8$\pm$0.0 & -0.0 \\
+    BRITS & 40.7$\pm$1.4 & 39.1$\pm$1.1 & 34.8$\pm$0.9 & $\downarrow$4.3 & 54.2$\pm$0.9 & 56.1$\pm$1.1 & 47.1$\pm$1.9 & $\downarrow$9.0 & 28.5$\pm$1.3 & 27.8$\pm$1.0 & 27.8$\pm$1.0 & -0.0 \\
+    SAITS & 45.1$\pm$1.6 & 45.5$\pm$3.7 & 36.4$\pm$0.3 & $\downarrow$9.1 & 58.7$\pm$1.2 & 57.0$\pm$1.4 & 48.4$\pm$2.4 & $\downarrow$8.6 & 267.3$\pm$16.8 & 241.6$\pm$14.6 & 243.0$\pm$19.9 & $\uparrow$1.5 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

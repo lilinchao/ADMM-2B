@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (too large for GitHub; see data/README.md for download instructions)
+data/tensor.mat
+data/PeMSD7/tensor.mat
+data/EPA_CA/tensor.mat
+data/external/STGCN_IJCAI-18/
+
+# Results (intermediate files kept locally)
+results/
+
+# Logs
+logs/
+
+# Old scripts not needed for reproduction
+_worker.py
+_analyze_sweep.py
+_verify_analytic.py
+_sweep_rank_beta.py
+_run_ablation.py
+_run_full_tensor_parallel.py
+_run_one_gamma.py
+_run_full_tensor_ablation.py
+_run_interp_baselines.py
+_run_gamma_rho_sweep.py
+_run_warmstart_ablation.py
+_worker_ft.py
+_run_one_rb.py
+_run_method_r.py
+_rerun_with_rank.py
+inspect_mat.py
+test_*.py
+gen_section_4_1.py
+generate_case_study.py
+plot_paper_figures.py
+run_comparison_denorm.py
+run_full_comparison.py
+run_hpo_idw_mode.py
+run_spatial_estimation.py
+run_spatial_estimation_v2.py
+run_parallel.py
+run_block_missing.py
+run_experiments.py
+summarize_results.py
+results_writing_plan.md
+paper.md
+refine-logs/
+
+# Old figures (paper now uses tables)
+figures/*.png
+figures/*.pdf
+!figures/*.tex
+
+# Old overleaf figures (not used in current paper)
+overleaf/figures/
+
+# LaTeX build artifacts
+overleaf/*.aux
+overleaf/*.bbl
+overleaf/*.blg
+overleaf/*.log
+overleaf/*.out
+overleaf/*.synctex.gz
+
+# Compressed archive
+overleaf.zip
+
+# Original PDF
+Spatial_and_temporal_kriging_informed_tensor_decomposition_for_missing_data_imputaion.pdf
+
+# Old source versions
+src/admm_joint_v4_fixed_gamma.py

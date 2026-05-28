@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Mixed missingness results at 30\% fault rate (MAE, mean $\pm$ std). MAE\textsubscript{spatial}: unobserved sensor locations; MAE\textsubscript{fault}: sensor fault positions.}
+  \label{tab:exp5_detail}
+  \small
+  \begin{tabular}{lccccccccc}
+    \toprule
+    & \multicolumn{3}{c}{Guangzhou} & \multicolumn{3}{c}{PeMSD7} & \multicolumn{3}{c}{EPA CA} \\
+    \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+    & All & Spatial & Fault & All & Spatial & Fault & All & Spatial & Fault \\
+    \midrule
+    ADMM-2B & \textbf{6.02}$\pm$0.13 & 6.98$\pm$0.07 & 5.20$\pm$0.23 & \textbf{6.66}$\pm$0.06 & 7.45$\pm$0.12 & 6.04$\pm$0.19 & \textbf{4.01}$\pm$0.11 & 4.43$\pm$0.02 & 3.65$\pm$0.20 \\
+    IDW & 15.57$\pm$0.18 & 11.92$\pm$0.20 & 18.65$\pm$0.17 & 23.94$\pm$0.20 & 19.32$\pm$0.29 & 27.60$\pm$0.35 & 7.26$\pm$0.11 & 5.95$\pm$0.13 & 8.42$\pm$0.08 \\
+    Kriging & 7.75$\pm$0.10 & 7.91$\pm$0.19 & 7.62$\pm$0.14 & 7.49$\pm$0.07 & 7.91$\pm$0.28 & 7.17$\pm$0.11 & 4.29$\pm$0.19 & 4.92$\pm$0.08 & 3.73$\pm$0.29 \\
+    Linear & 7.71$\pm$0.17 & 9.27$\pm$0.03 & 6.40$\pm$0.31 & 8.84$\pm$0.08 & 9.92$\pm$0.14 & 7.99$\pm$0.26 & 4.54$\pm$0.09 & 4.84$\pm$0.02 & 4.28$\pm$0.19 \\
+    CP-TD & 258.33$\pm$98.64 & 307.81$\pm$96.20 & 216.62$\pm$101.60 & 470.53$\pm$23.30 & 580.82$\pm$9.31 & 383.23$\pm$34.62 & 23.43$\pm$12.21 & 26.90$\pm$17.18 & 20.35$\pm$7.82 \\
+    HaLRTC & 32.19$\pm$0.23 & 38.51$\pm$0.00 & 26.86$\pm$0.43 & 46.94$\pm$0.22 & 55.65$\pm$0.00 & 40.05$\pm$0.40 & 14.75$\pm$0.05 & 14.75$\pm$0.00 & 14.76$\pm$0.09 \\
+    BRITS & 34.81$\pm$0.92 & 42.78$\pm$2.51 & 28.08$\pm$0.52 & 47.11$\pm$1.93 & 54.81$\pm$1.46 & 41.01$\pm$2.51 & 27.77$\pm$1.00 & 34.55$\pm$3.69 & 21.77$\pm$2.67 \\
+    SAITS & 36.38$\pm$0.25 & 42.52$\pm$1.58 & 31.21$\pm$1.68 & 48.45$\pm$2.37 & 56.34$\pm$4.08 & 42.20$\pm$1.06 & 243.04$\pm$19.94 & 319.01$\pm$27.29 & 175.89$\pm$13.93 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

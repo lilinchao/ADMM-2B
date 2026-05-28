@@ -1,0 +1,82 @@
+{
+  "06-037-1103": {
+    "lat": 34.06659,
+    "lon": -118.22688,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "1103"
+  },
+  "06-037-2005": {
+    "lat": 34.1326,
+    "lon": -118.1272,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "2005"
+  },
+  "06-037-1602": {
+    "lat": 34.01029,
+    "lon": -118.0685,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "1602"
+  },
+  "06-037-4008": {
+    "lat": 33.859662,
+    "lon": -118.200707,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "4008"
+  },
+  "06-037-4009": {
+    "lat": 33.793713,
+    "lon": -118.171019,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "4009"
+  },
+  "06-059-0007": {
+    "lat": 33.83062,
+    "lon": -117.93845,
+    "county": "Orange",
+    "state_code": "06",
+    "county_code": "059",
+    "site_number": "0007"
+  },
+  "06-111-2002": {
+    "lat": 34.276316,
+    "lon": -118.683685,
+    "county": "Ventura",
+    "state_code": "06",
+    "county_code": "111",
+    "site_number": "2002"
+  },
+  "06-071-0027": {
+    "lat": 34.030833,
+    "lon": -117.61722,
+    "county": "San Bernardino",
+    "state_code": "06",
+    "county_code": "071",
+    "site_number": "0027"
+  },
+  "06-037-1302": {
+    "lat": 33.901389,
+    "lon": -118.205,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "1302"
+  },
+  "06-037-1201": {
+    "lat": 34.19925,
+    "lon": -118.53276,
+    "county": "Los Angeles",
+    "state_code": "06",
+    "county_code": "037",
+    "site_number": "1201"
+  }
+}
