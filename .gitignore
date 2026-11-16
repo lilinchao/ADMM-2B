@@ -90,3 +90,15 @@ Spatial_and_temporal_kriging_informed_tensor_decomposition_for_missing_data_impu
 
 # Old source versions
 src/admm_joint_v4_fixed_gamma.py
+
+# Reproduction outputs and isolated local environments
+generated/
+reproduction_runs/
+.venv/
+.env
+.env.*
+*.pem
+*.key
+!tests/test_*.py
+!reproduction_data/results/
+!reproduction_data/results/**

@@ -1,135 +1,75 @@
-# ADMM-2B: Joint Kriging and Tensor Decomposition for Spatial Extrapolation
+# SCLT: Spatially Coupled Low-Rank Tensor Completion
 
-Official implementation of **"Where No Sensor Goes: Kriging-Informed Low-Rank Tensor Recovery for Unobserved Location Inference"**.
+Research code and recovered experiment artifacts for **Spatially Coupled Low-Rank Tensor Completion for Zero-Observation Spatio-Temporal Data Reconstruction**, by Linchao Li, Jiahan Huang, and Hanhao Li.
 
-## Overview
+The repository retains its historical name `ADMM-2B`. The current main implementation is called **SCLT-IDW**. Historical result keys `admm_2b` and `admm_idw` remain unchanged for traceability. Kriging is an auxiliary variant.
 
-ADMM-2B is a 2-block ADMM framework that unifies ordinary kriging with low-rank CP tensor decomposition for spatial extrapolation in spatio-temporal monitoring networks. The kriging block provides spatially informed estimates at unobserved locations, while the tensor block repairs sensor faults and enforces global low-rank consistency. The two blocks reinforce each other through dual updates, creating a positive feedback loop that makes the method uniquely robust to sensor faults.
+## Release Status
 
-## Project Structure
+**v0.2.0-rc.1 is a recovery/reproduction release candidate, not a certified end-to-end reproduction.** The original cloud server expired. The available core code, later experiment drivers, selected parameters, saved results and publication figures are preserved here. Original processed tensors, the historical environment lockfile and some per-seed sweep outputs were not recovered in this package. Read [the reproducibility audit](docs/REPRODUCIBILITY.md) before rerunning or interpreting the experiments.
 
-```
-├── src/                        # Core implementation
-│   ├── admm_joint.py           # ADMM-2B and 3-block ADMM solvers
-│   ├── kriging.py              # Ordinary kriging with variogram fitting
-│   ├── cp_als.py               # CP tensor decomposition via ALS
-│   ├── halrtc.py               # HaLRTC baseline
-│   ├── interpolation_baselines.py  # IDW, linear interpolation
-│   ├── data_loader.py          # Tensor data loading
-│   ├── dataset_config.py       # Dataset configuration (Guangzhou, PeMSD7, EPA CA)
-│   ├── data_split.py           # Train/test split utilities
-│   ├── metrics.py              # MAE, RMSE evaluation
-│   ├── hpo.py                  # Hyperparameter optimization
-│   ├── two_stage.py            # Two-stage baseline
-│   └── baselines/
-│       └── brits.py            # BRITS and SAITS deep learning baselines
-├── run_experiment1.py          # Exp 1: Pure spatial extrapolation benchmark
-├── run_experiment2.py          # Exp 2: Ablation study
-├── run_experiment3.py          # Exp 3: Parameter sensitivity
-├── run_experiment4.py          # Exp 4: Convergence analysis
-├── run_experiment5.py          # Exp 5: Mixed missingness (spatial + faults)
-├── run_hpo.py                  # Hyperparameter optimization runner
-├── run_all_experiments.sh      # Master script to reproduce all experiments
-├── data/                       # Datasets (see data/README.md for download)
-│   ├── tensor.mat              # Guangzhou traffic tensor
-│   ├── PeMSD7/                 # PeMSD7 traffic data
-│   ├── EPA_CA/                 # EPA CA air quality data
-│   └── external/               # Data download/processing scripts
-├── results/                    # Experiment results (JSON)
-├── overleaf/                   # LaTeX paper source
-└── figures/                    # Table LaTeX files
-```
+Two separate workflows are provided:
 
-## Setup
+1. **Saved-result reconstruction:** verify checksums, export numerical tables and redraw six experimental figures. No model is fitted.
+2. **Fresh experiments:** provide processed tensors in an isolated Linux cloud environment, review historical protocol caveats and explicitly launch the cloud runner. This workflow has not been revalidated after the server expired.
 
-### 1. Install Dependencies
+## Saved-Result Reproduction
+
+Use Python 3.10 or newer in an isolated environment, from the repository root:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements-reproduction.txt
+python reproduction/reproduce.py verify
+python reproduction/reproduce.py tables
+python reproduction/reproduce.py figures
 ```
 
-PyTorch with CUDA is recommended for the deep learning baselines (BRITS, SAITS). CPU-only PyTorch also works.
+Outputs go to `generated/`, never overwrite archived inputs, and are excluded from Git. Times New Roman is used when legally installed. Otherwise the script warns and uses STIXGeneral; numeric values remain unchanged. Use `figures --font-dir /path/to/fonts` to specify installed Times New Roman files. Fonts are not redistributed.
 
-### 2. Prepare Data
+The original framework is preserved byte-for-byte; the rejected redrawn framework is not used. Submitted table snippets are in `publication/tables/`. Regenerated numerical tables include a provenance report identifying unavailable source rows.
 
-Follow the instructions in [`data/README.md`](data/README.md) to download the three datasets. At minimum, you need the `.mat` tensor files:
+## Cloud Experiments
 
-- `data/tensor.mat` (Guangzhou)
-- `data/PeMSD7/tensor.mat` (PeMSD7)
-- `data/EPA_CA/tensor.mat` (EPA CA)
-
-## Reproducing Results
-
-### Quick Reproduction (All Experiments)
+Read [data preparation](data/README.md) and [protocol caveats](docs/REPRODUCIBILITY.md) first. The commands above do not download datasets or launch experiments.
 
 ```bash
-bash run_all_experiments.sh
+python -m pip install -r requirements-core.txt
+# Also install requirements.txt for the legacy BRITS/SAITS benchmark group.
+python reproduction/reproduce.py plan
+python reproduction/reproduce.py preflight --data-dir /path/to/prepared/data
+python reproduction/reproduce.py cloud-run \
+  --data-dir /path/to/prepared/data \
+  --output-dir /path/to/new-isolated-run \
+  --workers 2 --blas-threads 1 \
+  --confirm-cloud --acknowledge-legacy-protocol
 ```
 
-This runs all five experiments sequentially (HPO → Exp 1-5). Total runtime is approximately 4-8 hours depending on hardware.
+The output directory must not already exist. Each launch copies code and inputs into a new isolated directory, restores selected parameter caches, records the environment, and writes logs and a job-status report. Do not use another project's directory. Workers multiply memory demand; use one worker for runtime/memory measurement.
 
-### Individual Experiments
+Select experiment groups with `--groups zero holdouts faults density ablation scalability sensitivity timeseries`. Select datasets with `--datasets guangzhou pemsd7 epa_ca`. The main plan excludes two-stage and auxiliary Kriging-coupled comparisons; historical functions remain for traceability.
 
-```bash
-# Step 1: Hyperparameter optimization (required before experiments)
-python run_hpo.py --max-iter 200 --cache-dir results/hpo_cache
+## Contents
 
-# Experiment 1: Pure spatial extrapolation
-python run_experiment1.py --deploy-numbers 20 50 100 150 190 --n-seeds 3 --max-iter 200 \
-    --hpo-cache results/hpo_cache --output results/experiment1.json
+| Path | Purpose |
+|---|---|
+| `src/` | Existing ADMM, CP, interpolation, splitting and baseline code |
+| `run_section_5_*.py` | Recovered holdout, corruption and ablation drivers |
+| `run_spatial_prior_fault_experiment.py` | Density and flagged-rate experiments |
+| `run_tkde_extra_experiments.py` | Scalability/sensitivity driver; historical name retained |
+| `generate_zero_observation_timeseries_detail.py` | Refit and select illustrative time-series cases on the cloud |
+| `configs/paper_parameters.json` | Selected parameters recovered from result metadata |
+| `reproduction/` | Archive checks, table export, plots and isolated cloud runner |
+| `reproduction_data/` | Recovered results, not raw training datasets |
+| `paper_results/` | Previously published historical outputs |
+| `publication/` | Current seven figures and four submitted table snippets |
+| `docs/` | Provenance, limitations and validation record |
 
-# Experiment 2: Ablation study
-python run_experiment2.py --deploy-numbers 20 50 100 150 190 --n-seeds 3 --max-iter 200 \
-    --hpo-cache results/hpo_cache --output results/experiment2.json
+## Interpretation
 
-# Experiment 3: Parameter sensitivity
-python run_experiment3.py --n-deploy 100 --n-seeds 3 --max-iter 200 \
-    --hpo-cache results/hpo_cache --output results/experiment3.json
+SCLT combines spatial information for locations with no observations and low-rank structure for repairing monitored entries. The evidence is conditional: it does not establish universal superiority, anomaly detection, or guaranteed success for large contiguous outages. Zero-observation and flagged-entry errors must be evaluated separately.
 
-# Experiment 4: Convergence
-python run_experiment4.py --deploy-numbers 50 100 150 --gammas 0.5 1.0 5.0 --max-iter 200 \
-    --output results/experiment4.json
+## Citation and Contact
 
-# Experiment 5: Mixed missingness (spatial extrapolation + sensor faults)
-python run_experiment5.py --deploy-numbers 100 --fault-rates 0 0.05 0.1 0.2 0.3 \
-    --n-seeds 3 --max-iter 200 --hpo-cache results/hpo_cache --output results/experiment5.json
-```
+See [CITATION.cff](CITATION.cff). No publication DOI is claimed. Corresponding author: Linchao Li, `lilinchao@szu.edu.cn`.
 
-### Per-Dataset Experiments
-
-Each experiment script supports a `--dataset` flag:
-
-```bash
-python run_experiment1.py --dataset guangzhou --deploy-numbers 100 --n-seeds 3 --max-iter 200
-python run_experiment1.py --dataset pemsd7   --deploy-numbers 100 --n-seeds 3 --max-iter 200
-python run_experiment1.py --dataset epa_ca   --deploy-numbers 50  --n-seeds 3 --max-iter 200
-```
-
-## Key Results
-
-| Method | Guangzhou MAE | PeMSD7 MAE | EPA CA MAE |
-|--------|:---:|:---:|:---:|
-| **ADMM-2B** | **6.98** | **7.42** | **4.42** |
-| IDW | 6.99 | 7.96 | 4.51 |
-| Kriging | 7.94 | 7.90 | 4.91 |
-| CP-TD | 163.7 | 562.9 | 34.9 |
-| HaLRTC | 38.5 | 55.7 | 14.8 |
-| BRITS | 40.7 | 54.2 | 28.5 |
-| SAITS | 45.1 | 58.7 | 267.3 |
-
-At 30% sensor fault rate, ADMM-2B is the **only method whose MAE decreases** (−11% on Guangzhou, −8% on PeMSD7), while IDW's MAE increases by 130–216%.
-
-## Citation
-
-```bibtex
-@article{admm2b2026,
-  title={Where No Sensor Goes: Kriging-Informed Low-Rank Tensor Recovery for Unobserved Location Inference},
-  author={},
-  journal={IEEE Transactions on Knowledge and Data Engineering},
-  year={2026}
-}
-```
-
-## License
-
-This project is released under the MIT License.
+This release introduces no new software or dataset license. Preserve existing third-party terms and seek author clarification where no license is specified.

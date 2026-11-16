@@ -1,0 +1,352 @@
+{
+  "archive_date": "2026-11-16",
+  "upstream_commit": "307b6ba",
+  "status": "recovery release candidate; no full cloud rerun",
+  "files": {
+    "reproduction_data/results/section_5_ablation/epa_ca_admm_cp_only.json": {
+      "sha256": "5120a067f767b2e6853b6cafdffb21670dbf4d2f8ae0792b776d57e347ca21a3",
+      "bytes": 4639
+    },
+    "reproduction_data/results/section_5_ablation/guangzhou_admm_cp_only.json": {
+      "sha256": "6c8fb758917529340d1076ca66b70a7cfba5c98da0afa7c59e7c6032f3414a62",
+      "bytes": 4625
+    },
+    "reproduction_data/results/section_5_ablation/pemsd7_admm_cp_only.json": {
+      "sha256": "2d473cbb31214124bccbee14fce68e1522818e384d64229f3796f95f7fd6701c",
+      "bytes": 4588
+    },
+    "reproduction_data/results/section_5_ablation/section_5_ablation_runtime_summary.csv": {
+      "sha256": "b2baa114776605b7abc9b6c1767b3e097d00e9f01bbedcb388ef9d51fd7fe9a6",
+      "bytes": 6459
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_burst.json": {
+      "sha256": "cf7d7ee22ae04681cb472e07c8fa1c8b9713d101fdb8af8812490f660712cc7a",
+      "bytes": 22969
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_high_value.json": {
+      "sha256": "b6f9f7a52c9ae2fd916622cc803f8b58354db34c0f98ccf56c12c6cfdfe2842c",
+      "bytes": 23198
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_mask_fn05.json": {
+      "sha256": "0ca750adbfa853d4127a8e37faedd8f668b431c37752371ccddd0cd8fc3e6f28",
+      "bytes": 23958
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_mask_fn10.json": {
+      "sha256": "0bdba33ca07c8d6d078dc942527a5de552b4c09f6505a6b7dd3b5dd586471233",
+      "bytes": 23934
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_mask_fn20.json": {
+      "sha256": "e204086f5eb2e725439ac6542dadf216e3a8f43df2f916a3d1dae27629d8bac1",
+      "bytes": 23942
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_mask_fp10.json": {
+      "sha256": "2830b8320b9aad48f049b9f532a7d3904d2e9d1a25ba0d33c31cb33f9d183147",
+      "bytes": 23941
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_mask_perfect.json": {
+      "sha256": "81b77c6196e1b916021e8e7c4bd69992a7419a702b542a80d8044f4453cd0aa4",
+      "bytes": 23246
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_sensor_outage.json": {
+      "sha256": "b8c69fe9b8df0c9ce3c2a2e4a43fbea915424c52495e3bc4e808b855c65d19f4",
+      "bytes": 23291
+    },
+    "reproduction_data/results/section_5_fault_stress/epa_ca_spatial_cluster.json": {
+      "sha256": "c6e139bfe53cf8d7b588be5f4d808f611a14c0d807e07e039e8e4cfc109c1051",
+      "bytes": 23364
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_burst.json": {
+      "sha256": "6d3810c49103cb318801401190504576853a46648465adb741147f5d1d7ba966",
+      "bytes": 23001
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_high_value.json": {
+      "sha256": "44176c7f29d89bbb55b46af55ef593a1c5206cb46ce4c7c2d581a1c199d9dbfc",
+      "bytes": 23257
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_mask_fn05.json": {
+      "sha256": "9c9072ce5bf48a92b0f51462ea0ccc3f39957942372152f59052f654611217dc",
+      "bytes": 24032
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_mask_fn10.json": {
+      "sha256": "a0fc5429f5ab83e6e584853690cb981730d712edbbe07866a5580d8c116c02d9",
+      "bytes": 24026
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_mask_fn20.json": {
+      "sha256": "5422e88430426b560f7dd6d02d237f85e747ad58e22d2015173f913ede3fd2bf",
+      "bytes": 24029
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_mask_fp10.json": {
+      "sha256": "1f5be34e7667e0abd0b81b06cdfc9d4ffa2a92176cc1cb8b321e1f8f89a6965f",
+      "bytes": 24009
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_mask_perfect.json": {
+      "sha256": "08c8725f3fa53bee1c6329eebf8409360ad34831ca8e6ad63a415762eb9d33e9",
+      "bytes": 23302
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_sensor_outage.json": {
+      "sha256": "59658756c5f607801a195f0531bbd858587a4b06c64f4bfa981dabeb088fc14c",
+      "bytes": 23356
+    },
+    "reproduction_data/results/section_5_fault_stress/guangzhou_spatial_cluster.json": {
+      "sha256": "18d75b5ed1b072265225478ddacb6ffa81c5d28ec3172a237eb8fde7c0b64339",
+      "bytes": 23412
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_burst.json": {
+      "sha256": "34c4cc6548b1b059efbc7c1a81a672453b3eae400ad06d1c6c2247f3b781f681",
+      "bytes": 22963
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_high_value.json": {
+      "sha256": "c90b6bec8484ed1060b8872d6dd80876194f64a1c4deb739d6e35f89d2435323",
+      "bytes": 23158
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_mask_fn05.json": {
+      "sha256": "48a48ce5027bcbfd520dc9e1546137337e0c5b6b1c09ffcc98685b545340b4f3",
+      "bytes": 23941
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_mask_fn10.json": {
+      "sha256": "bd33767980333a627898e1a84e7eeaaff3526985d47588948385317a118c2996",
+      "bytes": 23969
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_mask_fn20.json": {
+      "sha256": "4309cc38296046805f8a9a000ca5bebc59ce9dd973706fced09c3eeb1537254d",
+      "bytes": 23985
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_mask_fp10.json": {
+      "sha256": "d11f958ab4ebb8697f7cf4fad3f3d97eed273b9c1375f6ba034739f49508a5bb",
+      "bytes": 23975
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_mask_perfect.json": {
+      "sha256": "b86cba3bd7b0f59722e6294e6b5cdbfa9058cea9ae66e7f9f4f1d1a7c29fbeb4",
+      "bytes": 23268
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_sensor_outage.json": {
+      "sha256": "d1e000fe9f9a66707669b2901b3b888091e091a324ef6a9001125daedecd5436",
+      "bytes": 23312
+    },
+    "reproduction_data/results/section_5_fault_stress/pemsd7_spatial_cluster.json": {
+      "sha256": "fc9c94ff5765ba6426ebcef10e3c86017387dde9a36797b80fb3f5e58336aa3a",
+      "bytes": 23386
+    },
+    "reproduction_data/results/section_5_fault_stress/section_5_fault_stress_summary.csv": {
+      "sha256": "1c204601f94df408970a748bc67b2d565f1455bc9919589d8a5873b8b8c51096",
+      "bytes": 34495
+    },
+    "reproduction_data/results/section_5_q1_strengthening/epa_ca_cluster.json": {
+      "sha256": "2489122dd248e2455a1176772dda93c41aa3233b98fd1b2fde9534b72c133342",
+      "bytes": 357693
+    },
+    "reproduction_data/results/section_5_q1_strengthening/epa_ca_random.json": {
+      "sha256": "84862daa18a625d09fa6e558855af7d85b7c205e276e4ad8429a11e526ece59a",
+      "bytes": 356315
+    },
+    "reproduction_data/results/section_5_q1_strengthening/guangzhou_cluster.json": {
+      "sha256": "99d56208b308fb516d31a7cad0685dae10968bae2c89078f30ff124f7370be32",
+      "bytes": 755773
+    },
+    "reproduction_data/results/section_5_q1_strengthening/guangzhou_random.json": {
+      "sha256": "a85dcaf3fcdfeae56e4b3a7761645195e76ce5857f11e55d62593831b8726316",
+      "bytes": 753888
+    },
+    "reproduction_data/results/section_5_q1_strengthening/pemsd7_cluster.json": {
+      "sha256": "e95ec585a20df128376332b9309c0c947cdf9f93bc40fe80055563451afed3b9",
+      "bytes": 794783
+    },
+    "reproduction_data/results/section_5_q1_strengthening/pemsd7_random.json": {
+      "sha256": "740a8e9a8a4f98c388f2a77a72d1de66bfe5b45b857bd595b9b6212788edb5e8",
+      "bytes": 791196
+    },
+    "reproduction_data/results/section_5_q1_strengthening/section_5_q1_distance_bins.csv": {
+      "sha256": "199bb0efd98e103e4d5b5dd3d6be521a9668ed01b50271960d49654c6c50453f",
+      "bytes": 4182
+    },
+    "reproduction_data/results/section_5_q1_strengthening/section_5_q1_significance.csv": {
+      "sha256": "856c7f277ec2155fa111e6a9e34f9b2b4abf71ef932322cdb16d0e7952562945",
+      "bytes": 2683
+    },
+    "reproduction_data/results/section_5_q1_strengthening/section_5_q1_strengthening_summary.csv": {
+      "sha256": "cf24b2a9e335586313918f51e2c09dad849e1585bcf1b20c2604ebabd6139f31",
+      "bytes": 2974
+    },
+    "reproduction_data/results/tkde_extra/scalability.json": {
+      "sha256": "3a91977aa9be9a1ef11aa57af86ba8f9d52f398238172bfb744924e64699a656",
+      "bytes": 8837
+    },
+    "reproduction_data/results/tkde_extra/sensitivity.json": {
+      "sha256": "380917a5e760b67f5351bf5abb3c13802ca127418957b1430ed53b7dcccc30c3",
+      "bytes": 50314
+    },
+    "reproduction_data/results/zero_observation_timeseries_detail/pemsd7_full_sensor_series.csv": {
+      "sha256": "3e75983f0cacb682b0f22879b6fb08fda09c716672f435c01cb4e8897b362d7e",
+      "bytes": 737154
+    },
+    "reproduction_data/results/zero_observation_timeseries_detail/pemsd7_meta.json": {
+      "sha256": "8503a5458fa995e24abfa90c63e4582f3679644a3be41af46fecfb67e38812ad",
+      "bytes": 4364
+    },
+    "reproduction_data/results/zero_observation_timeseries_detail/pemsd7_series.csv": {
+      "sha256": "7859c7860f5257489e66e97e9509f4dfcf9a461ad18918b26a9f2518932ef121",
+      "bytes": 120662
+    },
+    "reproduction_data/section_5_masked_idw_sweep/epa_ca_idw_masked_density_fault.json": {
+      "sha256": "1f64da4e5c61c07cdc32690daad743e6e364d5d834433181ec6ac90710c563d5",
+      "bytes": 68602
+    },
+    "reproduction_data/section_5_masked_idw_sweep/guangzhou_idw_masked_density_fault.json": {
+      "sha256": "999a109f4f69bbfa50bc3674550629876d29873becf209f44ffee9d8cc201aff",
+      "bytes": 68406
+    },
+    "reproduction_data/section_5_masked_idw_sweep/pemsd7_idw_masked_density_fault.json": {
+      "sha256": "876dae7ad89121887d3c2c3aa1ba1f09560d1ab622980de8b150ebe094408aed",
+      "bytes": 68649
+    },
+    "reproduction_data/section_5_2_dense_fault_rate_summary.csv": {
+      "sha256": "c127bcb3de8a2323eef925a8817b44a94868b973c2b67aed08042439d167aac4",
+      "bytes": 23273
+    },
+    "reproduction_data/section_5_2_fault_robustness_summary.csv": {
+      "sha256": "9bc6c925a77f4351e12d6926857e2202319b97e0a969262d89706dd77760c995",
+      "bytes": 9357
+    },
+    "reproduction_data/section_5_3_fault_robustness_slope.csv": {
+      "sha256": "70af8514f64358816f523e98ef7ed163d0fd83cd7b300785cdaff7e995e3f897",
+      "bytes": 1399
+    },
+    "reproduction_data/section_5_3_relative_gain_summary.csv": {
+      "sha256": "1efa0d10373619fde34001207ef91b8e486c7d187395ffa0469031320caba534",
+      "bytes": 4826
+    },
+    "reproduction_data/section_5_4_density_fault_gain_summary.csv": {
+      "sha256": "8aa524db090e4fb902a161c192f8d0d704f97b6955b0cf46ccba6dad739744be",
+      "bytes": 9526
+    },
+    "reproduction_data/section_5_4_density_fault_summary.csv": {
+      "sha256": "81c7550f148bdda91fa7d538e1b9ee3b31f5ab49fa82f08f09af8702c1adc34c",
+      "bytes": 65903
+    },
+    "reproduction_data/section_5_4_density_fault_table.csv": {
+      "sha256": "c40f7e4142b5e212dc5203200aa1ed2827a08057895c6dd12aa91e2c6d882e94",
+      "bytes": 1313
+    },
+    "reproduction_data/section_5_revised_masked_summary.csv": {
+      "sha256": "dfb921ad1cf5c28dcf675d22be696fa7491edcff6eea4b35c9016c7ed8030371",
+      "bytes": 77572
+    },
+    "reproduction_data/section_5_revised_spatial_gain_masked.csv": {
+      "sha256": "6473e8e724ae156b3064a201fe52e1cc5ef2b5ad8ea74441aa2e2f8b8fb45ee1",
+      "bytes": 10291
+    },
+    "reproduction_data/section_5_runtime_convergence_summary.csv": {
+      "sha256": "8ae3a0eac493125a601572e94432111184bbc93b44a7f7e10b29a85d89ef534c",
+      "bytes": 2078
+    },
+    "publication/figures/SCLT_Framework_HighQuality.pdf": {
+      "sha256": "0e6fc29421f9ffb7099c2dc285c4a0a20600e68ed4f79cd05b0bf9cfe69d3d61",
+      "bytes": 1857423
+    },
+    "publication/figures/figure_density_sweep_fault30_spatial_mae_masked.pdf": {
+      "sha256": "4d6e5809159ed04f541a4b0b4727b89c144149fa954ba5691860a69f984470e2",
+      "bytes": 56304
+    },
+    "publication/figures/figure_mask_noise_degradation.pdf": {
+      "sha256": "885d681c676bbdffa6e7bca347f81d8c8e606022ee16468a93b28a563853b846",
+      "bytes": 54992
+    },
+    "publication/figures/figure_structured_fault_gain.pdf": {
+      "sha256": "c4be9aba30a42338b4065468fd74be206fb13103b5c969a80379a9acd6582731",
+      "bytes": 40312
+    },
+    "publication/figures/figure_tkde_parameter_sensitivity.pdf": {
+      "sha256": "7692f082a87cde771f0bb8b3ff9751fe7573cb36a256bf3a77ac1d622f631593",
+      "bytes": 52709
+    },
+    "publication/figures/figure_tkde_scalability_runtime.pdf": {
+      "sha256": "768f5e460126d0fe4088bbb5219d5fb666bca7b96238d1b9f5076625abb2a41c",
+      "bytes": 32324
+    },
+    "publication/figures/figure_zero_observation_timeseries_detail.pdf": {
+      "sha256": "2e8c3ec4c280353b6e50a0f57d2fa8e63e48d7b65dc0485f1f8d4a541f68481a",
+      "bytes": 135862
+    },
+    "publication/tables/table_01_submitted.tex": {
+      "sha256": "d9da257ce10273cd1d020c2cba5799ad143b3b503af87437e3f7efcb6c98a457",
+      "bytes": 602,
+      "origin": "Extracted verbatim from the current manuscript; not independently rerun."
+    },
+    "publication/tables/table_02_submitted.tex": {
+      "sha256": "1afadac84327a364214fa92d48f3d4382c3eeb01a8641fcf5f45055f5412ccb6",
+      "bytes": 1680,
+      "origin": "Extracted verbatim from the current manuscript; not independently rerun."
+    },
+    "publication/tables/table_03_submitted.tex": {
+      "sha256": "f6d6fdd047ff729c0de12903fa2b962ed4f005c973995c78b9de03eb1359d290",
+      "bytes": 1811,
+      "origin": "Extracted verbatim from the current manuscript; not independently rerun."
+    },
+    "publication/tables/table_04_submitted.tex": {
+      "sha256": "df53d5e09d6a01622608044abe819e59a62f323ea1f865c19c430fd5f6154ba3",
+      "bytes": 1185,
+      "origin": "Extracted verbatim from the current manuscript; not independently rerun."
+    },
+    "paper_results/experiment1_epa_ca.json": {
+      "sha256": "4e9606584b9e443e85f8007fc88942f96b6496cbf76a027191fae6cfb43125c7",
+      "bytes": 22257
+    },
+    "paper_results/experiment1_guangzhou.json": {
+      "sha256": "474256587244184018fc9250538759ee65212c86fda87587e0603f8b577c72a8",
+      "bytes": 24279
+    },
+    "paper_results/experiment1_pemsd7.json": {
+      "sha256": "d96442787c18b2b37e064a42ae294af2e4d806c16e907e58fb2c0814a6acddf3",
+      "bytes": 24545
+    },
+    "paper_results/experiment2_epa_ca.json": {
+      "sha256": "d550ccfca0ac1818ab5a8d954a437b5f3f835f41ba6cc9bfaaeef86f60f6c55f",
+      "bytes": 10303
+    },
+    "paper_results/experiment2_guangzhou.json": {
+      "sha256": "5c64aa663847253041d8488b12acc32814dbc444efe3022151e27a2e1a2d3044",
+      "bytes": 10280
+    },
+    "paper_results/experiment2_pemsd7.json": {
+      "sha256": "8e4b535dcbfa3457c3efc63815fb0c75dde652c15b67c62a7a2188de51f637da",
+      "bytes": 10279
+    },
+    "paper_results/experiment3_epa_ca.json": {
+      "sha256": "707bee823464cf106794a9f801021711ff96548ef903484bd11a200b888964ae",
+      "bytes": 14114
+    },
+    "paper_results/experiment3_guangzhou.json": {
+      "sha256": "b47a38941709667d3c0b8bb283cd5c440b420348feb1d841c0e553047de4b379",
+      "bytes": 14080
+    },
+    "paper_results/experiment3_pemsd7.json": {
+      "sha256": "88456d1b6d6bc0186929b5c4064719a9ea6825c4f5c5675e511d0bab3e4f0cdf",
+      "bytes": 14105
+    },
+    "paper_results/experiment4_epa_ca.json": {
+      "sha256": "65a98ae9dd0957db459135f6ffcd044b8154c79900115caeaf7325a6b7a59095",
+      "bytes": 168130
+    },
+    "paper_results/experiment4_guangzhou.json": {
+      "sha256": "f38a273f702b3be03d3a8d18516550969f45453bf9639ea0839f863d6624a35c",
+      "bytes": 180510
+    },
+    "paper_results/experiment4_pemsd7.json": {
+      "sha256": "c88c1439caca7a6860631de0ba53c57ce021c88ce7c72a3f6342e2e3250b2f57",
+      "bytes": 177054
+    },
+    "paper_results/experiment5_epa_ca.json": {
+      "sha256": "b708d3571b8b8e79737ccd6a4760b5f02a6f479a72731fe91f2c1d2c82c4a17c",
+      "bytes": 174908
+    },
+    "paper_results/experiment5_guangzhou.json": {
+      "sha256": "0ada6e0e5ee861c1977f514093e01262dc96796caee688aa6e5769ef395ed89a",
+      "bytes": 237109
+    },
+    "paper_results/experiment5_pemsd7.json": {
+      "sha256": "77506c4a19f28280f2fdbad6e0ff65e4359591b465d87d7af3c97fecfd3e1c33",
+      "bytes": 238907
+    }
+  },
+  "text_transport": "UTF-8 text archive files normalized to LF; numeric content unchanged. Enforced by .gitattributes."
+}

@@ -1,0 +1,180 @@
+{
+  "results": [
+    {
+      "dataset": "guangzhou",
+      "scenario": "mask_perfect",
+      "seed": 0,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 114.72135829925537,
+      "mae_all": 27.14083961966379,
+      "rmse_all": 33.36894111830326,
+      "mae_spatial": 38.514686521658696,
+      "rmse_spatial": 40.33130106656057,
+      "mae_fault": 2.8747912098881248,
+      "rmse_fault": 4.327921013754173,
+      "n_true_fault": 263500,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 31.263709623559937,
+      "dual_res_final": 0.04585220838192839
+    },
+    {
+      "dataset": "guangzhou",
+      "scenario": "mask_perfect",
+      "seed": 1,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 114.26880121231079,
+      "mae_all": 27.09561207533183,
+      "rmse_all": 33.35964182033938,
+      "mae_spatial": 38.514686521658696,
+      "rmse_spatial": 40.33130106656057,
+      "mae_fault": 2.7330709142758383,
+      "rmse_fault": 4.097130178599875,
+      "n_true_fault": 263500,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 34.99896997682747,
+      "dual_res_final": 0.04672684759679706
+    },
+    {
+      "dataset": "guangzhou",
+      "scenario": "mask_perfect",
+      "seed": 2,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 113.34760475158691,
+      "mae_all": 27.11059382442703,
+      "rmse_all": 33.36266899056745,
+      "mae_spatial": 38.514686521658696,
+      "rmse_spatial": 40.33130106656057,
+      "mae_fault": 2.780016153994746,
+      "rmse_fault": 4.173652887230237,
+      "n_true_fault": 263500,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 28.539745495251264,
+      "dual_res_final": 0.011235865055581235
+    },
+    {
+      "dataset": "guangzhou",
+      "scenario": "mask_perfect",
+      "seed": 3,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 116.76586723327637,
+      "mae_all": 27.08056828986843,
+      "rmse_all": 33.35940010682098,
+      "mae_spatial": 38.514686521658696,
+      "rmse_spatial": 40.33130106656057,
+      "mae_fault": 2.685931283891489,
+      "rmse_fault": 4.0909585861254225,
+      "n_true_fault": 263500,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 22.43974295253033,
+      "dual_res_final": 0.013966210979816164
+    },
+    {
+      "dataset": "guangzhou",
+      "scenario": "mask_perfect",
+      "seed": 4,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 116.95664286613464,
+      "mae_all": 27.136600560756197,
+      "rmse_all": 33.36787931387161,
+      "mae_spatial": 38.514686521658696,
+      "rmse_spatial": 40.33130106656057,
+      "mae_fault": 2.861508138910555,
+      "rmse_fault": 4.302192031811407,
+      "n_true_fault": 263500,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 57.978332072931146,
+      "dual_res_final": 0.044800907018354034
+    }
+  ],
+  "experiment": "section_5_cp_only_ablation",
+  "dataset": "guangzhou",
+  "shape": [
+    214,
+    61,
+    144
+  ],
+  "scenario": "mask_perfect",
+  "fault_rate": 0.3,
+  "n_deploy": 100,
+  "seed_start": 0,
+  "n_seeds": 5,
+  "method": "admm_cp_only",
+  "label": "ADMM-CP only",
+  "max_iter": 200,
+  "params": {
+    "rank": 15,
+    "gamma": 0.0,
+    "n_neighbors": 30,
+    "beta": 0.1,
+    "idw_power": 1
+  },
+  "variogram_params": {
+    "nugget": 0.0031603025366190554,
+    "sill": 0.009302956679121266,
+    "range_": 0.29767116024959556,
+    "model": "exponential",
+    "rmse": 0.0010650993996086631
+  },
+  "summary": {
+    "mae_all": {
+      "mean": 27.112842874009452,
+      "std": 0.025941534627691956,
+      "n": 5
+    },
+    "rmse_all": {
+      "mean": 33.36370626998053,
+      "std": 0.004498796308510144,
+      "n": 5
+    },
+    "mae_spatial": {
+      "mean": 38.514686521658696,
+      "std": 0.0,
+      "n": 5
+    },
+    "rmse_spatial": {
+      "mean": 40.33130106656057,
+      "std": 0.0,
+      "n": 5
+    },
+    "mae_fault": {
+      "mean": 2.7870635401921504,
+      "std": 0.08128767569356246,
+      "n": 5
+    },
+    "rmse_fault": {
+      "mean": 4.198370939504223,
+      "std": 0.11175881215938561,
+      "n": 5
+    },
+    "elapsed": {
+      "mean": 115.21205487251282,
+      "std": 1.5862380785889898,
+      "n": 5
+    },
+    "n_iter": {
+      "mean": 200.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "primal_res_final": {
+      "mean": 35.04410002422003,
+      "std": 13.614779037831271,
+      "n": 5
+    },
+    "dual_res_final": {
+      "mean": 0.03251640780649538,
+      "std": 0.018218537255977007,
+      "n": 5
+    }
+  }
+}

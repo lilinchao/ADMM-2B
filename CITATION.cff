@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this research software and the associated manuscript when using these artifacts."
+type: software
+title: "SCLT: Spatially Coupled Low-Rank Tensor Completion for Zero-Observation Spatio-Temporal Data Reconstruction"
+authors:
+  - family-names: Li
+    given-names: Linchao
+  - family-names: Huang
+    given-names: Jiahan
+  - family-names: Li
+    given-names: Hanhao
+version: 0.2.0-rc.1
+date-released: 2026-11-16
+repository-code: "https://github.com/lilinchao/ADMM-2B"

@@ -1,0 +1,180 @@
+{
+  "results": [
+    {
+      "dataset": "epa_ca",
+      "scenario": "mask_perfect",
+      "seed": 0,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 3.113353729248047,
+      "mae_all": 11.003844322117567,
+      "rmse_all": 15.420827718357538,
+      "mae_spatial": 14.751280193236713,
+      "rmse_spatial": 18.295305628258877,
+      "mae_fault": 3.504443956470067,
+      "rmse_fault": 6.62210292299738,
+      "n_true_fault": 33100,
+      "n_iter": 58,
+      "gamma_used": 0.0,
+      "primal_res_final": 9.395400320949464e-05,
+      "dual_res_final": 9.465643909435627e-10
+    },
+    {
+      "dataset": "epa_ca",
+      "scenario": "mask_perfect",
+      "seed": 1,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 10.318992853164673,
+      "mae_all": 10.87747079435039,
+      "rmse_all": 15.26684593560955,
+      "mae_spatial": 14.751280193236713,
+      "rmse_spatial": 18.295305628258877,
+      "mae_fault": 3.125170655914441,
+      "rmse_fault": 5.447064222676915,
+      "n_true_fault": 33100,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 0.789146897115728,
+      "dual_res_final": 0.0015219436708035483
+    },
+    {
+      "dataset": "epa_ca",
+      "scenario": "mask_perfect",
+      "seed": 2,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 3.4221553802490234,
+      "mae_all": 11.022186872770238,
+      "rmse_all": 15.499439730807303,
+      "mae_spatial": 14.751280193236713,
+      "rmse_spatial": 18.295305628258877,
+      "mae_fault": 3.5594937746524278,
+      "rmse_fault": 7.151733907169072,
+      "n_true_fault": 33100,
+      "n_iter": 64,
+      "gamma_used": 0.0,
+      "primal_res_final": 9.472625547978025e-05,
+      "dual_res_final": 2.6318295506841965e-09
+    },
+    {
+      "dataset": "epa_ca",
+      "scenario": "mask_perfect",
+      "seed": 3,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 10.239234685897827,
+      "mae_all": 10.877284573868282,
+      "rmse_all": 15.301423538543531,
+      "mae_spatial": 14.751280193236713,
+      "rmse_spatial": 18.295305628258877,
+      "mae_fault": 3.124611769428254,
+      "rmse_fault": 5.730856691011908,
+      "n_true_fault": 33100,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 0.5811912635864203,
+      "dual_res_final": 0.0016724415980595559
+    },
+    {
+      "dataset": "epa_ca",
+      "scenario": "mask_perfect",
+      "seed": 4,
+      "method": "admm_cp_only",
+      "label": "ADMM-CP only",
+      "elapsed": 10.323829889297485,
+      "mae_all": 10.949276355378888,
+      "rmse_all": 15.425136789915774,
+      "mae_spatial": 14.751280193236713,
+      "rmse_spatial": 18.295305628258877,
+      "mae_fault": 3.340674113091805,
+      "rmse_fault": 6.652154549704686,
+      "n_true_fault": 33100,
+      "n_iter": 200,
+      "gamma_used": 0.0,
+      "primal_res_final": 0.48880541639402153,
+      "dual_res_final": 0.00026162377563739063
+    }
+  ],
+  "experiment": "section_5_cp_only_ablation",
+  "dataset": "epa_ca",
+  "shape": [
+    101,
+    24,
+    92
+  ],
+  "scenario": "mask_perfect",
+  "fault_rate": 0.3,
+  "n_deploy": 50,
+  "seed_start": 0,
+  "n_seeds": 5,
+  "method": "admm_cp_only",
+  "label": "ADMM-CP only",
+  "max_iter": 200,
+  "params": {
+    "rank": 10,
+    "gamma": 0.0,
+    "n_neighbors": 30,
+    "beta": 0.01,
+    "idw_power": 1
+  },
+  "variogram_params": {
+    "nugget": 2.166171955516482e-05,
+    "sill": 0.00019241516079407622,
+    "range_": 2.928140631092507,
+    "model": "exponential",
+    "rmse": 2.5949291665836324e-05
+  },
+  "summary": {
+    "mae_all": {
+      "mean": 10.946012583697073,
+      "std": 0.0681527708754401,
+      "n": 5
+    },
+    "rmse_all": {
+      "mean": 15.382734742646738,
+      "std": 0.09606090539585108,
+      "n": 5
+    },
+    "mae_spatial": {
+      "mean": 14.751280193236713,
+      "std": 0.0,
+      "n": 5
+    },
+    "rmse_spatial": {
+      "mean": 18.295305628258877,
+      "std": 0.0,
+      "n": 5
+    },
+    "mae_fault": {
+      "mean": 3.330878853911399,
+      "std": 0.20454067247027646,
+      "n": 5
+    },
+    "rmse_fault": {
+      "mean": 6.320782458711992,
+      "std": 0.7075446561800411,
+      "n": 5
+    },
+    "elapsed": {
+      "mean": 7.483513307571411,
+      "std": 3.850138497726639,
+      "n": 5
+    },
+    "n_iter": {
+      "mean": 144.4,
+      "std": 76.16298313485365,
+      "n": 5
+    },
+    "primal_res_final": {
+      "mean": 0.3718664514709718,
+      "std": 0.35638587736646116,
+      "n": 5
+    },
+    "dual_res_final": {
+      "mean": 0.0006912025245788873,
+      "std": 0.0008356159084897245,
+      "n": 5
+    }
+  }
+}

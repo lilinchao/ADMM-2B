@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{Component ablation with 30\% flagged random-entry corruption. Values are Spatial MAE / Fault MAE (mean$\pm$std over five seeds).}
+\label{tab:component_ablation}
+\TableFont
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrr}
+\toprule
+\rowcolor{TableHeader}
+Method & Metric & Guangzhou & PeMSD7 & EPA CA \\
+\midrule
+\multicolumn{5}{l}{\textit{Spatial only}} \\
+\addlinespace[2pt]
+Masked-IDW & Spatial & 7.05$\pm$0.04 & 7.97$\pm$0.36 & 4.60$\pm$0.05 \\
+ & Fault & 6.84$\pm$0.27 & 7.32$\pm$0.29 & 4.20$\pm$0.27 \\
+Kriging & Spatial & 7.81$\pm$0.21 & 7.94$\pm$0.30 & 4.97$\pm$0.09 \\
+ & Fault & 7.83$\pm$0.28 & 7.28$\pm$0.28 & 2.68$\pm$0.09 \\
+\midrule
+\multicolumn{5}{l}{\textit{Low-rank only}} \\
+\addlinespace[2pt]
+SCLT w/o spatial & Spatial & 38.51$\pm$0.00 & 55.65$\pm$0.00 & 14.75$\pm$0.00 \\
+ & Fault & 2.79$\pm$0.08 & 3.67$\pm$0.10 & 3.33$\pm$0.20 \\
+\midrule
+\multicolumn{5}{l}{\textit{Coupled}} \\
+\addlinespace[2pt]
+SCLT-IDW & Spatial & 6.98$\pm$0.07 & 7.44$\pm$0.12 & 4.52$\pm$0.04 \\
+ & Fault & 2.81$\pm$0.10 & 3.72$\pm$0.09 & 3.29$\pm$0.23 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

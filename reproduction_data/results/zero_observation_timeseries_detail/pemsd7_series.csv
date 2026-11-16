@@ -1,0 +1,1441 @@
+case_key,case_label,sensor_id,time_index,flat_index,method,value
+gain,Largest stable SCLT-IDW gain,12,0,1301,Ground truth,47.900000000000006
+gain,Largest stable SCLT-IDW gain,12,1,1302,Ground truth,41.666666666666664
+gain,Largest stable SCLT-IDW gain,12,2,1303,Ground truth,36.1
+gain,Largest stable SCLT-IDW gain,12,3,1304,Ground truth,31.833333333333332
+gain,Largest stable SCLT-IDW gain,12,4,1305,Ground truth,31.166666666666668
+gain,Largest stable SCLT-IDW gain,12,5,1306,Ground truth,31.099999999999998
+gain,Largest stable SCLT-IDW gain,12,6,1307,Ground truth,32.233333333333334
+gain,Largest stable SCLT-IDW gain,12,7,1308,Ground truth,33.0
+gain,Largest stable SCLT-IDW gain,12,8,1309,Ground truth,34.300000000000004
+gain,Largest stable SCLT-IDW gain,12,9,1310,Ground truth,29.96666666666667
+gain,Largest stable SCLT-IDW gain,12,10,1311,Ground truth,30.566666666666666
+gain,Largest stable SCLT-IDW gain,12,11,1312,Ground truth,29.366666666666664
+gain,Largest stable SCLT-IDW gain,12,12,1313,Ground truth,29.133333333333336
+gain,Largest stable SCLT-IDW gain,12,13,1314,Ground truth,29.96666666666667
+gain,Largest stable SCLT-IDW gain,12,14,1315,Ground truth,30.166666666666668
+gain,Largest stable SCLT-IDW gain,12,15,1316,Ground truth,29.03333333333333
+gain,Largest stable SCLT-IDW gain,12,16,1317,Ground truth,24.366666666666664
+gain,Largest stable SCLT-IDW gain,12,17,1318,Ground truth,23.03333333333333
+gain,Largest stable SCLT-IDW gain,12,18,1319,Ground truth,21.866666666666664
+gain,Largest stable SCLT-IDW gain,12,19,1320,Ground truth,34.06666666666667
+gain,Largest stable SCLT-IDW gain,12,20,1321,Ground truth,35.699999999999996
+gain,Largest stable SCLT-IDW gain,12,21,1322,Ground truth,30.233333333333334
+gain,Largest stable SCLT-IDW gain,12,22,1323,Ground truth,29.7
+gain,Largest stable SCLT-IDW gain,12,23,1324,Ground truth,31.933333333333334
+gain,Largest stable SCLT-IDW gain,12,24,1325,Ground truth,42.0
+gain,Largest stable SCLT-IDW gain,12,25,1326,Ground truth,47.800000000000004
+gain,Largest stable SCLT-IDW gain,12,26,1327,Ground truth,41.6
+gain,Largest stable SCLT-IDW gain,12,27,1328,Ground truth,49.36666666666667
+gain,Largest stable SCLT-IDW gain,12,28,1329,Ground truth,50.86666666666667
+gain,Largest stable SCLT-IDW gain,12,29,1330,Ground truth,60.133333333333326
+gain,Largest stable SCLT-IDW gain,12,30,1331,Ground truth,65.0
+gain,Largest stable SCLT-IDW gain,12,31,1332,Ground truth,64.7
+gain,Largest stable SCLT-IDW gain,12,32,1333,Ground truth,64.96666666666667
+gain,Largest stable SCLT-IDW gain,12,33,1334,Ground truth,65.23333333333333
+gain,Largest stable SCLT-IDW gain,12,34,1335,Ground truth,65.76666666666667
+gain,Largest stable SCLT-IDW gain,12,35,1336,Ground truth,65.36666666666666
+gain,Largest stable SCLT-IDW gain,12,36,1337,Ground truth,64.63333333333334
+gain,Largest stable SCLT-IDW gain,12,37,1338,Ground truth,64.8
+gain,Largest stable SCLT-IDW gain,12,38,1339,Ground truth,64.53333333333335
+gain,Largest stable SCLT-IDW gain,12,39,1340,Ground truth,63.699999999999996
+gain,Largest stable SCLT-IDW gain,12,40,1341,Ground truth,64.66666666666667
+gain,Largest stable SCLT-IDW gain,12,41,1342,Ground truth,64.83333333333334
+gain,Largest stable SCLT-IDW gain,12,42,1343,Ground truth,65.16666666666667
+gain,Largest stable SCLT-IDW gain,12,43,1344,Ground truth,65.03333333333333
+gain,Largest stable SCLT-IDW gain,12,44,1345,Ground truth,64.63333333333334
+gain,Largest stable SCLT-IDW gain,12,45,1346,Ground truth,64.73333333333333
+gain,Largest stable SCLT-IDW gain,12,46,1347,Ground truth,65.06666666666666
+gain,Largest stable SCLT-IDW gain,12,47,1348,Ground truth,65.26666666666667
+gain,Largest stable SCLT-IDW gain,12,48,1349,Ground truth,65.10000000000001
+gain,Largest stable SCLT-IDW gain,12,49,1350,Ground truth,64.39999999999999
+gain,Largest stable SCLT-IDW gain,12,50,1351,Ground truth,64.96666666666667
+gain,Largest stable SCLT-IDW gain,12,51,1352,Ground truth,64.83333333333333
+gain,Largest stable SCLT-IDW gain,12,52,1353,Ground truth,64.56666666666666
+gain,Largest stable SCLT-IDW gain,12,53,1354,Ground truth,64.60000000000001
+gain,Largest stable SCLT-IDW gain,12,54,1355,Ground truth,64.36666666666666
+gain,Largest stable SCLT-IDW gain,12,55,1356,Ground truth,64.36666666666667
+gain,Largest stable SCLT-IDW gain,12,56,1357,Ground truth,64.36666666666666
+gain,Largest stable SCLT-IDW gain,12,57,1358,Ground truth,64.66666666666667
+gain,Largest stable SCLT-IDW gain,12,58,1359,Ground truth,64.39999999999999
+gain,Largest stable SCLT-IDW gain,12,59,1360,Ground truth,64.5
+gain,Largest stable SCLT-IDW gain,12,60,1361,Ground truth,64.26666666666667
+gain,Largest stable SCLT-IDW gain,12,61,1362,Ground truth,64.56666666666666
+gain,Largest stable SCLT-IDW gain,12,62,1363,Ground truth,63.300000000000004
+gain,Largest stable SCLT-IDW gain,12,63,1364,Ground truth,64.60000000000001
+gain,Largest stable SCLT-IDW gain,12,64,1365,Ground truth,64.99999999999999
+gain,Largest stable SCLT-IDW gain,12,65,1366,Ground truth,65.7
+gain,Largest stable SCLT-IDW gain,12,66,1367,Ground truth,65.60000000000001
+gain,Largest stable SCLT-IDW gain,12,67,1368,Ground truth,63.73333333333333
+gain,Largest stable SCLT-IDW gain,12,68,1369,Ground truth,62.86666666666667
+gain,Largest stable SCLT-IDW gain,12,69,1370,Ground truth,62.166666666666664
+gain,Largest stable SCLT-IDW gain,12,70,1371,Ground truth,63.26666666666667
+gain,Largest stable SCLT-IDW gain,12,71,1372,Ground truth,64.03333333333335
+gain,Largest stable SCLT-IDW gain,12,72,1373,Ground truth,63.53333333333333
+gain,Largest stable SCLT-IDW gain,12,73,1374,Ground truth,63.333333333333336
+gain,Largest stable SCLT-IDW gain,12,74,1375,Ground truth,64.0
+gain,Largest stable SCLT-IDW gain,12,75,1376,Ground truth,64.53333333333335
+gain,Largest stable SCLT-IDW gain,12,76,1377,Ground truth,63.76666666666667
+gain,Largest stable SCLT-IDW gain,12,77,1378,Ground truth,62.86666666666667
+gain,Largest stable SCLT-IDW gain,12,78,1379,Ground truth,62.93333333333334
+gain,Largest stable SCLT-IDW gain,12,79,1380,Ground truth,62.76666666666667
+gain,Largest stable SCLT-IDW gain,12,80,1381,Ground truth,62.79999999999999
+gain,Largest stable SCLT-IDW gain,12,81,1382,Ground truth,61.96666666666667
+gain,Largest stable SCLT-IDW gain,12,82,1383,Ground truth,61.13333333333333
+gain,Largest stable SCLT-IDW gain,12,83,1384,Ground truth,61.96666666666667
+gain,Largest stable SCLT-IDW gain,12,84,1385,Ground truth,61.6
+gain,Largest stable SCLT-IDW gain,12,85,1386,Ground truth,61.699999999999996
+gain,Largest stable SCLT-IDW gain,12,86,1387,Ground truth,61.36666666666667
+gain,Largest stable SCLT-IDW gain,12,87,1388,Ground truth,61.0
+gain,Largest stable SCLT-IDW gain,12,88,1389,Ground truth,53.833333333333336
+gain,Largest stable SCLT-IDW gain,12,89,1390,Ground truth,60.46666666666667
+gain,Largest stable SCLT-IDW gain,12,90,1391,Ground truth,61.23333333333333
+gain,Largest stable SCLT-IDW gain,12,91,1392,Ground truth,61.56666666666666
+gain,Largest stable SCLT-IDW gain,12,92,1393,Ground truth,61.333333333333336
+gain,Largest stable SCLT-IDW gain,12,93,1394,Ground truth,61.96666666666667
+gain,Largest stable SCLT-IDW gain,12,94,1395,Ground truth,59.4
+gain,Largest stable SCLT-IDW gain,12,95,1396,Ground truth,59.800000000000004
+gain,Largest stable SCLT-IDW gain,12,0,1301,SCLT-IDW,49.53989082463867
+gain,Largest stable SCLT-IDW gain,12,1,1302,SCLT-IDW,48.63736488316898
+gain,Largest stable SCLT-IDW gain,12,2,1303,SCLT-IDW,47.14985491192396
+gain,Largest stable SCLT-IDW gain,12,3,1304,SCLT-IDW,46.07594673592291
+gain,Largest stable SCLT-IDW gain,12,4,1305,SCLT-IDW,45.09210391175631
+gain,Largest stable SCLT-IDW gain,12,5,1306,SCLT-IDW,44.168468626094395
+gain,Largest stable SCLT-IDW gain,12,6,1307,SCLT-IDW,43.064179253700935
+gain,Largest stable SCLT-IDW gain,12,7,1308,SCLT-IDW,42.6047790322032
+gain,Largest stable SCLT-IDW gain,12,8,1309,SCLT-IDW,42.201827472448876
+gain,Largest stable SCLT-IDW gain,12,9,1310,SCLT-IDW,42.28097616313574
+gain,Largest stable SCLT-IDW gain,12,10,1311,SCLT-IDW,42.14150283484518
+gain,Largest stable SCLT-IDW gain,12,11,1312,SCLT-IDW,42.45746627720839
+gain,Largest stable SCLT-IDW gain,12,12,1313,SCLT-IDW,42.883308359475585
+gain,Largest stable SCLT-IDW gain,12,13,1314,SCLT-IDW,43.52635356625933
+gain,Largest stable SCLT-IDW gain,12,14,1315,SCLT-IDW,43.72415942398316
+gain,Largest stable SCLT-IDW gain,12,15,1316,SCLT-IDW,44.016442388421055
+gain,Largest stable SCLT-IDW gain,12,16,1317,SCLT-IDW,44.07212349633454
+gain,Largest stable SCLT-IDW gain,12,17,1318,SCLT-IDW,44.178758371444076
+gain,Largest stable SCLT-IDW gain,12,18,1319,SCLT-IDW,44.452973560780826
+gain,Largest stable SCLT-IDW gain,12,19,1320,SCLT-IDW,45.71899139794906
+gain,Largest stable SCLT-IDW gain,12,20,1321,SCLT-IDW,46.88115994503627
+gain,Largest stable SCLT-IDW gain,12,21,1322,SCLT-IDW,48.69126653432982
+gain,Largest stable SCLT-IDW gain,12,22,1323,SCLT-IDW,50.46485726312578
+gain,Largest stable SCLT-IDW gain,12,23,1324,SCLT-IDW,53.212032723777
+gain,Largest stable SCLT-IDW gain,12,24,1325,SCLT-IDW,55.57870716322235
+gain,Largest stable SCLT-IDW gain,12,25,1326,SCLT-IDW,57.5812163549283
+gain,Largest stable SCLT-IDW gain,12,26,1327,SCLT-IDW,58.897657506660615
+gain,Largest stable SCLT-IDW gain,12,27,1328,SCLT-IDW,60.07938707982379
+gain,Largest stable SCLT-IDW gain,12,28,1329,SCLT-IDW,60.66946279868574
+gain,Largest stable SCLT-IDW gain,12,29,1330,SCLT-IDW,61.06680025270874
+gain,Largest stable SCLT-IDW gain,12,30,1331,SCLT-IDW,61.82046353701186
+gain,Largest stable SCLT-IDW gain,12,31,1332,SCLT-IDW,63.67215203449082
+gain,Largest stable SCLT-IDW gain,12,32,1333,SCLT-IDW,64.18518176199758
+gain,Largest stable SCLT-IDW gain,12,33,1334,SCLT-IDW,64.48240913042767
+gain,Largest stable SCLT-IDW gain,12,34,1335,SCLT-IDW,64.94701717312724
+gain,Largest stable SCLT-IDW gain,12,35,1336,SCLT-IDW,64.88734313335856
+gain,Largest stable SCLT-IDW gain,12,36,1337,SCLT-IDW,64.79976207165392
+gain,Largest stable SCLT-IDW gain,12,37,1338,SCLT-IDW,64.98359271255651
+gain,Largest stable SCLT-IDW gain,12,38,1339,SCLT-IDW,65.15288437368685
+gain,Largest stable SCLT-IDW gain,12,39,1340,SCLT-IDW,65.1889349592965
+gain,Largest stable SCLT-IDW gain,12,40,1341,SCLT-IDW,64.92869073433639
+gain,Largest stable SCLT-IDW gain,12,41,1342,SCLT-IDW,64.90007664430188
+gain,Largest stable SCLT-IDW gain,12,42,1343,SCLT-IDW,65.094141725648
+gain,Largest stable SCLT-IDW gain,12,43,1344,SCLT-IDW,67.0038636550299
+gain,Largest stable SCLT-IDW gain,12,44,1345,SCLT-IDW,66.57408925918457
+gain,Largest stable SCLT-IDW gain,12,45,1346,SCLT-IDW,66.20532849112823
+gain,Largest stable SCLT-IDW gain,12,46,1347,SCLT-IDW,65.84510541235863
+gain,Largest stable SCLT-IDW gain,12,47,1348,SCLT-IDW,66.00301075884059
+gain,Largest stable SCLT-IDW gain,12,48,1349,SCLT-IDW,66.028162949471
+gain,Largest stable SCLT-IDW gain,12,49,1350,SCLT-IDW,66.02362484984056
+gain,Largest stable SCLT-IDW gain,12,50,1351,SCLT-IDW,65.9913306901226
+gain,Largest stable SCLT-IDW gain,12,51,1352,SCLT-IDW,65.98477343384904
+gain,Largest stable SCLT-IDW gain,12,52,1353,SCLT-IDW,65.9479538817383
+gain,Largest stable SCLT-IDW gain,12,53,1354,SCLT-IDW,65.91954078774617
+gain,Largest stable SCLT-IDW gain,12,54,1355,SCLT-IDW,65.99960949710334
+gain,Largest stable SCLT-IDW gain,12,55,1356,SCLT-IDW,65.7377124848575
+gain,Largest stable SCLT-IDW gain,12,56,1357,SCLT-IDW,65.71047766176119
+gain,Largest stable SCLT-IDW gain,12,57,1358,SCLT-IDW,65.98363332775958
+gain,Largest stable SCLT-IDW gain,12,58,1359,SCLT-IDW,66.32150911972741
+gain,Largest stable SCLT-IDW gain,12,59,1360,SCLT-IDW,65.79981748794998
+gain,Largest stable SCLT-IDW gain,12,60,1361,SCLT-IDW,66.31621988224093
+gain,Largest stable SCLT-IDW gain,12,61,1362,SCLT-IDW,67.04022479527892
+gain,Largest stable SCLT-IDW gain,12,62,1363,SCLT-IDW,67.38644521384296
+gain,Largest stable SCLT-IDW gain,12,63,1364,SCLT-IDW,67.65194039079178
+gain,Largest stable SCLT-IDW gain,12,64,1365,SCLT-IDW,67.9559671094392
+gain,Largest stable SCLT-IDW gain,12,65,1366,SCLT-IDW,67.4297299071877
+gain,Largest stable SCLT-IDW gain,12,66,1367,SCLT-IDW,66.08826159410444
+gain,Largest stable SCLT-IDW gain,12,67,1368,SCLT-IDW,61.59505518402191
+gain,Largest stable SCLT-IDW gain,12,68,1369,SCLT-IDW,57.271863880601714
+gain,Largest stable SCLT-IDW gain,12,69,1370,SCLT-IDW,53.28931337195233
+gain,Largest stable SCLT-IDW gain,12,70,1371,SCLT-IDW,51.29759876087345
+gain,Largest stable SCLT-IDW gain,12,71,1372,SCLT-IDW,50.09490052121186
+gain,Largest stable SCLT-IDW gain,12,72,1373,SCLT-IDW,48.29868483638082
+gain,Largest stable SCLT-IDW gain,12,73,1374,SCLT-IDW,46.96658334610038
+gain,Largest stable SCLT-IDW gain,12,74,1375,SCLT-IDW,46.94807219589545
+gain,Largest stable SCLT-IDW gain,12,75,1376,SCLT-IDW,47.72755284533785
+gain,Largest stable SCLT-IDW gain,12,76,1377,SCLT-IDW,48.379106176930314
+gain,Largest stable SCLT-IDW gain,12,77,1378,SCLT-IDW,48.89946164882507
+gain,Largest stable SCLT-IDW gain,12,78,1379,SCLT-IDW,49.967275249273605
+gain,Largest stable SCLT-IDW gain,12,79,1380,SCLT-IDW,51.49361094313052
+gain,Largest stable SCLT-IDW gain,12,80,1381,SCLT-IDW,52.24878969049721
+gain,Largest stable SCLT-IDW gain,12,81,1382,SCLT-IDW,52.59930488328852
+gain,Largest stable SCLT-IDW gain,12,82,1383,SCLT-IDW,53.18862392100704
+gain,Largest stable SCLT-IDW gain,12,83,1384,SCLT-IDW,53.892845260741005
+gain,Largest stable SCLT-IDW gain,12,84,1385,SCLT-IDW,54.54503028046029
+gain,Largest stable SCLT-IDW gain,12,85,1386,SCLT-IDW,54.76791155163531
+gain,Largest stable SCLT-IDW gain,12,86,1387,SCLT-IDW,55.1233470316505
+gain,Largest stable SCLT-IDW gain,12,87,1388,SCLT-IDW,55.61617021792087
+gain,Largest stable SCLT-IDW gain,12,88,1389,SCLT-IDW,55.98807325082908
+gain,Largest stable SCLT-IDW gain,12,89,1390,SCLT-IDW,56.307284110827126
+gain,Largest stable SCLT-IDW gain,12,90,1391,SCLT-IDW,56.62241461097926
+gain,Largest stable SCLT-IDW gain,12,91,1392,SCLT-IDW,57.06296840807231
+gain,Largest stable SCLT-IDW gain,12,92,1393,SCLT-IDW,57.398832974954914
+gain,Largest stable SCLT-IDW gain,12,93,1394,SCLT-IDW,57.58719564546062
+gain,Largest stable SCLT-IDW gain,12,94,1395,SCLT-IDW,57.87588671671221
+gain,Largest stable SCLT-IDW gain,12,95,1396,SCLT-IDW,58.2420648360463
+gain,Largest stable SCLT-IDW gain,12,0,1301,IDW,46.499369220926745
+gain,Largest stable SCLT-IDW gain,12,1,1302,IDW,49.716817980440105
+gain,Largest stable SCLT-IDW gain,12,2,1303,IDW,60.819343586001565
+gain,Largest stable SCLT-IDW gain,12,3,1304,IDW,64.28385539473015
+gain,Largest stable SCLT-IDW gain,12,4,1305,IDW,64.14294235793417
+gain,Largest stable SCLT-IDW gain,12,5,1306,IDW,63.1500786806795
+gain,Largest stable SCLT-IDW gain,12,6,1307,IDW,63.581378891486445
+gain,Largest stable SCLT-IDW gain,12,7,1308,IDW,61.77011956392628
+gain,Largest stable SCLT-IDW gain,12,8,1309,IDW,57.917138522070864
+gain,Largest stable SCLT-IDW gain,12,9,1310,IDW,50.94040181776063
+gain,Largest stable SCLT-IDW gain,12,10,1311,IDW,54.6517292435996
+gain,Largest stable SCLT-IDW gain,12,11,1312,IDW,65.4232140691926
+gain,Largest stable SCLT-IDW gain,12,12,1313,IDW,66.24841088242648
+gain,Largest stable SCLT-IDW gain,12,13,1314,IDW,67.20784717721551
+gain,Largest stable SCLT-IDW gain,12,14,1315,IDW,63.82072709607286
+gain,Largest stable SCLT-IDW gain,12,15,1316,IDW,63.94953427351045
+gain,Largest stable SCLT-IDW gain,12,16,1317,IDW,56.041776738708975
+gain,Largest stable SCLT-IDW gain,12,17,1318,IDW,60.32336393031914
+gain,Largest stable SCLT-IDW gain,12,18,1319,IDW,62.24849988835517
+gain,Largest stable SCLT-IDW gain,12,19,1320,IDW,57.00226647901943
+gain,Largest stable SCLT-IDW gain,12,20,1321,IDW,51.03966852164408
+gain,Largest stable SCLT-IDW gain,12,21,1322,IDW,64.86449341838416
+gain,Largest stable SCLT-IDW gain,12,22,1323,IDW,67.96339460117318
+gain,Largest stable SCLT-IDW gain,12,23,1324,IDW,65.83323980517936
+gain,Largest stable SCLT-IDW gain,12,24,1325,IDW,66.25188850456857
+gain,Largest stable SCLT-IDW gain,12,25,1326,IDW,68.5609972793462
+gain,Largest stable SCLT-IDW gain,12,26,1327,IDW,71.19579388400821
+gain,Largest stable SCLT-IDW gain,12,27,1328,IDW,70.7964015751045
+gain,Largest stable SCLT-IDW gain,12,28,1329,IDW,70.00408729745398
+gain,Largest stable SCLT-IDW gain,12,29,1330,IDW,67.62193891314823
+gain,Largest stable SCLT-IDW gain,12,30,1331,IDW,68.62209852449551
+gain,Largest stable SCLT-IDW gain,12,31,1332,IDW,70.45178849256021
+gain,Largest stable SCLT-IDW gain,12,32,1333,IDW,71.64790187686731
+gain,Largest stable SCLT-IDW gain,12,33,1334,IDW,70.35131066964495
+gain,Largest stable SCLT-IDW gain,12,34,1335,IDW,71.01576994175983
+gain,Largest stable SCLT-IDW gain,12,35,1336,IDW,71.18095309437933
+gain,Largest stable SCLT-IDW gain,12,36,1337,IDW,70.01613644756112
+gain,Largest stable SCLT-IDW gain,12,37,1338,IDW,68.39261156985206
+gain,Largest stable SCLT-IDW gain,12,38,1339,IDW,68.29341709613901
+gain,Largest stable SCLT-IDW gain,12,39,1340,IDW,69.41725195811546
+gain,Largest stable SCLT-IDW gain,12,40,1341,IDW,71.0124395885665
+gain,Largest stable SCLT-IDW gain,12,41,1342,IDW,72.50827924105229
+gain,Largest stable SCLT-IDW gain,12,42,1343,IDW,71.28354343267313
+gain,Largest stable SCLT-IDW gain,12,43,1344,IDW,69.4547184995379
+gain,Largest stable SCLT-IDW gain,12,44,1345,IDW,68.88753249464716
+gain,Largest stable SCLT-IDW gain,12,45,1346,IDW,70.37959492165591
+gain,Largest stable SCLT-IDW gain,12,46,1347,IDW,69.81756585190205
+gain,Largest stable SCLT-IDW gain,12,47,1348,IDW,69.7848932313241
+gain,Largest stable SCLT-IDW gain,12,48,1349,IDW,68.72161518991439
+gain,Largest stable SCLT-IDW gain,12,49,1350,IDW,70.78318056033841
+gain,Largest stable SCLT-IDW gain,12,50,1351,IDW,68.258414243078
+gain,Largest stable SCLT-IDW gain,12,51,1352,IDW,68.8903399126502
+gain,Largest stable SCLT-IDW gain,12,52,1353,IDW,69.98574872647235
+gain,Largest stable SCLT-IDW gain,12,53,1354,IDW,68.2249769326029
+gain,Largest stable SCLT-IDW gain,12,54,1355,IDW,66.86021655041034
+gain,Largest stable SCLT-IDW gain,12,55,1356,IDW,62.87390948125037
+gain,Largest stable SCLT-IDW gain,12,56,1357,IDW,65.66303766067426
+gain,Largest stable SCLT-IDW gain,12,57,1358,IDW,67.02682302157349
+gain,Largest stable SCLT-IDW gain,12,58,1359,IDW,69.3863922411995
+gain,Largest stable SCLT-IDW gain,12,59,1360,IDW,68.38826578230355
+gain,Largest stable SCLT-IDW gain,12,60,1361,IDW,70.91644663725819
+gain,Largest stable SCLT-IDW gain,12,61,1362,IDW,71.74340055091126
+gain,Largest stable SCLT-IDW gain,12,62,1363,IDW,71.51344190554403
+gain,Largest stable SCLT-IDW gain,12,63,1364,IDW,77.1559751701655
+gain,Largest stable SCLT-IDW gain,12,64,1365,IDW,78.09064784437216
+gain,Largest stable SCLT-IDW gain,12,65,1366,IDW,73.7445835856932
+gain,Largest stable SCLT-IDW gain,12,66,1367,IDW,69.29326492542954
+gain,Largest stable SCLT-IDW gain,12,67,1368,IDW,54.59884292502319
+gain,Largest stable SCLT-IDW gain,12,68,1369,IDW,50.14016452326642
+gain,Largest stable SCLT-IDW gain,12,69,1370,IDW,43.330098120396336
+gain,Largest stable SCLT-IDW gain,12,70,1371,IDW,38.24721116828585
+gain,Largest stable SCLT-IDW gain,12,71,1372,IDW,36.95343121906446
+gain,Largest stable SCLT-IDW gain,12,72,1373,IDW,35.85702580623581
+gain,Largest stable SCLT-IDW gain,12,73,1374,IDW,40.90437708472888
+gain,Largest stable SCLT-IDW gain,12,74,1375,IDW,42.06742028374288
+gain,Largest stable SCLT-IDW gain,12,75,1376,IDW,31.802674804303855
+gain,Largest stable SCLT-IDW gain,12,76,1377,IDW,30.72758763980305
+gain,Largest stable SCLT-IDW gain,12,77,1378,IDW,34.28365988716167
+gain,Largest stable SCLT-IDW gain,12,78,1379,IDW,39.89772557629305
+gain,Largest stable SCLT-IDW gain,12,79,1380,IDW,44.87999630552473
+gain,Largest stable SCLT-IDW gain,12,80,1381,IDW,39.82971507850586
+gain,Largest stable SCLT-IDW gain,12,81,1382,IDW,47.47140534085573
+gain,Largest stable SCLT-IDW gain,12,82,1383,IDW,55.17960530629522
+gain,Largest stable SCLT-IDW gain,12,83,1384,IDW,56.90944603097439
+gain,Largest stable SCLT-IDW gain,12,84,1385,IDW,58.09989682870214
+gain,Largest stable SCLT-IDW gain,12,85,1386,IDW,34.91367235265787
+gain,Largest stable SCLT-IDW gain,12,86,1387,IDW,20.30282627328281
+gain,Largest stable SCLT-IDW gain,12,87,1388,IDW,18.472188235929778
+gain,Largest stable SCLT-IDW gain,12,88,1389,IDW,16.97299399942571
+gain,Largest stable SCLT-IDW gain,12,89,1390,IDW,17.13434693463193
+gain,Largest stable SCLT-IDW gain,12,90,1391,IDW,24.78564134833196
+gain,Largest stable SCLT-IDW gain,12,91,1392,IDW,30.43551969908769
+gain,Largest stable SCLT-IDW gain,12,92,1393,IDW,34.22431950314108
+gain,Largest stable SCLT-IDW gain,12,93,1394,IDW,38.038252077981696
+gain,Largest stable SCLT-IDW gain,12,94,1395,IDW,54.51616316271033
+gain,Largest stable SCLT-IDW gain,12,95,1396,IDW,58.140352279930376
+gain,Largest stable SCLT-IDW gain,12,0,1301,Kriging,46.901282645628974
+gain,Largest stable SCLT-IDW gain,12,1,1302,Kriging,50.1009985961373
+gain,Largest stable SCLT-IDW gain,12,2,1303,Kriging,60.96898314804559
+gain,Largest stable SCLT-IDW gain,12,3,1304,Kriging,64.37473550748359
+gain,Largest stable SCLT-IDW gain,12,4,1305,Kriging,64.19545403168522
+gain,Largest stable SCLT-IDW gain,12,5,1306,Kriging,63.28415580514523
+gain,Largest stable SCLT-IDW gain,12,6,1307,Kriging,63.656368634559584
+gain,Largest stable SCLT-IDW gain,12,7,1308,Kriging,61.89371314420864
+gain,Largest stable SCLT-IDW gain,12,8,1309,Kriging,58.079599155880565
+gain,Largest stable SCLT-IDW gain,12,9,1310,Kriging,51.28471801910323
+gain,Largest stable SCLT-IDW gain,12,10,1311,Kriging,54.9218640987271
+gain,Largest stable SCLT-IDW gain,12,11,1312,Kriging,65.56655840278523
+gain,Largest stable SCLT-IDW gain,12,12,1313,Kriging,66.36490644082744
+gain,Largest stable SCLT-IDW gain,12,13,1314,Kriging,67.27812148439762
+gain,Largest stable SCLT-IDW gain,12,14,1315,Kriging,63.94525488078596
+gain,Largest stable SCLT-IDW gain,12,15,1316,Kriging,64.06591844875598
+gain,Largest stable SCLT-IDW gain,12,16,1317,Kriging,56.321577268850056
+gain,Largest stable SCLT-IDW gain,12,17,1318,Kriging,60.547747459309285
+gain,Largest stable SCLT-IDW gain,12,18,1319,Kriging,62.422121083112536
+gain,Largest stable SCLT-IDW gain,12,19,1320,Kriging,57.20620276205909
+gain,Largest stable SCLT-IDW gain,12,20,1321,Kriging,51.36619560946469
+gain,Largest stable SCLT-IDW gain,12,21,1322,Kriging,64.90635776447176
+gain,Largest stable SCLT-IDW gain,12,22,1323,Kriging,67.73197116598121
+gain,Largest stable SCLT-IDW gain,12,23,1324,Kriging,65.72343199773324
+gain,Largest stable SCLT-IDW gain,12,24,1325,Kriging,66.37398365864308
+gain,Largest stable SCLT-IDW gain,12,25,1326,Kriging,68.52712232192988
+gain,Largest stable SCLT-IDW gain,12,26,1327,Kriging,71.10426732976192
+gain,Largest stable SCLT-IDW gain,12,27,1328,Kriging,70.74107783110178
+gain,Largest stable SCLT-IDW gain,12,28,1329,Kriging,69.9683612227992
+gain,Largest stable SCLT-IDW gain,12,29,1330,Kriging,67.6045337997789
+gain,Largest stable SCLT-IDW gain,12,30,1331,Kriging,68.59672626636025
+gain,Largest stable SCLT-IDW gain,12,31,1332,Kriging,70.30395489946095
+gain,Largest stable SCLT-IDW gain,12,32,1333,Kriging,71.50562167051551
+gain,Largest stable SCLT-IDW gain,12,33,1334,Kriging,70.25027884819295
+gain,Largest stable SCLT-IDW gain,12,34,1335,Kriging,70.92465021249136
+gain,Largest stable SCLT-IDW gain,12,35,1336,Kriging,71.04325711223902
+gain,Largest stable SCLT-IDW gain,12,36,1337,Kriging,69.77477911346507
+gain,Largest stable SCLT-IDW gain,12,37,1338,Kriging,68.37198436169935
+gain,Largest stable SCLT-IDW gain,12,38,1339,Kriging,68.2620874785373
+gain,Largest stable SCLT-IDW gain,12,39,1340,Kriging,69.38686121067728
+gain,Largest stable SCLT-IDW gain,12,40,1341,Kriging,70.9202059932254
+gain,Largest stable SCLT-IDW gain,12,41,1342,Kriging,72.36328972092409
+gain,Largest stable SCLT-IDW gain,12,42,1343,Kriging,71.15970561061258
+gain,Largest stable SCLT-IDW gain,12,43,1344,Kriging,69.36239304501557
+gain,Largest stable SCLT-IDW gain,12,44,1345,Kriging,68.79296045238499
+gain,Largest stable SCLT-IDW gain,12,45,1346,Kriging,70.28271458279147
+gain,Largest stable SCLT-IDW gain,12,46,1347,Kriging,69.75890282695995
+gain,Largest stable SCLT-IDW gain,12,47,1348,Kriging,69.70992569319634
+gain,Largest stable SCLT-IDW gain,12,48,1349,Kriging,68.64243887288366
+gain,Largest stable SCLT-IDW gain,12,49,1350,Kriging,70.69052729679107
+gain,Largest stable SCLT-IDW gain,12,50,1351,Kriging,68.20585868603857
+gain,Largest stable SCLT-IDW gain,12,51,1352,Kriging,68.81451978771624
+gain,Largest stable SCLT-IDW gain,12,52,1353,Kriging,69.88177648798253
+gain,Largest stable SCLT-IDW gain,12,53,1354,Kriging,68.16228361082345
+gain,Largest stable SCLT-IDW gain,12,54,1355,Kriging,66.8273282328511
+gain,Largest stable SCLT-IDW gain,12,55,1356,Kriging,62.9117266499277
+gain,Largest stable SCLT-IDW gain,12,56,1357,Kriging,65.67134493824702
+gain,Largest stable SCLT-IDW gain,12,57,1358,Kriging,66.99585397275432
+gain,Largest stable SCLT-IDW gain,12,58,1359,Kriging,69.28688877128756
+gain,Largest stable SCLT-IDW gain,12,59,1360,Kriging,68.31063099112718
+gain,Largest stable SCLT-IDW gain,12,60,1361,Kriging,70.83632311480201
+gain,Largest stable SCLT-IDW gain,12,61,1362,Kriging,71.63794680101718
+gain,Largest stable SCLT-IDW gain,12,62,1363,Kriging,71.43196325125862
+gain,Largest stable SCLT-IDW gain,12,63,1364,Kriging,76.95911113190907
+gain,Largest stable SCLT-IDW gain,12,64,1365,Kriging,77.87987198505594
+gain,Largest stable SCLT-IDW gain,12,65,1366,Kriging,73.59909834195679
+gain,Largest stable SCLT-IDW gain,12,66,1367,Kriging,69.24048563294647
+gain,Largest stable SCLT-IDW gain,12,67,1368,Kriging,54.77649334461603
+gain,Largest stable SCLT-IDW gain,12,68,1369,Kriging,50.3808745788707
+gain,Largest stable SCLT-IDW gain,12,69,1370,Kriging,43.68415783051522
+gain,Largest stable SCLT-IDW gain,12,70,1371,Kriging,38.66157872426142
+gain,Largest stable SCLT-IDW gain,12,71,1372,Kriging,37.393852927361216
+gain,Largest stable SCLT-IDW gain,12,72,1373,Kriging,36.31475212179229
+gain,Largest stable SCLT-IDW gain,12,73,1374,Kriging,41.22599032503181
+gain,Largest stable SCLT-IDW gain,12,74,1375,Kriging,42.38208878291245
+gain,Largest stable SCLT-IDW gain,12,75,1376,Kriging,32.3017975647567
+gain,Largest stable SCLT-IDW gain,12,76,1377,Kriging,31.191364774719435
+gain,Largest stable SCLT-IDW gain,12,77,1378,Kriging,34.695829656178084
+gain,Largest stable SCLT-IDW gain,12,78,1379,Kriging,40.22298052630115
+gain,Largest stable SCLT-IDW gain,12,79,1380,Kriging,45.16769275684559
+gain,Largest stable SCLT-IDW gain,12,80,1381,Kriging,40.21787870649071
+gain,Largest stable SCLT-IDW gain,12,81,1382,Kriging,47.70950436767932
+gain,Largest stable SCLT-IDW gain,12,82,1383,Kriging,55.293300344976565
+gain,Largest stable SCLT-IDW gain,12,83,1384,Kriging,57.005719498761756
+gain,Largest stable SCLT-IDW gain,12,84,1385,Kriging,58.206405727735486
+gain,Largest stable SCLT-IDW gain,12,85,1386,Kriging,35.44901903786967
+gain,Largest stable SCLT-IDW gain,12,86,1387,Kriging,21.093980045846397
+gain,Largest stable SCLT-IDW gain,12,87,1388,Kriging,19.270018030309824
+gain,Largest stable SCLT-IDW gain,12,88,1389,Kriging,17.864069976674596
+gain,Largest stable SCLT-IDW gain,12,89,1390,Kriging,17.668874848063037
+gain,Largest stable SCLT-IDW gain,12,90,1391,Kriging,25.42386126406477
+gain,Largest stable SCLT-IDW gain,12,91,1392,Kriging,31.016977144843974
+gain,Largest stable SCLT-IDW gain,12,92,1393,Kriging,34.7808359238737
+gain,Largest stable SCLT-IDW gain,12,93,1394,Kriging,38.52057874835863
+gain,Largest stable SCLT-IDW gain,12,94,1395,Kriging,54.715526603534066
+gain,Largest stable SCLT-IDW gain,12,95,1396,Kriging,58.22453714499173
+gain,Largest stable SCLT-IDW gain,12,0,1301,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,1,1302,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,2,1303,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,3,1304,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,4,1305,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,5,1306,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,6,1307,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,7,1308,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,8,1309,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,9,1310,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,10,1311,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,11,1312,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,12,1313,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,13,1314,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,14,1315,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,15,1316,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,16,1317,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,17,1318,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,18,1319,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,19,1320,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,20,1321,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,21,1322,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,22,1323,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,23,1324,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,24,1325,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,25,1326,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,26,1327,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,27,1328,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,28,1329,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,29,1330,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,30,1331,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,31,1332,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,32,1333,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,33,1334,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,34,1335,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,35,1336,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,36,1337,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,37,1338,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,38,1339,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,39,1340,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,40,1341,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,41,1342,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,42,1343,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,43,1344,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,44,1345,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,45,1346,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,46,1347,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,47,1348,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,48,1349,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,49,1350,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,50,1351,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,51,1352,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,52,1353,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,53,1354,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,54,1355,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,55,1356,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,56,1357,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,57,1358,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,58,1359,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,59,1360,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,60,1361,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,61,1362,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,62,1363,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,63,1364,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,64,1365,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,65,1366,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,66,1367,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,67,1368,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,68,1369,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,69,1370,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,70,1371,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,71,1372,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,72,1373,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,73,1374,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,74,1375,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,75,1376,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,76,1377,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,77,1378,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,78,1379,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,79,1380,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,80,1381,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,81,1382,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,82,1383,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,83,1384,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,84,1385,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,85,1386,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,86,1387,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,87,1388,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,88,1389,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,89,1390,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,90,1391,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,91,1392,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,92,1393,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,93,1394,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,94,1395,Temporal-only,58.70896408688975
+gain,Largest stable SCLT-IDW gain,12,95,1396,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,0,1080,Ground truth,67.66666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,1,1081,Ground truth,67.43333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,2,1082,Ground truth,67.76666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,3,1083,Ground truth,67.46666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,4,1084,Ground truth,66.99999999999999
+distant_gain,Distant target with SCLT-IDW gain,141,5,1085,Ground truth,66.1
+distant_gain,Distant target with SCLT-IDW gain,141,6,1086,Ground truth,65.6
+distant_gain,Distant target with SCLT-IDW gain,141,7,1087,Ground truth,65.36666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,8,1088,Ground truth,65.06666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,9,1089,Ground truth,64.46666666666665
+distant_gain,Distant target with SCLT-IDW gain,141,10,1090,Ground truth,64.60000000000001
+distant_gain,Distant target with SCLT-IDW gain,141,11,1091,Ground truth,64.26666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,12,1092,Ground truth,63.79999999999999
+distant_gain,Distant target with SCLT-IDW gain,141,13,1093,Ground truth,63.26666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,14,1094,Ground truth,63.43333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,15,1095,Ground truth,63.63333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,16,1096,Ground truth,63.199999999999996
+distant_gain,Distant target with SCLT-IDW gain,141,17,1097,Ground truth,63.199999999999996
+distant_gain,Distant target with SCLT-IDW gain,141,18,1098,Ground truth,62.93333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,19,1099,Ground truth,63.0
+distant_gain,Distant target with SCLT-IDW gain,141,20,1100,Ground truth,62.5
+distant_gain,Distant target with SCLT-IDW gain,141,21,1101,Ground truth,62.43333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,22,1102,Ground truth,62.79999999999999
+distant_gain,Distant target with SCLT-IDW gain,141,23,1103,Ground truth,63.06666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,24,1104,Ground truth,62.900000000000006
+distant_gain,Distant target with SCLT-IDW gain,141,25,1105,Ground truth,62.93333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,26,1106,Ground truth,63.199999999999996
+distant_gain,Distant target with SCLT-IDW gain,141,27,1107,Ground truth,62.9
+distant_gain,Distant target with SCLT-IDW gain,141,28,1108,Ground truth,63.0
+distant_gain,Distant target with SCLT-IDW gain,141,29,1109,Ground truth,62.5
+distant_gain,Distant target with SCLT-IDW gain,141,30,1110,Ground truth,62.833333333333336
+distant_gain,Distant target with SCLT-IDW gain,141,31,1111,Ground truth,62.36666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,32,1112,Ground truth,62.333333333333336
+distant_gain,Distant target with SCLT-IDW gain,141,33,1113,Ground truth,61.26666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,34,1114,Ground truth,57.79999999999999
+distant_gain,Distant target with SCLT-IDW gain,141,35,1115,Ground truth,45.56666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,36,1116,Ground truth,37.333333333333336
+distant_gain,Distant target with SCLT-IDW gain,141,37,1117,Ground truth,32.666666666666664
+distant_gain,Distant target with SCLT-IDW gain,141,38,1118,Ground truth,31.03333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,39,1119,Ground truth,29.3
+distant_gain,Distant target with SCLT-IDW gain,141,40,1120,Ground truth,27.733333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,41,1121,Ground truth,26.333333333333332
+distant_gain,Distant target with SCLT-IDW gain,141,42,1122,Ground truth,26.166666666666668
+distant_gain,Distant target with SCLT-IDW gain,141,43,1123,Ground truth,25.900000000000002
+distant_gain,Distant target with SCLT-IDW gain,141,44,1124,Ground truth,25.53333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,45,1125,Ground truth,24.866666666666664
+distant_gain,Distant target with SCLT-IDW gain,141,46,1126,Ground truth,25.133333333333336
+distant_gain,Distant target with SCLT-IDW gain,141,47,1127,Ground truth,25.8
+distant_gain,Distant target with SCLT-IDW gain,141,48,1128,Ground truth,27.2
+distant_gain,Distant target with SCLT-IDW gain,141,49,1129,Ground truth,28.8
+distant_gain,Distant target with SCLT-IDW gain,141,50,1130,Ground truth,29.599999999999998
+distant_gain,Distant target with SCLT-IDW gain,141,51,1131,Ground truth,38.5
+distant_gain,Distant target with SCLT-IDW gain,141,52,1132,Ground truth,49.6
+distant_gain,Distant target with SCLT-IDW gain,141,53,1133,Ground truth,61.36666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,54,1134,Ground truth,64.86666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,55,1135,Ground truth,65.06666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,56,1136,Ground truth,66.03333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,57,1137,Ground truth,66.36666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,58,1138,Ground truth,66.76666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,59,1139,Ground truth,67.56666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,60,1140,Ground truth,69.06666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,61,1141,Ground truth,70.03333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,62,1142,Ground truth,70.33333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,63,1143,Ground truth,70.86666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,64,1144,Ground truth,70.06666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,65,1145,Ground truth,69.33333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,66,1146,Ground truth,68.8
+distant_gain,Distant target with SCLT-IDW gain,141,67,1147,Ground truth,69.43333333333334
+distant_gain,Distant target with SCLT-IDW gain,141,68,1148,Ground truth,69.19999999999999
+distant_gain,Distant target with SCLT-IDW gain,141,69,1149,Ground truth,68.96666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,70,1150,Ground truth,69.10000000000001
+distant_gain,Distant target with SCLT-IDW gain,141,71,1151,Ground truth,69.39999999999999
+distant_gain,Distant target with SCLT-IDW gain,141,72,1152,Ground truth,70.16666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,73,1153,Ground truth,69.26666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,74,1154,Ground truth,69.0
+distant_gain,Distant target with SCLT-IDW gain,141,75,1155,Ground truth,69.03333333333335
+distant_gain,Distant target with SCLT-IDW gain,141,76,1156,Ground truth,69.3
+distant_gain,Distant target with SCLT-IDW gain,141,77,1157,Ground truth,69.2
+distant_gain,Distant target with SCLT-IDW gain,141,78,1158,Ground truth,69.16666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,79,1159,Ground truth,69.26666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,80,1160,Ground truth,69.7
+distant_gain,Distant target with SCLT-IDW gain,141,81,1161,Ground truth,69.66666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,82,1162,Ground truth,69.46666666666668
+distant_gain,Distant target with SCLT-IDW gain,141,83,1163,Ground truth,69.10000000000001
+distant_gain,Distant target with SCLT-IDW gain,141,84,1164,Ground truth,69.66666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,85,1165,Ground truth,69.5
+distant_gain,Distant target with SCLT-IDW gain,141,86,1166,Ground truth,69.53333333333333
+distant_gain,Distant target with SCLT-IDW gain,141,87,1167,Ground truth,69.4
+distant_gain,Distant target with SCLT-IDW gain,141,88,1168,Ground truth,69.10000000000001
+distant_gain,Distant target with SCLT-IDW gain,141,89,1169,Ground truth,69.5
+distant_gain,Distant target with SCLT-IDW gain,141,90,1170,Ground truth,69.76666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,91,1171,Ground truth,69.86666666666666
+distant_gain,Distant target with SCLT-IDW gain,141,92,1172,Ground truth,69.53333333333335
+distant_gain,Distant target with SCLT-IDW gain,141,93,1173,Ground truth,69.76666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,94,1174,Ground truth,69.86666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,95,1175,Ground truth,69.86666666666667
+distant_gain,Distant target with SCLT-IDW gain,141,0,1080,SCLT-IDW,62.7066816824721
+distant_gain,Distant target with SCLT-IDW gain,141,1,1081,SCLT-IDW,59.459982357623126
+distant_gain,Distant target with SCLT-IDW gain,141,2,1082,SCLT-IDW,56.07356941527548
+distant_gain,Distant target with SCLT-IDW gain,141,3,1083,SCLT-IDW,54.141410079005944
+distant_gain,Distant target with SCLT-IDW gain,141,4,1084,SCLT-IDW,52.74217378718151
+distant_gain,Distant target with SCLT-IDW gain,141,5,1085,SCLT-IDW,50.01831239051352
+distant_gain,Distant target with SCLT-IDW gain,141,6,1086,SCLT-IDW,47.38461695360383
+distant_gain,Distant target with SCLT-IDW gain,141,7,1087,SCLT-IDW,46.496662466879556
+distant_gain,Distant target with SCLT-IDW gain,141,8,1088,SCLT-IDW,46.8409871192107
+distant_gain,Distant target with SCLT-IDW gain,141,9,1089,SCLT-IDW,46.97718038558842
+distant_gain,Distant target with SCLT-IDW gain,141,10,1090,SCLT-IDW,47.3250773010625
+distant_gain,Distant target with SCLT-IDW gain,141,11,1091,SCLT-IDW,48.59700021826116
+distant_gain,Distant target with SCLT-IDW gain,141,12,1092,SCLT-IDW,50.751168633104136
+distant_gain,Distant target with SCLT-IDW gain,141,13,1093,SCLT-IDW,52.22509659642851
+distant_gain,Distant target with SCLT-IDW gain,141,14,1094,SCLT-IDW,53.20799187893979
+distant_gain,Distant target with SCLT-IDW gain,141,15,1095,SCLT-IDW,54.14065641451844
+distant_gain,Distant target with SCLT-IDW gain,141,16,1096,SCLT-IDW,55.09993711804349
+distant_gain,Distant target with SCLT-IDW gain,141,17,1097,SCLT-IDW,56.058805240223585
+distant_gain,Distant target with SCLT-IDW gain,141,18,1098,SCLT-IDW,56.536510200842415
+distant_gain,Distant target with SCLT-IDW gain,141,19,1099,SCLT-IDW,56.66692043585776
+distant_gain,Distant target with SCLT-IDW gain,141,20,1100,SCLT-IDW,56.95711746196954
+distant_gain,Distant target with SCLT-IDW gain,141,21,1101,SCLT-IDW,57.28870360654452
+distant_gain,Distant target with SCLT-IDW gain,141,22,1102,SCLT-IDW,57.52623534848249
+distant_gain,Distant target with SCLT-IDW gain,141,23,1103,SCLT-IDW,57.62683778675815
+distant_gain,Distant target with SCLT-IDW gain,141,24,1104,SCLT-IDW,57.824894275440606
+distant_gain,Distant target with SCLT-IDW gain,141,25,1105,SCLT-IDW,57.93541304388638
+distant_gain,Distant target with SCLT-IDW gain,141,26,1106,SCLT-IDW,58.021163490514745
+distant_gain,Distant target with SCLT-IDW gain,141,27,1107,SCLT-IDW,58.27507853264536
+distant_gain,Distant target with SCLT-IDW gain,141,28,1108,SCLT-IDW,58.47460611914459
+distant_gain,Distant target with SCLT-IDW gain,141,29,1109,SCLT-IDW,58.3165991051011
+distant_gain,Distant target with SCLT-IDW gain,141,30,1110,SCLT-IDW,57.79283444835951
+distant_gain,Distant target with SCLT-IDW gain,141,31,1111,SCLT-IDW,57.045615203031126
+distant_gain,Distant target with SCLT-IDW gain,141,32,1112,SCLT-IDW,56.37867136298728
+distant_gain,Distant target with SCLT-IDW gain,141,33,1113,SCLT-IDW,54.6101114337832
+distant_gain,Distant target with SCLT-IDW gain,141,34,1114,SCLT-IDW,52.02127571799179
+distant_gain,Distant target with SCLT-IDW gain,141,35,1115,SCLT-IDW,47.92548192459741
+distant_gain,Distant target with SCLT-IDW gain,141,36,1116,SCLT-IDW,45.04233437374608
+distant_gain,Distant target with SCLT-IDW gain,141,37,1117,SCLT-IDW,43.13211934450838
+distant_gain,Distant target with SCLT-IDW gain,141,38,1118,SCLT-IDW,42.512127539037536
+distant_gain,Distant target with SCLT-IDW gain,141,39,1119,SCLT-IDW,41.67642910811627
+distant_gain,Distant target with SCLT-IDW gain,141,40,1120,SCLT-IDW,40.93147038562255
+distant_gain,Distant target with SCLT-IDW gain,141,41,1121,SCLT-IDW,40.052762389818064
+distant_gain,Distant target with SCLT-IDW gain,141,42,1122,SCLT-IDW,39.688015430684565
+distant_gain,Distant target with SCLT-IDW gain,141,43,1123,SCLT-IDW,39.02427933283698
+distant_gain,Distant target with SCLT-IDW gain,141,44,1124,SCLT-IDW,39.004156212263254
+distant_gain,Distant target with SCLT-IDW gain,141,45,1125,SCLT-IDW,37.52904365987082
+distant_gain,Distant target with SCLT-IDW gain,141,46,1126,SCLT-IDW,37.09417097158911
+distant_gain,Distant target with SCLT-IDW gain,141,47,1127,SCLT-IDW,38.22846528684409
+distant_gain,Distant target with SCLT-IDW gain,141,48,1128,SCLT-IDW,40.83794736148831
+distant_gain,Distant target with SCLT-IDW gain,141,49,1129,SCLT-IDW,42.95011114262757
+distant_gain,Distant target with SCLT-IDW gain,141,50,1130,SCLT-IDW,45.31750804497277
+distant_gain,Distant target with SCLT-IDW gain,141,51,1131,SCLT-IDW,49.17842642517547
+distant_gain,Distant target with SCLT-IDW gain,141,52,1132,SCLT-IDW,53.61218828613115
+distant_gain,Distant target with SCLT-IDW gain,141,53,1133,SCLT-IDW,57.56207425995386
+distant_gain,Distant target with SCLT-IDW gain,141,54,1134,SCLT-IDW,60.39924391669185
+distant_gain,Distant target with SCLT-IDW gain,141,55,1135,SCLT-IDW,62.13589172710169
+distant_gain,Distant target with SCLT-IDW gain,141,56,1136,SCLT-IDW,63.456725912830265
+distant_gain,Distant target with SCLT-IDW gain,141,57,1137,SCLT-IDW,63.849093300034234
+distant_gain,Distant target with SCLT-IDW gain,141,58,1138,SCLT-IDW,64.11093840910696
+distant_gain,Distant target with SCLT-IDW gain,141,59,1139,SCLT-IDW,64.58935785768871
+distant_gain,Distant target with SCLT-IDW gain,141,60,1140,SCLT-IDW,65.79257372431371
+distant_gain,Distant target with SCLT-IDW gain,141,61,1141,SCLT-IDW,66.19960021748011
+distant_gain,Distant target with SCLT-IDW gain,141,62,1142,SCLT-IDW,66.35679532070728
+distant_gain,Distant target with SCLT-IDW gain,141,63,1143,SCLT-IDW,66.43867224941812
+distant_gain,Distant target with SCLT-IDW gain,141,64,1144,SCLT-IDW,66.15019550911947
+distant_gain,Distant target with SCLT-IDW gain,141,65,1145,SCLT-IDW,65.88356449511642
+distant_gain,Distant target with SCLT-IDW gain,141,66,1146,SCLT-IDW,66.09825159532467
+distant_gain,Distant target with SCLT-IDW gain,141,67,1147,SCLT-IDW,66.33180455019178
+distant_gain,Distant target with SCLT-IDW gain,141,68,1148,SCLT-IDW,66.31450680158608
+distant_gain,Distant target with SCLT-IDW gain,141,69,1149,SCLT-IDW,66.38826153176693
+distant_gain,Distant target with SCLT-IDW gain,141,70,1150,SCLT-IDW,66.36681674476407
+distant_gain,Distant target with SCLT-IDW gain,141,71,1151,SCLT-IDW,66.19735132319619
+distant_gain,Distant target with SCLT-IDW gain,141,72,1152,SCLT-IDW,67.09735556935517
+distant_gain,Distant target with SCLT-IDW gain,141,73,1153,SCLT-IDW,66.76857213959616
+distant_gain,Distant target with SCLT-IDW gain,141,74,1154,SCLT-IDW,66.46597969331837
+distant_gain,Distant target with SCLT-IDW gain,141,75,1155,SCLT-IDW,66.14110469562131
+distant_gain,Distant target with SCLT-IDW gain,141,76,1156,SCLT-IDW,66.27414630831734
+distant_gain,Distant target with SCLT-IDW gain,141,77,1157,SCLT-IDW,66.21043443399071
+distant_gain,Distant target with SCLT-IDW gain,141,78,1158,SCLT-IDW,66.11747295588489
+distant_gain,Distant target with SCLT-IDW gain,141,79,1159,SCLT-IDW,66.14948607787312
+distant_gain,Distant target with SCLT-IDW gain,141,80,1160,SCLT-IDW,66.23916092566435
+distant_gain,Distant target with SCLT-IDW gain,141,81,1161,SCLT-IDW,66.21727711718336
+distant_gain,Distant target with SCLT-IDW gain,141,82,1162,SCLT-IDW,66.12802020215383
+distant_gain,Distant target with SCLT-IDW gain,141,83,1163,SCLT-IDW,66.11643337760353
+distant_gain,Distant target with SCLT-IDW gain,141,84,1164,SCLT-IDW,66.02056521706257
+distant_gain,Distant target with SCLT-IDW gain,141,85,1165,SCLT-IDW,66.02219589392986
+distant_gain,Distant target with SCLT-IDW gain,141,86,1166,SCLT-IDW,66.21649711562497
+distant_gain,Distant target with SCLT-IDW gain,141,87,1167,SCLT-IDW,66.41292850936009
+distant_gain,Distant target with SCLT-IDW gain,141,88,1168,SCLT-IDW,65.99716160076537
+distant_gain,Distant target with SCLT-IDW gain,141,89,1169,SCLT-IDW,66.34323121423502
+distant_gain,Distant target with SCLT-IDW gain,141,90,1170,SCLT-IDW,66.94333839439939
+distant_gain,Distant target with SCLT-IDW gain,141,91,1171,SCLT-IDW,67.25004871560692
+distant_gain,Distant target with SCLT-IDW gain,141,92,1172,SCLT-IDW,67.24736714104115
+distant_gain,Distant target with SCLT-IDW gain,141,93,1173,SCLT-IDW,67.59384245874675
+distant_gain,Distant target with SCLT-IDW gain,141,94,1174,SCLT-IDW,67.48567900382997
+distant_gain,Distant target with SCLT-IDW gain,141,95,1175,SCLT-IDW,66.78868343626402
+distant_gain,Distant target with SCLT-IDW gain,141,0,1080,IDW,50.32658468376534
+distant_gain,Distant target with SCLT-IDW gain,141,1,1081,IDW,49.09153498385827
+distant_gain,Distant target with SCLT-IDW gain,141,2,1082,IDW,49.523429473166935
+distant_gain,Distant target with SCLT-IDW gain,141,3,1083,IDW,50.42939656927351
+distant_gain,Distant target with SCLT-IDW gain,141,4,1084,IDW,48.66580662014801
+distant_gain,Distant target with SCLT-IDW gain,141,5,1085,IDW,35.74818016878732
+distant_gain,Distant target with SCLT-IDW gain,141,6,1086,IDW,29.052357269513095
+distant_gain,Distant target with SCLT-IDW gain,141,7,1087,IDW,28.306738906636316
+distant_gain,Distant target with SCLT-IDW gain,141,8,1088,IDW,30.30214594326962
+distant_gain,Distant target with SCLT-IDW gain,141,9,1089,IDW,32.970327420092474
+distant_gain,Distant target with SCLT-IDW gain,141,10,1090,IDW,35.948401537395014
+distant_gain,Distant target with SCLT-IDW gain,141,11,1091,IDW,34.03859323669476
+distant_gain,Distant target with SCLT-IDW gain,141,12,1092,IDW,37.32507548072687
+distant_gain,Distant target with SCLT-IDW gain,141,13,1093,IDW,34.18114560139256
+distant_gain,Distant target with SCLT-IDW gain,141,14,1094,IDW,34.72397487816184
+distant_gain,Distant target with SCLT-IDW gain,141,15,1095,IDW,36.96319249416355
+distant_gain,Distant target with SCLT-IDW gain,141,16,1096,IDW,40.63712126615667
+distant_gain,Distant target with SCLT-IDW gain,141,17,1097,IDW,43.738823753659666
+distant_gain,Distant target with SCLT-IDW gain,141,18,1098,IDW,43.43715414867898
+distant_gain,Distant target with SCLT-IDW gain,141,19,1099,IDW,43.259084135373115
+distant_gain,Distant target with SCLT-IDW gain,141,20,1100,IDW,44.638826416394195
+distant_gain,Distant target with SCLT-IDW gain,141,21,1101,IDW,43.81099511304937
+distant_gain,Distant target with SCLT-IDW gain,141,22,1102,IDW,44.414186648039305
+distant_gain,Distant target with SCLT-IDW gain,141,23,1103,IDW,43.880193101490285
+distant_gain,Distant target with SCLT-IDW gain,141,24,1104,IDW,42.588820174156396
+distant_gain,Distant target with SCLT-IDW gain,141,25,1105,IDW,43.62966404979979
+distant_gain,Distant target with SCLT-IDW gain,141,26,1106,IDW,45.156261068207364
+distant_gain,Distant target with SCLT-IDW gain,141,27,1107,IDW,45.494203125493534
+distant_gain,Distant target with SCLT-IDW gain,141,28,1108,IDW,45.880644041959926
+distant_gain,Distant target with SCLT-IDW gain,141,29,1109,IDW,46.753100251293795
+distant_gain,Distant target with SCLT-IDW gain,141,30,1110,IDW,46.87614872872581
+distant_gain,Distant target with SCLT-IDW gain,141,31,1111,IDW,44.27743744700026
+distant_gain,Distant target with SCLT-IDW gain,141,32,1112,IDW,44.64511725025525
+distant_gain,Distant target with SCLT-IDW gain,141,33,1113,IDW,44.515865968356856
+distant_gain,Distant target with SCLT-IDW gain,141,34,1114,IDW,45.47776122486153
+distant_gain,Distant target with SCLT-IDW gain,141,35,1115,IDW,46.230770157876144
+distant_gain,Distant target with SCLT-IDW gain,141,36,1116,IDW,47.63712439545367
+distant_gain,Distant target with SCLT-IDW gain,141,37,1117,IDW,47.26333883737383
+distant_gain,Distant target with SCLT-IDW gain,141,38,1118,IDW,46.63101835135292
+distant_gain,Distant target with SCLT-IDW gain,141,39,1119,IDW,46.27191192082065
+distant_gain,Distant target with SCLT-IDW gain,141,40,1120,IDW,47.716202225491685
+distant_gain,Distant target with SCLT-IDW gain,141,41,1121,IDW,47.65148471505465
+distant_gain,Distant target with SCLT-IDW gain,141,42,1122,IDW,46.81241739563207
+distant_gain,Distant target with SCLT-IDW gain,141,43,1123,IDW,47.39819899839454
+distant_gain,Distant target with SCLT-IDW gain,141,44,1124,IDW,47.61219261797569
+distant_gain,Distant target with SCLT-IDW gain,141,45,1125,IDW,49.97980212013326
+distant_gain,Distant target with SCLT-IDW gain,141,46,1126,IDW,49.569917712035526
+distant_gain,Distant target with SCLT-IDW gain,141,47,1127,IDW,50.42046958535839
+distant_gain,Distant target with SCLT-IDW gain,141,48,1128,IDW,50.906279844722086
+distant_gain,Distant target with SCLT-IDW gain,141,49,1129,IDW,52.29206597385795
+distant_gain,Distant target with SCLT-IDW gain,141,50,1130,IDW,51.67351291020207
+distant_gain,Distant target with SCLT-IDW gain,141,51,1131,IDW,50.11559734339394
+distant_gain,Distant target with SCLT-IDW gain,141,52,1132,IDW,51.671425720763196
+distant_gain,Distant target with SCLT-IDW gain,141,53,1133,IDW,52.5631398391671
+distant_gain,Distant target with SCLT-IDW gain,141,54,1134,IDW,51.454406817002415
+distant_gain,Distant target with SCLT-IDW gain,141,55,1135,IDW,53.850521085472046
+distant_gain,Distant target with SCLT-IDW gain,141,56,1136,IDW,55.399828923642715
+distant_gain,Distant target with SCLT-IDW gain,141,57,1137,IDW,54.5140260108248
+distant_gain,Distant target with SCLT-IDW gain,141,58,1138,IDW,53.90260741736268
+distant_gain,Distant target with SCLT-IDW gain,141,59,1139,IDW,55.77191760314401
+distant_gain,Distant target with SCLT-IDW gain,141,60,1140,IDW,54.34954151016659
+distant_gain,Distant target with SCLT-IDW gain,141,61,1141,IDW,52.66631981759524
+distant_gain,Distant target with SCLT-IDW gain,141,62,1142,IDW,53.64141272210412
+distant_gain,Distant target with SCLT-IDW gain,141,63,1143,IDW,53.54126308979762
+distant_gain,Distant target with SCLT-IDW gain,141,64,1144,IDW,54.278987465227246
+distant_gain,Distant target with SCLT-IDW gain,141,65,1145,IDW,57.23541099994505
+distant_gain,Distant target with SCLT-IDW gain,141,66,1146,IDW,53.86350587478915
+distant_gain,Distant target with SCLT-IDW gain,141,67,1147,IDW,55.45870172123508
+distant_gain,Distant target with SCLT-IDW gain,141,68,1148,IDW,53.025003228900566
+distant_gain,Distant target with SCLT-IDW gain,141,69,1149,IDW,52.35713468195857
+distant_gain,Distant target with SCLT-IDW gain,141,70,1150,IDW,56.10335658768524
+distant_gain,Distant target with SCLT-IDW gain,141,71,1151,IDW,59.23328798810763
+distant_gain,Distant target with SCLT-IDW gain,141,72,1152,IDW,64.66235504611274
+distant_gain,Distant target with SCLT-IDW gain,141,73,1153,IDW,62.62304866765593
+distant_gain,Distant target with SCLT-IDW gain,141,74,1154,IDW,63.52095885330648
+distant_gain,Distant target with SCLT-IDW gain,141,75,1155,IDW,63.85156489838079
+distant_gain,Distant target with SCLT-IDW gain,141,76,1156,IDW,58.563635077884484
+distant_gain,Distant target with SCLT-IDW gain,141,77,1157,IDW,55.77021058753954
+distant_gain,Distant target with SCLT-IDW gain,141,78,1158,IDW,55.931186116073135
+distant_gain,Distant target with SCLT-IDW gain,141,79,1159,IDW,61.043067433609664
+distant_gain,Distant target with SCLT-IDW gain,141,80,1160,IDW,59.31964918387704
+distant_gain,Distant target with SCLT-IDW gain,141,81,1161,IDW,56.70492640913584
+distant_gain,Distant target with SCLT-IDW gain,141,82,1162,IDW,57.32886506203404
+distant_gain,Distant target with SCLT-IDW gain,141,83,1163,IDW,58.515302642752374
+distant_gain,Distant target with SCLT-IDW gain,141,84,1164,IDW,55.86516089930609
+distant_gain,Distant target with SCLT-IDW gain,141,85,1165,IDW,57.09029552592955
+distant_gain,Distant target with SCLT-IDW gain,141,86,1166,IDW,56.17904202259443
+distant_gain,Distant target with SCLT-IDW gain,141,87,1167,IDW,57.37893397001535
+distant_gain,Distant target with SCLT-IDW gain,141,88,1168,IDW,59.32037601632702
+distant_gain,Distant target with SCLT-IDW gain,141,89,1169,IDW,60.8143124836312
+distant_gain,Distant target with SCLT-IDW gain,141,90,1170,IDW,58.83920658300565
+distant_gain,Distant target with SCLT-IDW gain,141,91,1171,IDW,58.390785905330475
+distant_gain,Distant target with SCLT-IDW gain,141,92,1172,IDW,55.98118031011895
+distant_gain,Distant target with SCLT-IDW gain,141,93,1173,IDW,54.33017587600679
+distant_gain,Distant target with SCLT-IDW gain,141,94,1174,IDW,54.15849089457362
+distant_gain,Distant target with SCLT-IDW gain,141,95,1175,IDW,52.68444454640476
+distant_gain,Distant target with SCLT-IDW gain,141,0,1080,Kriging,51.69096154259665
+distant_gain,Distant target with SCLT-IDW gain,141,1,1081,Kriging,48.39580242874667
+distant_gain,Distant target with SCLT-IDW gain,141,2,1082,Kriging,48.207283221797276
+distant_gain,Distant target with SCLT-IDW gain,141,3,1083,Kriging,49.05930400625631
+distant_gain,Distant target with SCLT-IDW gain,141,4,1084,Kriging,46.21878825869772
+distant_gain,Distant target with SCLT-IDW gain,141,5,1085,Kriging,36.55331707363222
+distant_gain,Distant target with SCLT-IDW gain,141,6,1086,Kriging,31.463761925084288
+distant_gain,Distant target with SCLT-IDW gain,141,7,1087,Kriging,31.06111700707614
+distant_gain,Distant target with SCLT-IDW gain,141,8,1088,Kriging,32.015971876690905
+distant_gain,Distant target with SCLT-IDW gain,141,9,1089,Kriging,35.34247623791937
+distant_gain,Distant target with SCLT-IDW gain,141,10,1090,Kriging,39.37778916477957
+distant_gain,Distant target with SCLT-IDW gain,141,11,1091,Kriging,38.1923753385648
+distant_gain,Distant target with SCLT-IDW gain,141,12,1092,Kriging,38.57296105329451
+distant_gain,Distant target with SCLT-IDW gain,141,13,1093,Kriging,36.63516012411613
+distant_gain,Distant target with SCLT-IDW gain,141,14,1094,Kriging,37.85950846051635
+distant_gain,Distant target with SCLT-IDW gain,141,15,1095,Kriging,39.6229345464087
+distant_gain,Distant target with SCLT-IDW gain,141,16,1096,Kriging,42.62964180803473
+distant_gain,Distant target with SCLT-IDW gain,141,17,1097,Kriging,45.96233367801693
+distant_gain,Distant target with SCLT-IDW gain,141,18,1098,Kriging,45.85412332025417
+distant_gain,Distant target with SCLT-IDW gain,141,19,1099,Kriging,45.49168397991124
+distant_gain,Distant target with SCLT-IDW gain,141,20,1100,Kriging,47.60761485108938
+distant_gain,Distant target with SCLT-IDW gain,141,21,1101,Kriging,46.90708048887841
+distant_gain,Distant target with SCLT-IDW gain,141,22,1102,Kriging,47.30242232712676
+distant_gain,Distant target with SCLT-IDW gain,141,23,1103,Kriging,46.63116876368854
+distant_gain,Distant target with SCLT-IDW gain,141,24,1104,Kriging,45.82025075234872
+distant_gain,Distant target with SCLT-IDW gain,141,25,1105,Kriging,46.80204021043644
+distant_gain,Distant target with SCLT-IDW gain,141,26,1106,Kriging,47.79309072894025
+distant_gain,Distant target with SCLT-IDW gain,141,27,1107,Kriging,48.30738250154202
+distant_gain,Distant target with SCLT-IDW gain,141,28,1108,Kriging,48.5933243659069
+distant_gain,Distant target with SCLT-IDW gain,141,29,1109,Kriging,49.411977964761064
+distant_gain,Distant target with SCLT-IDW gain,141,30,1110,Kriging,49.77813326508171
+distant_gain,Distant target with SCLT-IDW gain,141,31,1111,Kriging,47.70374481409347
+distant_gain,Distant target with SCLT-IDW gain,141,32,1112,Kriging,47.80640044690079
+distant_gain,Distant target with SCLT-IDW gain,141,33,1113,Kriging,47.4032655479373
+distant_gain,Distant target with SCLT-IDW gain,141,34,1114,Kriging,48.258349173105415
+distant_gain,Distant target with SCLT-IDW gain,141,35,1115,Kriging,47.7260061660669
+distant_gain,Distant target with SCLT-IDW gain,141,36,1116,Kriging,48.86656468027831
+distant_gain,Distant target with SCLT-IDW gain,141,37,1117,Kriging,48.835783337589504
+distant_gain,Distant target with SCLT-IDW gain,141,38,1118,Kriging,48.08081959004579
+distant_gain,Distant target with SCLT-IDW gain,141,39,1119,Kriging,47.40906319625517
+distant_gain,Distant target with SCLT-IDW gain,141,40,1120,Kriging,47.71004555789872
+distant_gain,Distant target with SCLT-IDW gain,141,41,1121,Kriging,47.66422823517341
+distant_gain,Distant target with SCLT-IDW gain,141,42,1122,Kriging,47.101811924951704
+distant_gain,Distant target with SCLT-IDW gain,141,43,1123,Kriging,47.58318748347348
+distant_gain,Distant target with SCLT-IDW gain,141,44,1124,Kriging,47.70476034273793
+distant_gain,Distant target with SCLT-IDW gain,141,45,1125,Kriging,49.46964691047445
+distant_gain,Distant target with SCLT-IDW gain,141,46,1126,Kriging,49.515072527821744
+distant_gain,Distant target with SCLT-IDW gain,141,47,1127,Kriging,50.27629057013716
+distant_gain,Distant target with SCLT-IDW gain,141,48,1128,Kriging,50.75457484089773
+distant_gain,Distant target with SCLT-IDW gain,141,49,1129,Kriging,51.83509454101643
+distant_gain,Distant target with SCLT-IDW gain,141,50,1130,Kriging,51.871976225331004
+distant_gain,Distant target with SCLT-IDW gain,141,51,1131,Kriging,51.425658574666535
+distant_gain,Distant target with SCLT-IDW gain,141,52,1132,Kriging,53.49618112734943
+distant_gain,Distant target with SCLT-IDW gain,141,53,1133,Kriging,54.3689033632704
+distant_gain,Distant target with SCLT-IDW gain,141,54,1134,Kriging,54.51067403716185
+distant_gain,Distant target with SCLT-IDW gain,141,55,1135,Kriging,56.50756581759579
+distant_gain,Distant target with SCLT-IDW gain,141,56,1136,Kriging,57.98536242564418
+distant_gain,Distant target with SCLT-IDW gain,141,57,1137,Kriging,57.131177402867024
+distant_gain,Distant target with SCLT-IDW gain,141,58,1138,Kriging,56.54439591090833
+distant_gain,Distant target with SCLT-IDW gain,141,59,1139,Kriging,57.95053611955685
+distant_gain,Distant target with SCLT-IDW gain,141,60,1140,Kriging,57.147084043099014
+distant_gain,Distant target with SCLT-IDW gain,141,61,1141,Kriging,55.91849285396853
+distant_gain,Distant target with SCLT-IDW gain,141,62,1142,Kriging,56.6226836656181
+distant_gain,Distant target with SCLT-IDW gain,141,63,1143,Kriging,56.57457825414913
+distant_gain,Distant target with SCLT-IDW gain,141,64,1144,Kriging,57.17137384512968
+distant_gain,Distant target with SCLT-IDW gain,141,65,1145,Kriging,59.41689093363802
+distant_gain,Distant target with SCLT-IDW gain,141,66,1146,Kriging,56.91968460753993
+distant_gain,Distant target with SCLT-IDW gain,141,67,1147,Kriging,58.312128704269995
+distant_gain,Distant target with SCLT-IDW gain,141,68,1148,Kriging,56.61603604142012
+distant_gain,Distant target with SCLT-IDW gain,141,69,1149,Kriging,56.033401576454146
+distant_gain,Distant target with SCLT-IDW gain,141,70,1150,Kriging,58.395236007071624
+distant_gain,Distant target with SCLT-IDW gain,141,71,1151,Kriging,61.01164813529752
+distant_gain,Distant target with SCLT-IDW gain,141,72,1152,Kriging,65.52441627350038
+distant_gain,Distant target with SCLT-IDW gain,141,73,1153,Kriging,63.379378905679616
+distant_gain,Distant target with SCLT-IDW gain,141,74,1154,Kriging,64.25407292445281
+distant_gain,Distant target with SCLT-IDW gain,141,75,1155,Kriging,63.99645475370957
+distant_gain,Distant target with SCLT-IDW gain,141,76,1156,Kriging,60.020785632284635
+distant_gain,Distant target with SCLT-IDW gain,141,77,1157,Kriging,57.808792291309885
+distant_gain,Distant target with SCLT-IDW gain,141,78,1158,Kriging,58.1023954942673
+distant_gain,Distant target with SCLT-IDW gain,141,79,1159,Kriging,61.73095995653206
+distant_gain,Distant target with SCLT-IDW gain,141,80,1160,Kriging,60.75073909567531
+distant_gain,Distant target with SCLT-IDW gain,141,81,1161,Kriging,58.88572907927435
+distant_gain,Distant target with SCLT-IDW gain,141,82,1162,Kriging,59.24127900910309
+distant_gain,Distant target with SCLT-IDW gain,141,83,1163,Kriging,59.8504700816339
+distant_gain,Distant target with SCLT-IDW gain,141,84,1164,Kriging,57.438361983710955
+distant_gain,Distant target with SCLT-IDW gain,141,85,1165,Kriging,58.288778300886
+distant_gain,Distant target with SCLT-IDW gain,141,86,1166,Kriging,57.94710046256096
+distant_gain,Distant target with SCLT-IDW gain,141,87,1167,Kriging,58.90788160326019
+distant_gain,Distant target with SCLT-IDW gain,141,88,1168,Kriging,60.70271236270305
+distant_gain,Distant target with SCLT-IDW gain,141,89,1169,Kriging,62.10682043049091
+distant_gain,Distant target with SCLT-IDW gain,141,90,1170,Kriging,60.89623246594302
+distant_gain,Distant target with SCLT-IDW gain,141,91,1171,Kriging,60.6156814511609
+distant_gain,Distant target with SCLT-IDW gain,141,92,1172,Kriging,59.61382580806664
+distant_gain,Distant target with SCLT-IDW gain,141,93,1173,Kriging,58.1019430852421
+distant_gain,Distant target with SCLT-IDW gain,141,94,1174,Kriging,57.72118073174146
+distant_gain,Distant target with SCLT-IDW gain,141,95,1175,Kriging,56.36570035664948
+distant_gain,Distant target with SCLT-IDW gain,141,0,1080,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,1,1081,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,2,1082,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,3,1083,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,4,1084,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,5,1085,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,6,1086,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,7,1087,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,8,1088,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,9,1089,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,10,1090,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,11,1091,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,12,1092,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,13,1093,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,14,1094,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,15,1095,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,16,1096,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,17,1097,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,18,1098,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,19,1099,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,20,1100,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,21,1101,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,22,1102,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,23,1103,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,24,1104,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,25,1105,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,26,1106,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,27,1107,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,28,1108,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,29,1109,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,30,1110,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,31,1111,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,32,1112,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,33,1113,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,34,1114,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,35,1115,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,36,1116,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,37,1117,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,38,1118,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,39,1119,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,40,1120,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,41,1121,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,42,1122,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,43,1123,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,44,1124,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,45,1125,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,46,1126,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,47,1127,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,48,1128,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,49,1129,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,50,1130,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,51,1131,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,52,1132,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,53,1133,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,54,1134,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,55,1135,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,56,1136,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,57,1137,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,58,1138,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,59,1139,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,60,1140,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,61,1141,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,62,1142,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,63,1143,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,64,1144,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,65,1145,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,66,1146,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,67,1147,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,68,1148,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,69,1149,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,70,1150,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,71,1151,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,72,1152,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,73,1153,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,74,1154,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,75,1155,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,76,1156,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,77,1157,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,78,1158,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,79,1159,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,80,1160,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,81,1161,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,82,1162,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,83,1163,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,84,1164,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,85,1165,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,86,1166,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,87,1167,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,88,1168,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,89,1169,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,90,1170,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,91,1171,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,92,1172,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,93,1173,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,94,1174,Temporal-only,58.70896408688975
+distant_gain,Distant target with SCLT-IDW gain,141,95,1175,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,0,4000,Ground truth,16.7
+dynamic_gain,High-variation target with SCLT-IDW gain,153,1,4001,Ground truth,13.366666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,2,4002,Ground truth,34.03333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,3,4003,Ground truth,19.400000000000002
+dynamic_gain,High-variation target with SCLT-IDW gain,153,4,4004,Ground truth,19.266666666666666
+dynamic_gain,High-variation target with SCLT-IDW gain,153,5,4005,Ground truth,19.8
+dynamic_gain,High-variation target with SCLT-IDW gain,153,6,4006,Ground truth,24.0
+dynamic_gain,High-variation target with SCLT-IDW gain,153,7,4007,Ground truth,23.400000000000002
+dynamic_gain,High-variation target with SCLT-IDW gain,153,8,4008,Ground truth,20.3
+dynamic_gain,High-variation target with SCLT-IDW gain,153,9,4009,Ground truth,26.73333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,10,4010,Ground truth,30.26666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,11,4011,Ground truth,38.5
+dynamic_gain,High-variation target with SCLT-IDW gain,153,12,4012,Ground truth,45.666666666666664
+dynamic_gain,High-variation target with SCLT-IDW gain,153,13,4013,Ground truth,60.13333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,14,4014,Ground truth,63.5
+dynamic_gain,High-variation target with SCLT-IDW gain,153,15,4015,Ground truth,63.0
+dynamic_gain,High-variation target with SCLT-IDW gain,153,16,4016,Ground truth,65.39999999999999
+dynamic_gain,High-variation target with SCLT-IDW gain,153,17,4017,Ground truth,68.10000000000001
+dynamic_gain,High-variation target with SCLT-IDW gain,153,18,4018,Ground truth,64.46666666666665
+dynamic_gain,High-variation target with SCLT-IDW gain,153,19,4019,Ground truth,60.23333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,20,4020,Ground truth,61.5
+dynamic_gain,High-variation target with SCLT-IDW gain,153,21,4021,Ground truth,60.20000000000001
+dynamic_gain,High-variation target with SCLT-IDW gain,153,22,4022,Ground truth,62.36666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,23,4023,Ground truth,62.133333333333326
+dynamic_gain,High-variation target with SCLT-IDW gain,153,24,4024,Ground truth,60.5
+dynamic_gain,High-variation target with SCLT-IDW gain,153,25,4025,Ground truth,55.199999999999996
+dynamic_gain,High-variation target with SCLT-IDW gain,153,26,4026,Ground truth,62.366666666666674
+dynamic_gain,High-variation target with SCLT-IDW gain,153,27,4027,Ground truth,65.2
+dynamic_gain,High-variation target with SCLT-IDW gain,153,28,4028,Ground truth,64.23333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,29,4029,Ground truth,65.03333333333335
+dynamic_gain,High-variation target with SCLT-IDW gain,153,30,4030,Ground truth,65.73333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,31,4031,Ground truth,62.79999999999999
+dynamic_gain,High-variation target with SCLT-IDW gain,153,32,4032,Ground truth,62.9
+dynamic_gain,High-variation target with SCLT-IDW gain,153,33,4033,Ground truth,62.73333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,34,4034,Ground truth,62.13333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,35,4035,Ground truth,63.800000000000004
+dynamic_gain,High-variation target with SCLT-IDW gain,153,36,4036,Ground truth,63.633333333333326
+dynamic_gain,High-variation target with SCLT-IDW gain,153,37,4037,Ground truth,64.76666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,38,4038,Ground truth,64.96666666666665
+dynamic_gain,High-variation target with SCLT-IDW gain,153,39,4039,Ground truth,62.800000000000004
+dynamic_gain,High-variation target with SCLT-IDW gain,153,40,4040,Ground truth,64.63333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,41,4041,Ground truth,64.60000000000001
+dynamic_gain,High-variation target with SCLT-IDW gain,153,42,4042,Ground truth,64.06666666666668
+dynamic_gain,High-variation target with SCLT-IDW gain,153,43,4043,Ground truth,64.80000000000001
+dynamic_gain,High-variation target with SCLT-IDW gain,153,44,4044,Ground truth,65.36666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,45,4045,Ground truth,65.2
+dynamic_gain,High-variation target with SCLT-IDW gain,153,46,4046,Ground truth,65.06666666666666
+dynamic_gain,High-variation target with SCLT-IDW gain,153,47,4047,Ground truth,65.23333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,48,4048,Ground truth,65.26666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,49,4049,Ground truth,63.46666666666666
+dynamic_gain,High-variation target with SCLT-IDW gain,153,50,4050,Ground truth,64.2
+dynamic_gain,High-variation target with SCLT-IDW gain,153,51,4051,Ground truth,61.9
+dynamic_gain,High-variation target with SCLT-IDW gain,153,52,4052,Ground truth,64.13333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,53,4053,Ground truth,65.96666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,54,4054,Ground truth,65.39999999999999
+dynamic_gain,High-variation target with SCLT-IDW gain,153,55,4055,Ground truth,68.93333333333334
+dynamic_gain,High-variation target with SCLT-IDW gain,153,56,4056,Ground truth,67.8
+dynamic_gain,High-variation target with SCLT-IDW gain,153,57,4057,Ground truth,65.06666666666666
+dynamic_gain,High-variation target with SCLT-IDW gain,153,58,4058,Ground truth,65.13333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,59,4059,Ground truth,62.166666666666664
+dynamic_gain,High-variation target with SCLT-IDW gain,153,60,4060,Ground truth,61.70000000000001
+dynamic_gain,High-variation target with SCLT-IDW gain,153,61,4061,Ground truth,62.76666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,62,4062,Ground truth,60.300000000000004
+dynamic_gain,High-variation target with SCLT-IDW gain,153,63,4063,Ground truth,61.133333333333326
+dynamic_gain,High-variation target with SCLT-IDW gain,153,64,4064,Ground truth,59.73333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,65,4065,Ground truth,56.5
+dynamic_gain,High-variation target with SCLT-IDW gain,153,66,4066,Ground truth,58.333333333333336
+dynamic_gain,High-variation target with SCLT-IDW gain,153,67,4067,Ground truth,56.56666666666666
+dynamic_gain,High-variation target with SCLT-IDW gain,153,68,4068,Ground truth,57.300000000000004
+dynamic_gain,High-variation target with SCLT-IDW gain,153,69,4069,Ground truth,58.366666666666674
+dynamic_gain,High-variation target with SCLT-IDW gain,153,70,4070,Ground truth,57.0
+dynamic_gain,High-variation target with SCLT-IDW gain,153,71,4071,Ground truth,53.833333333333336
+dynamic_gain,High-variation target with SCLT-IDW gain,153,72,4072,Ground truth,51.43333333333334
+dynamic_gain,High-variation target with SCLT-IDW gain,153,73,4073,Ground truth,54.1
+dynamic_gain,High-variation target with SCLT-IDW gain,153,74,4074,Ground truth,54.76666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,75,4075,Ground truth,54.96666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,76,4076,Ground truth,54.13333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,77,4077,Ground truth,55.166666666666664
+dynamic_gain,High-variation target with SCLT-IDW gain,153,78,4078,Ground truth,57.166666666666664
+dynamic_gain,High-variation target with SCLT-IDW gain,153,79,4079,Ground truth,57.53333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,80,4080,Ground truth,57.70000000000001
+dynamic_gain,High-variation target with SCLT-IDW gain,153,81,4081,Ground truth,56.199999999999996
+dynamic_gain,High-variation target with SCLT-IDW gain,153,82,4082,Ground truth,59.93333333333334
+dynamic_gain,High-variation target with SCLT-IDW gain,153,83,4083,Ground truth,59.53333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,84,4084,Ground truth,58.96666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,85,4085,Ground truth,58.76666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,86,4086,Ground truth,59.93333333333334
+dynamic_gain,High-variation target with SCLT-IDW gain,153,87,4087,Ground truth,60.1
+dynamic_gain,High-variation target with SCLT-IDW gain,153,88,4088,Ground truth,57.1
+dynamic_gain,High-variation target with SCLT-IDW gain,153,89,4089,Ground truth,56.5
+dynamic_gain,High-variation target with SCLT-IDW gain,153,90,4090,Ground truth,55.76666666666667
+dynamic_gain,High-variation target with SCLT-IDW gain,153,91,4091,Ground truth,58.699999999999996
+dynamic_gain,High-variation target with SCLT-IDW gain,153,92,4092,Ground truth,44.43333333333334
+dynamic_gain,High-variation target with SCLT-IDW gain,153,93,4093,Ground truth,22.266666666666666
+dynamic_gain,High-variation target with SCLT-IDW gain,153,94,4094,Ground truth,17.133333333333333
+dynamic_gain,High-variation target with SCLT-IDW gain,153,95,4095,Ground truth,13.866666666666665
+dynamic_gain,High-variation target with SCLT-IDW gain,153,0,4000,SCLT-IDW,50.17579246968507
+dynamic_gain,High-variation target with SCLT-IDW gain,153,1,4001,SCLT-IDW,49.58491704568715
+dynamic_gain,High-variation target with SCLT-IDW gain,153,2,4002,SCLT-IDW,48.969721049233094
+dynamic_gain,High-variation target with SCLT-IDW gain,153,3,4003,SCLT-IDW,47.15018387857811
+dynamic_gain,High-variation target with SCLT-IDW gain,153,4,4004,SCLT-IDW,46.10808282985461
+dynamic_gain,High-variation target with SCLT-IDW gain,153,5,4005,SCLT-IDW,42.839838889066435
+dynamic_gain,High-variation target with SCLT-IDW gain,153,6,4006,SCLT-IDW,41.33525943919565
+dynamic_gain,High-variation target with SCLT-IDW gain,153,7,4007,SCLT-IDW,42.67868346342399
+dynamic_gain,High-variation target with SCLT-IDW gain,153,8,4008,SCLT-IDW,46.7704144851463
+dynamic_gain,High-variation target with SCLT-IDW gain,153,9,4009,SCLT-IDW,49.56247159506448
+dynamic_gain,High-variation target with SCLT-IDW gain,153,10,4010,SCLT-IDW,52.5077188214891
+dynamic_gain,High-variation target with SCLT-IDW gain,153,11,4011,SCLT-IDW,55.609446558812905
+dynamic_gain,High-variation target with SCLT-IDW gain,153,12,4012,SCLT-IDW,59.09548303088482
+dynamic_gain,High-variation target with SCLT-IDW gain,153,13,4013,SCLT-IDW,61.663995607714064
+dynamic_gain,High-variation target with SCLT-IDW gain,153,14,4014,SCLT-IDW,63.89738923819368
+dynamic_gain,High-variation target with SCLT-IDW gain,153,15,4015,SCLT-IDW,65.47538734234325
+dynamic_gain,High-variation target with SCLT-IDW gain,153,16,4016,SCLT-IDW,66.50942288613227
+dynamic_gain,High-variation target with SCLT-IDW gain,153,17,4017,SCLT-IDW,66.59315119044786
+dynamic_gain,High-variation target with SCLT-IDW gain,153,18,4018,SCLT-IDW,66.45894520532511
+dynamic_gain,High-variation target with SCLT-IDW gain,153,19,4019,SCLT-IDW,66.29883134136968
+dynamic_gain,High-variation target with SCLT-IDW gain,153,20,4020,SCLT-IDW,67.0103581133046
+dynamic_gain,High-variation target with SCLT-IDW gain,153,21,4021,SCLT-IDW,67.18661145664093
+dynamic_gain,High-variation target with SCLT-IDW gain,153,22,4022,SCLT-IDW,67.254173264581
+dynamic_gain,High-variation target with SCLT-IDW gain,153,23,4023,SCLT-IDW,67.43568014445226
+dynamic_gain,High-variation target with SCLT-IDW gain,153,24,4024,SCLT-IDW,67.2750738709456
+dynamic_gain,High-variation target with SCLT-IDW gain,153,25,4025,SCLT-IDW,67.01771526410982
+dynamic_gain,High-variation target with SCLT-IDW gain,153,26,4026,SCLT-IDW,67.17385619005861
+dynamic_gain,High-variation target with SCLT-IDW gain,153,27,4027,SCLT-IDW,67.35509661501455
+dynamic_gain,High-variation target with SCLT-IDW gain,153,28,4028,SCLT-IDW,67.45037951006212
+dynamic_gain,High-variation target with SCLT-IDW gain,153,29,4029,SCLT-IDW,67.31823311391103
+dynamic_gain,High-variation target with SCLT-IDW gain,153,30,4030,SCLT-IDW,67.21071116170967
+dynamic_gain,High-variation target with SCLT-IDW gain,153,31,4031,SCLT-IDW,67.02742180074884
+dynamic_gain,High-variation target with SCLT-IDW gain,153,32,4032,SCLT-IDW,67.86871376351897
+dynamic_gain,High-variation target with SCLT-IDW gain,153,33,4033,SCLT-IDW,67.41350332575357
+dynamic_gain,High-variation target with SCLT-IDW gain,153,34,4034,SCLT-IDW,67.13405735125386
+dynamic_gain,High-variation target with SCLT-IDW gain,153,35,4035,SCLT-IDW,66.85018380345589
+dynamic_gain,High-variation target with SCLT-IDW gain,153,36,4036,SCLT-IDW,66.99137489325298
+dynamic_gain,High-variation target with SCLT-IDW gain,153,37,4037,SCLT-IDW,67.01512534881536
+dynamic_gain,High-variation target with SCLT-IDW gain,153,38,4038,SCLT-IDW,66.98682176956055
+dynamic_gain,High-variation target with SCLT-IDW gain,153,39,4039,SCLT-IDW,66.95948659373317
+dynamic_gain,High-variation target with SCLT-IDW gain,153,40,4040,SCLT-IDW,66.95178195404998
+dynamic_gain,High-variation target with SCLT-IDW gain,153,41,4041,SCLT-IDW,66.90843155843211
+dynamic_gain,High-variation target with SCLT-IDW gain,153,42,4042,SCLT-IDW,66.90158684177648
+dynamic_gain,High-variation target with SCLT-IDW gain,153,43,4043,SCLT-IDW,66.94369097098416
+dynamic_gain,High-variation target with SCLT-IDW gain,153,44,4044,SCLT-IDW,66.69189575246327
+dynamic_gain,High-variation target with SCLT-IDW gain,153,45,4045,SCLT-IDW,66.78958964816294
+dynamic_gain,High-variation target with SCLT-IDW gain,153,46,4046,SCLT-IDW,66.91887792976497
+dynamic_gain,High-variation target with SCLT-IDW gain,153,47,4047,SCLT-IDW,67.28496958719157
+dynamic_gain,High-variation target with SCLT-IDW gain,153,48,4048,SCLT-IDW,66.75462561818597
+dynamic_gain,High-variation target with SCLT-IDW gain,153,49,4049,SCLT-IDW,67.34580729560018
+dynamic_gain,High-variation target with SCLT-IDW gain,153,50,4050,SCLT-IDW,68.14432428841015
+dynamic_gain,High-variation target with SCLT-IDW gain,153,51,4051,SCLT-IDW,68.36831844623556
+dynamic_gain,High-variation target with SCLT-IDW gain,153,52,4052,SCLT-IDW,68.96057595306098
+dynamic_gain,High-variation target with SCLT-IDW gain,153,53,4053,SCLT-IDW,69.17540919716748
+dynamic_gain,High-variation target with SCLT-IDW gain,153,54,4054,SCLT-IDW,68.28534325138169
+dynamic_gain,High-variation target with SCLT-IDW gain,153,55,4055,SCLT-IDW,65.61791458289233
+dynamic_gain,High-variation target with SCLT-IDW gain,153,56,4056,SCLT-IDW,60.12235015012799
+dynamic_gain,High-variation target with SCLT-IDW gain,153,57,4057,SCLT-IDW,55.324938709523735
+dynamic_gain,High-variation target with SCLT-IDW gain,153,58,4058,SCLT-IDW,51.50440079049577
+dynamic_gain,High-variation target with SCLT-IDW gain,153,59,4059,SCLT-IDW,49.859990036894544
+dynamic_gain,High-variation target with SCLT-IDW gain,153,60,4060,SCLT-IDW,49.22533283871768
+dynamic_gain,High-variation target with SCLT-IDW gain,153,61,4061,SCLT-IDW,48.223675482845195
+dynamic_gain,High-variation target with SCLT-IDW gain,153,62,4062,SCLT-IDW,48.07162617841173
+dynamic_gain,High-variation target with SCLT-IDW gain,153,63,4063,SCLT-IDW,48.886315429907384
+dynamic_gain,High-variation target with SCLT-IDW gain,153,64,4064,SCLT-IDW,50.29810295383502
+dynamic_gain,High-variation target with SCLT-IDW gain,153,65,4065,SCLT-IDW,51.222532629074216
+dynamic_gain,High-variation target with SCLT-IDW gain,153,66,4066,SCLT-IDW,51.79115437780509
+dynamic_gain,High-variation target with SCLT-IDW gain,153,67,4067,SCLT-IDW,52.68945069774664
+dynamic_gain,High-variation target with SCLT-IDW gain,153,68,4068,SCLT-IDW,54.50380866208459
+dynamic_gain,High-variation target with SCLT-IDW gain,153,69,4069,SCLT-IDW,55.00651123868834
+dynamic_gain,High-variation target with SCLT-IDW gain,153,70,4070,SCLT-IDW,55.20189953762185
+dynamic_gain,High-variation target with SCLT-IDW gain,153,71,4071,SCLT-IDW,55.740150340891454
+dynamic_gain,High-variation target with SCLT-IDW gain,153,72,4072,SCLT-IDW,56.84832542999555
+dynamic_gain,High-variation target with SCLT-IDW gain,153,73,4073,SCLT-IDW,57.81729478980973
+dynamic_gain,High-variation target with SCLT-IDW gain,153,74,4074,SCLT-IDW,58.490744532872505
+dynamic_gain,High-variation target with SCLT-IDW gain,153,75,4075,SCLT-IDW,59.033569027720894
+dynamic_gain,High-variation target with SCLT-IDW gain,153,76,4076,SCLT-IDW,59.559896276156536
+dynamic_gain,High-variation target with SCLT-IDW gain,153,77,4077,SCLT-IDW,59.85427223484449
+dynamic_gain,High-variation target with SCLT-IDW gain,153,78,4078,SCLT-IDW,60.29190609085053
+dynamic_gain,High-variation target with SCLT-IDW gain,153,79,4079,SCLT-IDW,60.7403071219788
+dynamic_gain,High-variation target with SCLT-IDW gain,153,80,4080,SCLT-IDW,61.265460409191235
+dynamic_gain,High-variation target with SCLT-IDW gain,153,81,4081,SCLT-IDW,61.63044126857878
+dynamic_gain,High-variation target with SCLT-IDW gain,153,82,4082,SCLT-IDW,61.87677739897245
+dynamic_gain,High-variation target with SCLT-IDW gain,153,83,4083,SCLT-IDW,62.34151872891078
+dynamic_gain,High-variation target with SCLT-IDW gain,153,84,4084,SCLT-IDW,62.62393912707975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,85,4085,SCLT-IDW,62.36602209193361
+dynamic_gain,High-variation target with SCLT-IDW gain,153,86,4086,SCLT-IDW,62.041906152833434
+dynamic_gain,High-variation target with SCLT-IDW gain,153,87,4087,SCLT-IDW,61.54602639356801
+dynamic_gain,High-variation target with SCLT-IDW gain,153,88,4088,SCLT-IDW,61.14843837091937
+dynamic_gain,High-variation target with SCLT-IDW gain,153,89,4089,SCLT-IDW,60.198623229729776
+dynamic_gain,High-variation target with SCLT-IDW gain,153,90,4090,SCLT-IDW,58.620346985253434
+dynamic_gain,High-variation target with SCLT-IDW gain,153,91,4091,SCLT-IDW,56.0125496613535
+dynamic_gain,High-variation target with SCLT-IDW gain,153,92,4092,SCLT-IDW,54.26754300622823
+dynamic_gain,High-variation target with SCLT-IDW gain,153,93,4093,SCLT-IDW,53.32560027717331
+dynamic_gain,High-variation target with SCLT-IDW gain,153,94,4094,SCLT-IDW,52.642842172055005
+dynamic_gain,High-variation target with SCLT-IDW gain,153,95,4095,SCLT-IDW,51.10456005055631
+dynamic_gain,High-variation target with SCLT-IDW gain,153,0,4000,IDW,64.76933498221842
+dynamic_gain,High-variation target with SCLT-IDW gain,153,1,4001,IDW,65.91813611964461
+dynamic_gain,High-variation target with SCLT-IDW gain,153,2,4002,IDW,65.72670097420547
+dynamic_gain,High-variation target with SCLT-IDW gain,153,3,4003,IDW,63.87739846565692
+dynamic_gain,High-variation target with SCLT-IDW gain,153,4,4004,IDW,61.12730158974014
+dynamic_gain,High-variation target with SCLT-IDW gain,153,5,4005,IDW,40.63840847077895
+dynamic_gain,High-variation target with SCLT-IDW gain,153,6,4006,IDW,33.80940617141461
+dynamic_gain,High-variation target with SCLT-IDW gain,153,7,4007,IDW,39.85535208456981
+dynamic_gain,High-variation target with SCLT-IDW gain,153,8,4008,IDW,58.489486097094165
+dynamic_gain,High-variation target with SCLT-IDW gain,153,9,4009,IDW,64.6469958729738
+dynamic_gain,High-variation target with SCLT-IDW gain,153,10,4010,IDW,66.66510793951039
+dynamic_gain,High-variation target with SCLT-IDW gain,153,11,4011,IDW,67.59972952422451
+dynamic_gain,High-variation target with SCLT-IDW gain,153,12,4012,IDW,67.56338590746489
+dynamic_gain,High-variation target with SCLT-IDW gain,153,13,4013,IDW,68.03053364144309
+dynamic_gain,High-variation target with SCLT-IDW gain,153,14,4014,IDW,68.21954600722927
+dynamic_gain,High-variation target with SCLT-IDW gain,153,15,4015,IDW,69.05231120366571
+dynamic_gain,High-variation target with SCLT-IDW gain,153,16,4016,IDW,67.91280086000347
+dynamic_gain,High-variation target with SCLT-IDW gain,153,17,4017,IDW,67.38370626909833
+dynamic_gain,High-variation target with SCLT-IDW gain,153,18,4018,IDW,67.36664014761597
+dynamic_gain,High-variation target with SCLT-IDW gain,153,19,4019,IDW,67.901637385579
+dynamic_gain,High-variation target with SCLT-IDW gain,153,20,4020,IDW,69.17361664945915
+dynamic_gain,High-variation target with SCLT-IDW gain,153,21,4021,IDW,69.65551577804342
+dynamic_gain,High-variation target with SCLT-IDW gain,153,22,4022,IDW,69.79096326665757
+dynamic_gain,High-variation target with SCLT-IDW gain,153,23,4023,IDW,70.3943326357572
+dynamic_gain,High-variation target with SCLT-IDW gain,153,24,4024,IDW,70.59785998863076
+dynamic_gain,High-variation target with SCLT-IDW gain,153,25,4025,IDW,70.35126375578778
+dynamic_gain,High-variation target with SCLT-IDW gain,153,26,4026,IDW,70.93710828196035
+dynamic_gain,High-variation target with SCLT-IDW gain,153,27,4027,IDW,70.78434729394169
+dynamic_gain,High-variation target with SCLT-IDW gain,153,28,4028,IDW,70.2708577726708
+dynamic_gain,High-variation target with SCLT-IDW gain,153,29,4029,IDW,69.94899569059562
+dynamic_gain,High-variation target with SCLT-IDW gain,153,30,4030,IDW,69.67743265249275
+dynamic_gain,High-variation target with SCLT-IDW gain,153,31,4031,IDW,69.96706352738974
+dynamic_gain,High-variation target with SCLT-IDW gain,153,32,4032,IDW,69.35016601460569
+dynamic_gain,High-variation target with SCLT-IDW gain,153,33,4033,IDW,68.91801958690772
+dynamic_gain,High-variation target with SCLT-IDW gain,153,34,4034,IDW,68.94197965294228
+dynamic_gain,High-variation target with SCLT-IDW gain,153,35,4035,IDW,68.68316232585268
+dynamic_gain,High-variation target with SCLT-IDW gain,153,36,4036,IDW,68.44540071327674
+dynamic_gain,High-variation target with SCLT-IDW gain,153,37,4037,IDW,68.95332919990688
+dynamic_gain,High-variation target with SCLT-IDW gain,153,38,4038,IDW,68.39084852914978
+dynamic_gain,High-variation target with SCLT-IDW gain,153,39,4039,IDW,68.80817511091534
+dynamic_gain,High-variation target with SCLT-IDW gain,153,40,4040,IDW,68.64636432760597
+dynamic_gain,High-variation target with SCLT-IDW gain,153,41,4041,IDW,68.4320672743379
+dynamic_gain,High-variation target with SCLT-IDW gain,153,42,4042,IDW,67.96963557018222
+dynamic_gain,High-variation target with SCLT-IDW gain,153,43,4043,IDW,68.750546472637
+dynamic_gain,High-variation target with SCLT-IDW gain,153,44,4044,IDW,67.86870637696603
+dynamic_gain,High-variation target with SCLT-IDW gain,153,45,4045,IDW,68.56289174969598
+dynamic_gain,High-variation target with SCLT-IDW gain,153,46,4046,IDW,68.42738977108665
+dynamic_gain,High-variation target with SCLT-IDW gain,153,47,4047,IDW,68.62485546949276
+dynamic_gain,High-variation target with SCLT-IDW gain,153,48,4048,IDW,69.04088246673071
+dynamic_gain,High-variation target with SCLT-IDW gain,153,49,4049,IDW,69.58208398496241
+dynamic_gain,High-variation target with SCLT-IDW gain,153,50,4050,IDW,68.6324578906126
+dynamic_gain,High-variation target with SCLT-IDW gain,153,51,4051,IDW,70.2985181825511
+dynamic_gain,High-variation target with SCLT-IDW gain,153,52,4052,IDW,74.17445098486431
+dynamic_gain,High-variation target with SCLT-IDW gain,153,53,4053,IDW,74.90459411100362
+dynamic_gain,High-variation target with SCLT-IDW gain,153,54,4054,IDW,74.9453142100802
+dynamic_gain,High-variation target with SCLT-IDW gain,153,55,4055,IDW,66.07291248466679
+dynamic_gain,High-variation target with SCLT-IDW gain,153,56,4056,IDW,51.84505276547395
+dynamic_gain,High-variation target with SCLT-IDW gain,153,57,4057,IDW,42.49228479462566
+dynamic_gain,High-variation target with SCLT-IDW gain,153,58,4058,IDW,36.95965549323278
+dynamic_gain,High-variation target with SCLT-IDW gain,153,59,4059,IDW,36.04626206163777
+dynamic_gain,High-variation target with SCLT-IDW gain,153,60,4060,IDW,27.900790311082037
+dynamic_gain,High-variation target with SCLT-IDW gain,153,61,4061,IDW,25.45953349672235
+dynamic_gain,High-variation target with SCLT-IDW gain,153,62,4062,IDW,27.374298119944957
+dynamic_gain,High-variation target with SCLT-IDW gain,153,63,4063,IDW,31.38200735585986
+dynamic_gain,High-variation target with SCLT-IDW gain,153,64,4064,IDW,29.593312146182242
+dynamic_gain,High-variation target with SCLT-IDW gain,153,65,4065,IDW,32.297333387508225
+dynamic_gain,High-variation target with SCLT-IDW gain,153,66,4066,IDW,32.85351621504928
+dynamic_gain,High-variation target with SCLT-IDW gain,153,67,4067,IDW,32.033658940272716
+dynamic_gain,High-variation target with SCLT-IDW gain,153,68,4068,IDW,32.694907097967274
+dynamic_gain,High-variation target with SCLT-IDW gain,153,69,4069,IDW,30.354092991807637
+dynamic_gain,High-variation target with SCLT-IDW gain,153,70,4070,IDW,27.397857679567476
+dynamic_gain,High-variation target with SCLT-IDW gain,153,71,4071,IDW,27.252798401744105
+dynamic_gain,High-variation target with SCLT-IDW gain,153,72,4072,IDW,28.756619308827453
+dynamic_gain,High-variation target with SCLT-IDW gain,153,73,4073,IDW,27.916213378363874
+dynamic_gain,High-variation target with SCLT-IDW gain,153,74,4074,IDW,28.25198367407465
+dynamic_gain,High-variation target with SCLT-IDW gain,153,75,4075,IDW,28.706805565427658
+dynamic_gain,High-variation target with SCLT-IDW gain,153,76,4076,IDW,28.112321727525153
+dynamic_gain,High-variation target with SCLT-IDW gain,153,77,4077,IDW,27.015247091656704
+dynamic_gain,High-variation target with SCLT-IDW gain,153,78,4078,IDW,27.1150035836018
+dynamic_gain,High-variation target with SCLT-IDW gain,153,79,4079,IDW,27.157523120321542
+dynamic_gain,High-variation target with SCLT-IDW gain,153,80,4080,IDW,33.32479896337699
+dynamic_gain,High-variation target with SCLT-IDW gain,153,81,4081,IDW,51.283797011273016
+dynamic_gain,High-variation target with SCLT-IDW gain,153,82,4082,IDW,64.16099491989212
+dynamic_gain,High-variation target with SCLT-IDW gain,153,83,4083,IDW,66.16751616572236
+dynamic_gain,High-variation target with SCLT-IDW gain,153,84,4084,IDW,66.55914482270447
+dynamic_gain,High-variation target with SCLT-IDW gain,153,85,4085,IDW,66.36210830064479
+dynamic_gain,High-variation target with SCLT-IDW gain,153,86,4086,IDW,65.6909336541276
+dynamic_gain,High-variation target with SCLT-IDW gain,153,87,4087,IDW,65.52396100982057
+dynamic_gain,High-variation target with SCLT-IDW gain,153,88,4088,IDW,66.1850423240108
+dynamic_gain,High-variation target with SCLT-IDW gain,153,89,4089,IDW,65.67231758547068
+dynamic_gain,High-variation target with SCLT-IDW gain,153,90,4090,IDW,64.91592640824351
+dynamic_gain,High-variation target with SCLT-IDW gain,153,91,4091,IDW,64.56940388632648
+dynamic_gain,High-variation target with SCLT-IDW gain,153,92,4092,IDW,64.46025780831994
+dynamic_gain,High-variation target with SCLT-IDW gain,153,93,4093,IDW,64.28474157588519
+dynamic_gain,High-variation target with SCLT-IDW gain,153,94,4094,IDW,63.964013140055606
+dynamic_gain,High-variation target with SCLT-IDW gain,153,95,4095,IDW,63.602179337396954
+dynamic_gain,High-variation target with SCLT-IDW gain,153,0,4000,Kriging,57.99016199953733
+dynamic_gain,High-variation target with SCLT-IDW gain,153,1,4001,Kriging,59.37982967685487
+dynamic_gain,High-variation target with SCLT-IDW gain,153,2,4002,Kriging,59.13652523758998
+dynamic_gain,High-variation target with SCLT-IDW gain,153,3,4003,Kriging,57.24512901355442
+dynamic_gain,High-variation target with SCLT-IDW gain,153,4,4004,Kriging,57.47066728472241
+dynamic_gain,High-variation target with SCLT-IDW gain,153,5,4005,Kriging,40.64649543907913
+dynamic_gain,High-variation target with SCLT-IDW gain,153,6,4006,Kriging,33.75921823314387
+dynamic_gain,High-variation target with SCLT-IDW gain,153,7,4007,Kriging,41.65220271394394
+dynamic_gain,High-variation target with SCLT-IDW gain,153,8,4008,Kriging,56.2818890915638
+dynamic_gain,High-variation target with SCLT-IDW gain,153,9,4009,Kriging,58.506292268577134
+dynamic_gain,High-variation target with SCLT-IDW gain,153,10,4010,Kriging,60.17636370966131
+dynamic_gain,High-variation target with SCLT-IDW gain,153,11,4011,Kriging,61.28559303580242
+dynamic_gain,High-variation target with SCLT-IDW gain,153,12,4012,Kriging,62.117510030539755
+dynamic_gain,High-variation target with SCLT-IDW gain,153,13,4013,Kriging,64.33550982923724
+dynamic_gain,High-variation target with SCLT-IDW gain,153,14,4014,Kriging,66.9954588594268
+dynamic_gain,High-variation target with SCLT-IDW gain,153,15,4015,Kriging,68.37486151569503
+dynamic_gain,High-variation target with SCLT-IDW gain,153,16,4016,Kriging,67.63440057207897
+dynamic_gain,High-variation target with SCLT-IDW gain,153,17,4017,Kriging,67.01910252003833
+dynamic_gain,High-variation target with SCLT-IDW gain,153,18,4018,Kriging,67.03926460640558
+dynamic_gain,High-variation target with SCLT-IDW gain,153,19,4019,Kriging,66.70625310211304
+dynamic_gain,High-variation target with SCLT-IDW gain,153,20,4020,Kriging,68.49054794286809
+dynamic_gain,High-variation target with SCLT-IDW gain,153,21,4021,Kriging,69.17011498346339
+dynamic_gain,High-variation target with SCLT-IDW gain,153,22,4022,Kriging,69.53088048284442
+dynamic_gain,High-variation target with SCLT-IDW gain,153,23,4023,Kriging,70.09785900983924
+dynamic_gain,High-variation target with SCLT-IDW gain,153,24,4024,Kriging,70.39117160133782
+dynamic_gain,High-variation target with SCLT-IDW gain,153,25,4025,Kriging,69.79494342732393
+dynamic_gain,High-variation target with SCLT-IDW gain,153,26,4026,Kriging,70.6276494954035
+dynamic_gain,High-variation target with SCLT-IDW gain,153,27,4027,Kriging,71.09602642514298
+dynamic_gain,High-variation target with SCLT-IDW gain,153,28,4028,Kriging,70.25969715900608
+dynamic_gain,High-variation target with SCLT-IDW gain,153,29,4029,Kriging,69.90908643848526
+dynamic_gain,High-variation target with SCLT-IDW gain,153,30,4030,Kriging,69.35831288305663
+dynamic_gain,High-variation target with SCLT-IDW gain,153,31,4031,Kriging,69.78575800064125
+dynamic_gain,High-variation target with SCLT-IDW gain,153,32,4032,Kriging,69.41014491505857
+dynamic_gain,High-variation target with SCLT-IDW gain,153,33,4033,Kriging,69.23883172671147
+dynamic_gain,High-variation target with SCLT-IDW gain,153,34,4034,Kriging,68.71320752082103
+dynamic_gain,High-variation target with SCLT-IDW gain,153,35,4035,Kriging,68.60822662766493
+dynamic_gain,High-variation target with SCLT-IDW gain,153,36,4036,Kriging,67.74982575422108
+dynamic_gain,High-variation target with SCLT-IDW gain,153,37,4037,Kriging,68.52566107975191
+dynamic_gain,High-variation target with SCLT-IDW gain,153,38,4038,Kriging,67.92112762124573
+dynamic_gain,High-variation target with SCLT-IDW gain,153,39,4039,Kriging,68.53016951258594
+dynamic_gain,High-variation target with SCLT-IDW gain,153,40,4040,Kriging,68.37260525718457
+dynamic_gain,High-variation target with SCLT-IDW gain,153,41,4041,Kriging,68.1690586991875
+dynamic_gain,High-variation target with SCLT-IDW gain,153,42,4042,Kriging,67.49797090661659
+dynamic_gain,High-variation target with SCLT-IDW gain,153,43,4043,Kriging,68.57668797672906
+dynamic_gain,High-variation target with SCLT-IDW gain,153,44,4044,Kriging,67.54282160376809
+dynamic_gain,High-variation target with SCLT-IDW gain,153,45,4045,Kriging,68.1348876607438
+dynamic_gain,High-variation target with SCLT-IDW gain,153,46,4046,Kriging,68.16334088437088
+dynamic_gain,High-variation target with SCLT-IDW gain,153,47,4047,Kriging,68.38738841528424
+dynamic_gain,High-variation target with SCLT-IDW gain,153,48,4048,Kriging,68.6145727440466
+dynamic_gain,High-variation target with SCLT-IDW gain,153,49,4049,Kriging,69.44229732669477
+dynamic_gain,High-variation target with SCLT-IDW gain,153,50,4050,Kriging,68.04448916262511
+dynamic_gain,High-variation target with SCLT-IDW gain,153,51,4051,Kriging,69.60031843654923
+dynamic_gain,High-variation target with SCLT-IDW gain,153,52,4052,Kriging,72.65673116358307
+dynamic_gain,High-variation target with SCLT-IDW gain,153,53,4053,Kriging,72.68561961977454
+dynamic_gain,High-variation target with SCLT-IDW gain,153,54,4054,Kriging,72.44784885959885
+dynamic_gain,High-variation target with SCLT-IDW gain,153,55,4055,Kriging,68.01377036639003
+dynamic_gain,High-variation target with SCLT-IDW gain,153,56,4056,Kriging,57.48308877836498
+dynamic_gain,High-variation target with SCLT-IDW gain,153,57,4057,Kriging,49.92672885501562
+dynamic_gain,High-variation target with SCLT-IDW gain,153,58,4058,Kriging,46.521910239287216
+dynamic_gain,High-variation target with SCLT-IDW gain,153,59,4059,Kriging,45.65080859350502
+dynamic_gain,High-variation target with SCLT-IDW gain,153,60,4060,Kriging,40.475639047640506
+dynamic_gain,High-variation target with SCLT-IDW gain,153,61,4061,Kriging,38.12125077912466
+dynamic_gain,High-variation target with SCLT-IDW gain,153,62,4062,Kriging,38.28789728939026
+dynamic_gain,High-variation target with SCLT-IDW gain,153,63,4063,Kriging,40.94960148600726
+dynamic_gain,High-variation target with SCLT-IDW gain,153,64,4064,Kriging,39.26384262710281
+dynamic_gain,High-variation target with SCLT-IDW gain,153,65,4065,Kriging,42.052242072437764
+dynamic_gain,High-variation target with SCLT-IDW gain,153,66,4066,Kriging,42.216377939487224
+dynamic_gain,High-variation target with SCLT-IDW gain,153,67,4067,Kriging,42.039765753105314
+dynamic_gain,High-variation target with SCLT-IDW gain,153,68,4068,Kriging,42.71078345635732
+dynamic_gain,High-variation target with SCLT-IDW gain,153,69,4069,Kriging,39.95528496605917
+dynamic_gain,High-variation target with SCLT-IDW gain,153,70,4070,Kriging,36.99808870015429
+dynamic_gain,High-variation target with SCLT-IDW gain,153,71,4071,Kriging,36.55150582680999
+dynamic_gain,High-variation target with SCLT-IDW gain,153,72,4072,Kriging,38.03162601098887
+dynamic_gain,High-variation target with SCLT-IDW gain,153,73,4073,Kriging,37.429675748429034
+dynamic_gain,High-variation target with SCLT-IDW gain,153,74,4074,Kriging,38.11936344544355
+dynamic_gain,High-variation target with SCLT-IDW gain,153,75,4075,Kriging,38.755289233224204
+dynamic_gain,High-variation target with SCLT-IDW gain,153,76,4076,Kriging,38.31633340261611
+dynamic_gain,High-variation target with SCLT-IDW gain,153,77,4077,Kriging,37.30826159858736
+dynamic_gain,High-variation target with SCLT-IDW gain,153,78,4078,Kriging,37.42557998598577
+dynamic_gain,High-variation target with SCLT-IDW gain,153,79,4079,Kriging,36.758583354915146
+dynamic_gain,High-variation target with SCLT-IDW gain,153,80,4080,Kriging,38.86971306794583
+dynamic_gain,High-variation target with SCLT-IDW gain,153,81,4081,Kriging,53.84816152911771
+dynamic_gain,High-variation target with SCLT-IDW gain,153,82,4082,Kriging,64.17007455370066
+dynamic_gain,High-variation target with SCLT-IDW gain,153,83,4083,Kriging,65.54202877653444
+dynamic_gain,High-variation target with SCLT-IDW gain,153,84,4084,Kriging,66.06638382827353
+dynamic_gain,High-variation target with SCLT-IDW gain,153,85,4085,Kriging,65.5052142600762
+dynamic_gain,High-variation target with SCLT-IDW gain,153,86,4086,Kriging,64.42933608094616
+dynamic_gain,High-variation target with SCLT-IDW gain,153,87,4087,Kriging,64.59002510250428
+dynamic_gain,High-variation target with SCLT-IDW gain,153,88,4088,Kriging,64.63884369834076
+dynamic_gain,High-variation target with SCLT-IDW gain,153,89,4089,Kriging,61.11586534040799
+dynamic_gain,High-variation target with SCLT-IDW gain,153,90,4090,Kriging,60.243884231827295
+dynamic_gain,High-variation target with SCLT-IDW gain,153,91,4091,Kriging,59.35432992017898
+dynamic_gain,High-variation target with SCLT-IDW gain,153,92,4092,Kriging,57.947966290207596
+dynamic_gain,High-variation target with SCLT-IDW gain,153,93,4093,Kriging,57.61801993075874
+dynamic_gain,High-variation target with SCLT-IDW gain,153,94,4094,Kriging,56.991560521867996
+dynamic_gain,High-variation target with SCLT-IDW gain,153,95,4095,Kriging,57.07049540468179
+dynamic_gain,High-variation target with SCLT-IDW gain,153,0,4000,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,1,4001,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,2,4002,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,3,4003,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,4,4004,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,5,4005,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,6,4006,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,7,4007,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,8,4008,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,9,4009,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,10,4010,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,11,4011,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,12,4012,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,13,4013,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,14,4014,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,15,4015,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,16,4016,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,17,4017,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,18,4018,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,19,4019,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,20,4020,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,21,4021,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,22,4022,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,23,4023,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,24,4024,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,25,4025,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,26,4026,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,27,4027,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,28,4028,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,29,4029,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,30,4030,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,31,4031,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,32,4032,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,33,4033,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,34,4034,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,35,4035,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,36,4036,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,37,4037,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,38,4038,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,39,4039,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,40,4040,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,41,4041,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,42,4042,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,43,4043,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,44,4044,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,45,4045,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,46,4046,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,47,4047,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,48,4048,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,49,4049,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,50,4050,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,51,4051,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,52,4052,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,53,4053,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,54,4054,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,55,4055,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,56,4056,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,57,4057,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,58,4058,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,59,4059,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,60,4060,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,61,4061,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,62,4062,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,63,4063,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,64,4064,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,65,4065,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,66,4066,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,67,4067,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,68,4068,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,69,4069,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,70,4070,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,71,4071,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,72,4072,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,73,4073,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,74,4074,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,75,4075,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,76,4076,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,77,4077,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,78,4078,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,79,4079,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,80,4080,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,81,4081,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,82,4082,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,83,4083,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,84,4084,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,85,4085,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,86,4086,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,87,4087,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,88,4088,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,89,4089,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,90,4090,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,91,4091,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,92,4092,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,93,4093,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,94,4094,Temporal-only,58.70896408688975
+dynamic_gain,High-variation target with SCLT-IDW gain,153,95,4095,Temporal-only,58.70896408688975

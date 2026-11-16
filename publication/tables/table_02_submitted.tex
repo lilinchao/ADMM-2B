@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Zero-observation reconstruction at medium observed-node density. Values are MAE/RMSE (mean$\pm$std); \textbf{bold} indicates the best value per metric.}
+\label{tab:zero_observation_medium}
+\TableFont
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+\rowcolor{TableHeader}
+Method & \multicolumn{2}{c}{Guangzhou} & \multicolumn{2}{c}{PeMSD7} & \multicolumn{2}{c}{EPA CA} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & MAE & RMSE & MAE & RMSE & MAE & RMSE \\
+\midrule
+\multicolumn{7}{l}{\textit{Spatial prior}} \\
+\addlinespace[2pt]
+SCLT-IDW & \textbf{6.98}$\pm$0.09 & \textbf{9.34}$\pm$0.09 & \textbf{7.42}$\pm$0.16 & \textbf{11.27}$\pm$0.20 & \textbf{4.42}$\pm$0.02 & 10.44$\pm$0.07 \\
+IDW & 6.99$\pm$0.09 & 9.35$\pm$0.09 & 7.96$\pm$0.52 & 12.93$\pm$0.71 & 4.51$\pm$0.08 & \textbf{10.42}$\pm$0.18 \\
+Kriging & 7.94$\pm$0.33 & 10.62$\pm$0.40 & 7.90$\pm$0.41 & 12.74$\pm$0.54 & 4.91$\pm$0.12 & 11.01$\pm$0.36 \\
+\addlinespace[4pt]
+\multicolumn{7}{l}{\textit{No spatial prior}} \\
+\addlinespace[2pt]
+Linear Time & 9.27$\pm$0.03 & 11.97$\pm$0.01 & 9.93$\pm$0.18 & 13.73$\pm$0.01 & 4.84$\pm$0.02 & 10.82$\pm$0.00 \\
+CP-TD & 163.7$\pm$58.2 & 213.1$\pm$77.2 & 562.9$\pm$2.5 & 701.6$\pm$2.9 & 34.9$\pm$17.7 & 43.0$\pm$21.7 \\
+HaLRTC & 38.5$\pm$0.0 & 40.3$\pm$0.0 & 55.7$\pm$0.0 & 57.3$\pm$0.0 & 14.8$\pm$0.0 & 18.3$\pm$0.0 \\
+BRITS & 40.7$\pm$1.7 & 44.7$\pm$1.5 & 54.2$\pm$1.1 & 59.3$\pm$2.3 & 28.5$\pm$1.6 & 34.6$\pm$1.1 \\
+SAITS & 45.1$\pm$2.0 & 53.7$\pm$3.1 & 58.7$\pm$1.5 & 66.1$\pm$1.4 & 267.3$\pm$20.6 & 333.5$\pm$26.8 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

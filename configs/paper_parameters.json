@@ -1,0 +1,119 @@
+{
+  "provenance": "Recovered best_params, not the original HPO search cache.",
+  "datasets": {
+    "guangzhou": {
+      "shape": [
+        214,
+        61,
+        144
+      ],
+      "best_params": {
+        "idw": {
+          "K": 30,
+          "power": 1
+        },
+        "linear_time": {},
+        "cp_td": {
+          "rank": 5,
+          "beta": 0.1
+        },
+        "halrtc": {
+          "rho": 0.001
+        },
+        "ordinary_kriging": {
+          "n_neighbors": 20
+        },
+        "admm_2b": {
+          "rank": 15,
+          "gamma": 0.5,
+          "n_neighbors": 30,
+          "beta": 0.1,
+          "idw_power": 1
+        },
+        "brits": {},
+        "saits": {}
+      },
+      "sources": [
+        "paper_results/experiment1_guangzhou.json",
+        "reproduction_data/results/section_5_fault_stress/guangzhou_mask_perfect.json"
+      ],
+      "original_hpo_search_history_available": false
+    },
+    "pemsd7": {
+      "shape": [
+        228,
+        96,
+        44
+      ],
+      "best_params": {
+        "idw": {
+          "K": 5,
+          "power": 3
+        },
+        "linear_time": {},
+        "cp_td": {
+          "rank": 3,
+          "beta": 0.1
+        },
+        "halrtc": {
+          "rho": 0.001
+        },
+        "ordinary_kriging": {
+          "n_neighbors": 5
+        },
+        "admm_2b": {
+          "rank": 10,
+          "gamma": 0.5,
+          "n_neighbors": 30,
+          "beta": 0.1,
+          "idw_power": 1
+        },
+        "brits": {},
+        "saits": {}
+      },
+      "sources": [
+        "paper_results/experiment1_pemsd7.json",
+        "reproduction_data/results/section_5_fault_stress/pemsd7_mask_perfect.json"
+      ],
+      "original_hpo_search_history_available": false
+    },
+    "epa_ca": {
+      "shape": [
+        101,
+        24,
+        92
+      ],
+      "best_params": {
+        "idw": {
+          "K": 30,
+          "power": 2
+        },
+        "linear_time": {},
+        "cp_td": {
+          "rank": 3,
+          "beta": 0.1
+        },
+        "halrtc": {
+          "rho": 0.001
+        },
+        "ordinary_kriging": {
+          "n_neighbors": 5
+        },
+        "admm_2b": {
+          "rank": 10,
+          "gamma": 1.0,
+          "n_neighbors": 30,
+          "beta": 0.01,
+          "idw_power": 1
+        },
+        "brits": {},
+        "saits": {}
+      },
+      "sources": [
+        "paper_results/experiment1_epa_ca.json",
+        "reproduction_data/results/section_5_fault_stress/epa_ca_mask_perfect.json"
+      ],
+      "original_hpo_search_history_available": false
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Plot/archive verification environment, not a recovered cloud lockfile.
+numpy>=1.24,<3
+matplotlib>=3.7,<4
+pypdf>=4,<7
